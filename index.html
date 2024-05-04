@@ -1,11 +1,765 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
+
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-663SDV58R3"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-663SDV58R3');
+        </script>
+        <title>PROEX</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description"
+            content="Site da Pró-Reitoria de Extensão da Universidade Estadual de Santa Cruz - UESC" />
+        <meta name="author" content="PROEX - UESC" />
+
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" integrity="" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <link rel="stylesheet" type="text/css" href="./css/icons.css" />
+        <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css">
+        <link rel="shortcut icon" href="./img/identidadeVisual/ProexUesc_color.png" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    </head>
+
+    <body>
+
+        <div id="header"></div>
+
+        <div>
+            <img class="img-proex-home" alt="Imagem de topo: PROEX, Uma história de compromisso com a região!"
+                src="./img/Topo-03.svg" />
+        </div>
+
+        <section class="pt-2">
+
+            <!-- Icones de Acesso rápido e acessivel -->
+            <div id="conteiner_accessibility">
+                <div id="text-and-icon-container">
+                    <div id="text-Acessibility">
+                        <p id="Acess_Title">Acesso Rápido</p>
+                    </div>
+                  <div class="container_Icons_accessibility" style="border: none;">
+                    <a class="box_Icon text-and-icon-container" href="./form.html">                        
+                        <img class="Accessibility-Icons" src="./img/cards/Formulários-01.svg" alt="Icone de acesso  ao formulário">
+                        <h6 class="Icon_Text">Formulários</h6>
+                    </a>
+                    <a class="box_Icon" href="./instrucoes.html">
+                        <img class="Accessibility-Icons" src="./img/cards/Instruções-01.svg" alt="Icone de acesso  as instruções">
+                        <h6 class="Icon_Text">Instruções</h6>
+                    </a>
+                    
+                    <a class="box_Icon" href="./voluntario.html">
+                        <img class="Accessibility-Icons" src="./img/cards/voluntarios.svg" alt="Icone de acesso  as tramitações">
+                        <h6 class="Icon_Text">Voluntários</h6>
+                    </a>
+                    
+                    <a class="box_Icon" href="./certificacao.html">
+                        <img class="Accessibility-Icons" src="./img/cards/Certificação-01.svg" alt="Icone de acesso rápido as certificações">
+                        <h6 class="Icon_Text">Certificação</h6>
+                    </a>
+                    <a class="box_Icon" href="./doc/instrucoes/passo_a_passo_relatorio_acao_cotinuada.pdf" target="_blank">
+                        <img class="Accessibility-Icons" src="./img/cards/Relatórios-01.svg" alt="Icone de acesso rápido ao Relatórios">
+                        <h6 class="Icon_Text">Relatórios</h6>
+                    </a>     
+                  </div>
+                </div>    
+            </div>
+
+            <div class="container card rounded-lg py-2" style="border: none;">
+                <div id="carouselExampleControls" class="carousel slide px-3" data-ride="carousel">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <a href="https://proex.uesc.br/semex/" target="_blank">
+                                <img class="d-block w-100" src="./img/carousel/carousel_6.png" alt="banner SEMEX">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./noticia.html#news12" target="_blank">
+                                <img class="d-block w-100" src="./img/carousel/carousel_5.png" alt="UESC Comunidade">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./doc/associacoes_importancia_e_caminhos_para_sua_criacao.pdf" target="_blank">
+                                <img class="d-block w-100" src="./img/carousel/carousel_4.jpg" alt="banner Associações ">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span aria-hidden="true"><img class="carousel-control-prev-img rounded-circle"
+                                src="./icon/left.png" alt="ícone para voltar carrosel de eventos"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span aria-hidden="true"><img class="carousel-control-next-img rounded-circle"
+                                src="./icon/right.png" alt="ícone esquerda"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Notícias -->
+            <div class="body-slider pt-3 mb-5">
+                <div class=" container card rounded-lg py-3" style="border: none;">
+                    <div class="slider-div pt-3 pb-2">
+                        <div class="slide-container swiper">
+                            <div class="slide-content-slider" id="noticias-slider">
+                                <h5 class="text-proex"><strong>Notícias</strong></h5>
+                                <div class="card-wrapper swiper-wrapper" >
+                                    <!-- Noticia 1 -->
+                                    <div class="card card-slider swiper-slide">
+                                        <div>
+                                            <a href="./noticia.html#news25">
+                                                <img class="card-image"
+                                                    src="./img/imagens-noticias/noticia_proex_Seminario_Esportivo_card.png"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-content news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news25" >
+                                                    <h2 class="name">PROEX promove o Seminário Esportivo com apoio da Liga Poliesportiva Universitária 
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Noticia 2 -->
+                                    <div class="card card-slider swiper-slide">
+                                        <div>
+                                            <a href="./noticia.html#news24">
+                                                <img class="card-image"
+                                                    src="./img/imagens-noticias/noticia_proex_Lancamento_Comunidades_card.png"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-content news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news24" >
+                                                    <h2 class="name">Projetos selecionados no Uesc Comunidades é apresentado a comunidade 
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Noticia 3 -->
+                                    <div class="card card-slider swiper-slide">
+                                        <div>
+                                            <a href="./noticia.html#news23">
+                                                <img class="card-image"
+                                                    src="./img/imagens-noticias/noticia_proex_EPEC_card.png"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-content news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news23" >
+                                                    <h2 class="name">O Escritório de Projetos da UESC é contemplado com o Edital da FAPESB 
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Noticia 4 -->
+                                    <div class="card card-slider swiper-slide">
+                                        <div>
+                                            <a href="./noticia.html#news22">
+                                                <img class="card-image"
+                                                    src="./img/imagens-noticias/noticia_proex_composta_card.png"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-content news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news22" >
+                                                    <h2 class="name">Composta Ilhéus na Proex: sustentabilidade na extensão 
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Noticia 5 -->
+                                    <div class="card card-slider swiper-slide">
+                                        <div>
+                                            <a href="./noticia.html#news21">
+                                                <img class="card-image"
+                                                    src="./img/imagens-noticias/noticias_proex_curso_de_regencia_card.png"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-content news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news21" >
+                                                    <h2 class="name">NAU inicia a segunda turma do curso de extensão em Regência Coral e Instrumental 
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Noticia 6 -->
+                                    <div class="card card-slider swiper-slide">
+                                        <div>
+                                            <a href="./noticia.html#news20">
+                                                <img class="card-image"
+                                                    src="./img/imagens-noticias/noticias_proex_seminario_nacional_card.png"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="card-content news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news20" >
+                                                    <h2 class="name">Pró-Reitor de Extensão da UESC participou de evento no Ministério da Saúde. 
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                                <div class="swiper-button-next swiper-navBtnoticiaNext swiper-navBtn"></div>
+                                <div class="swiper-button-prev swiper-navBtnoticiaPrev swiper-navBtn"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a class="text-white text-decoration-none" href="./noticias.html"><button
+                                class="button-slider">Mais Notícias</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Carrocel de Vídeos-->
+            <div class="body-slider pt-3 mb-5">
+                <div class=" container card rounded-lg py-3" style="border: none;">
+                    <div class="slider-div pt-3 pb-2">
+                        <div class="slide-container swiper">
+                            <div class="slide-content-slider" id="videos-slider">
+                                <h5 class="text-proex"><strong>Galeria</strong></h5>
+                                <div class="card-wrapper swiper-wrapper card_video" >
+                                    <!-- Vídeo 1 -->
+                                    <div class="card card-slider-youtube swiper-slide" style="width: 100%; height: 100%;">
+                                        <div style="position: relative; padding-top: 56.25%;">
+                                            <iframe class="video_frame" src="https://www.youtube.com/embed/h27Kx47jvwA?si=2aY4odhtGaM2tRiO" 
+                                                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                    allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                            </iframe>
+                                        </div>                                       
+                                        <div class="card-content-youtube news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news18" >
+                                                    <h2 class="name">O que é Termo de Outorga?</h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Vídeo 2 -->
+                                    <div class="card card-slider-youtube swiper-slide" style="width: 100%; height: 100%;">
+                                        <div style="position: relative; padding-top: 56.25%;">
+                                            <iframe class="video_frame" src="https://www.youtube.com/embed/1LPMVSrHrd8?si=PqjZc0K_QmMc5Xxy" 
+                                                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                    allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                            </iframe>
+                                        </div>                                       
+                                        <div class="card-content-youtube news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news18" >
+                                                    <h2 class="name">III Congresso Internacional de Educação Empreendedora e Cidadania (CIEECi 2023).</h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Vídeo 3 -->
+                                    <div class="card card-slider-youtube swiper-slide" style="width: 100%; height: 100%;">
+                                        <div style="position: relative; padding-top: 56.25%;">
+                                            <iframe class="video_frame" src="https://www.youtube.com/embed/jvJ1T4ECIZk?si=htelEdVvTdoBPAiz" 
+                                                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                    allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                            </iframe>
+                                        </div>                                       
+                                        <div class="card-content-youtube news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news18" >
+                                                    <h2 class="name">Seminário Novos Gestores Públicos 2021-2024 (5º dia - encerramento).</h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>             
+                                    <!-- Vídeo 4 -->
+                                    <div class="card card-slider-youtube swiper-slide" style="width: 100%; height: 100%;">
+                                        <div style="position: relative; padding-top: 56.25%;">
+                                            <iframe class="video_frame" src="https://www.youtube.com/embed/dn2DJcbom3w?si=eAXOFBnDAEB4A0Bx" 
+                                                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                    allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                            </iframe>
+                                        </div>                                       
+                                        <div class="card-content-youtube news-card-home">
+                                            <div>
+                                                <a href="./noticia.html#news18" >
+                                                    <h2 class="name">Seminário Novos Gestores Públicos 2021-2024 (1º dia).</h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>                           
+                                </div>
+                            </div>
+                            <div>
+
+                               <div class="swiper-button-next swiper-navBtnVideosNext swiper-navBtn"></div>
+                               <div class="swiper-button-prev swiper-navBtnVideosPrev swiper-navBtn"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+
+        <section>
+            <div id="team">
+                <div class="container">
+                    <div class="text-center">
+                        <h4 class="text-proex pt-5"><strong>Pró-Reitoria de Extensão</strong></h4>
+                        <p>
+                            A PROEX é formada pelas Gerência de Extensão (GEREX) e pela Coordenação de Integração
+                            Comunitária (COINC)
+                        </p>
+
+                        <p>
+                            CONHEÇA A PROEX :
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="image-flip">
+                                <div class="mainflip">
+                                    <div class="frontside rounded">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <p><img class="img-fluid" src="./img/cards/extensao.svg"
+                                                        alt="card image" />
+                                                </p>
+
+                                                <h4 class="text-center text-proex">Extensão</h4>
+                                                <p class="card-text">O que é extensão?</p>
+                                                <a href="#" class="btn btn-primary btn-sm rounded-circle"><i
+                                                        class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="backside">
+                                        <div class="card">
+                                            <div class="card-body text-center mt-4">
+                                                <h4 class="text-center text-proex">O que é extensão?</h4>
+                                                <p class="card-text">
+                                                    A Extensão Universitária é um processo educativo com desenvolvimento
+                                                    de atividades culturais, artísticas, educacionais e científicas, que
+                                                    promove a integração da universidade com a
+                                                    sociedade...
+                                                </p>
+                                                <a class="btn btn-light btn-sm shadow-sm gradient-nav-footer"
+                                                    href="acao/extensao.html"
+                                                    role="button">
+                                                    <p class="text-white m-1">Clique para saber mais</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="image-flip">
+                                <div class="mainflip">
+                                    <div class="frontside rounded">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <p><img class="img-fluid" src="./img/cards/bolsas.svg"
+                                                        alt="card image" />
+                                                </p>
+                                                <h4 class="text-center text-proex">Bolsas</h4>
+                                                <p class="card-text">PROBEX/UESC</p>
+                                                <a href="#" class="btn btn-primary btn-sm rounded-circle"><i
+                                                        class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="backside">
+                                        <div class="card">
+                                            <div class="card-body text-center mt-4">
+                                                <h4 class="text-center text-proex">PROBEX / UESC</h4>
+                                                <p class="card-text">Programa Institucional de Bolsas de Extensão tem
+                                                    como objetivo incentivar a participação de alunos de graduação nas
+                                                    atividades de extensão da UESC...</p>
+                                                <a class="btn btn-light btn-sm shadow-sm gradient-nav-footer"
+                                                    href="projeto/bolsas.html">
+                                                    <p class="text-white m-1">Clique para saber mais</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="image-flip">
+                                <div class="mainflip">
+                                    <div class="frontside rounded">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <p><img class="img-fluid" src="./img/cards/certificados.svg"
+                                                        alt="card image" /></p>
+                                                <h4 class="text-center text-proex">Certificação</h4>
+                                                <p class="card-text">Ger.de Certificação</p>
+                                                <a href="#" class="btn btn-primary btn-sm rounded-circle"><i
+                                                        class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="backside">
+                                        <div class="card">
+                                            <div class="card-body text-center mt-4">
+                                                <h4 class="text-center text-proex">Ger.de Certificação</h4>
+                                                <p class="card-text">
+                                                    O gerenciamento de certificação acontece através da articulação
+                                                    entre a coordenação da ação de extensão, o departamento ao qual a
+                                                    mesma está vinculada, a GEREX e o NUCOM.
+                                                </p>
+                                                <a class="btn btn-light btn-sm shadow-sm gradient-nav-footer"
+                                                    href="acao/certificacao.html">
+                                                    <p class="text-white m-1">Clique para saber mais</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="image-flip">
+                                <div class="mainflip">
+                                    <div class="frontside rounded">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <p><img class="img-fluid" src="./img/cards/forms.svg"
+                                                        alt="card image" />
+                                                </p>
+
+                                                <h4 class="text-center text-proex">Formulários</h4>
+                                                <p class="card-text">Formulários</p>
+                                                <a href="#" class="btn btn-primary btn-sm rounded-circle"><i
+                                                        class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="backside">
+                                        <div class="card">
+                                            <div class="card-body text-center mt-4">
+                                                <h4 class="text-center text-proex">Formulários</h4>
+                                                <p class="card-text">Formulários de propostas para Extensão e Adesão de
+                                                    Voluntários.</p>
+                                                <a class="btn btn-light btn-sm shadow-sm gradient-nav-footer"
+                                                    href="acao/form.html">
+                                                    <p class="text-white m-1">Clique para saber mais</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="image-flip">
+                                <div class="mainflip">
+                                    <div class="frontside rounded">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <p><img class="img-fluid" src="./img/cards/agir.svg" alt="card image" />
+                                                </p>
+
+                                                <h4 class="text-center text-proex">
+                                                    AGIR
+                                                </h4>
+                                                <p class="card-text">AGIR</p>
+                                                <a href="#" class="btn btn-primary btn-sm rounded-circle"><i
+                                                        class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="backside">
+                                        <div class="card">
+                                            <div class="card-body text-center mt-4">
+                                                <h4 class="text-center text-proex">
+                                                    AGIR
+                                                </h4>
+                                                <p class="card-text">
+                                                    O Programa de Apoio Institucional e Gerencial, tem o objetivo
+                                                    principal de propiciar meios para qualificar e aperfeiçoar gestores
+                                                    públicos municipais nas áreas estratégicas para o
+                                                    desenvolvimento local...
+                                                </p>
+                                                <a class="btn btn-light btn-sm shadow-sm gradient-nav-footer"
+                                                    href="projeto/agir.html">
+                                                    <p class="text-white m-1">Clique para saber mais</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="image-flip">
+                                <div class="mainflip">
+                                    <div class="frontside rounded">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <p><img class="img-fluid" src="./img/cards/upt.svg" alt="card image" />
+                                                </p>
+                                                <h4 class="text-center text-proex">
+                                                    UPT
+                                                </h4>
+                                                <p class="card-text">
+                                                    Universidade Para Todos
+                                                </p>
+                                                <a href="#" class="btn btn-primary btn-sm rounded-circle"><i
+                                                        class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="backside">
+                                        <div class="card">
+                                            <div class="card-body text-center mt-4">
+                                                <h4 class="text-center text-proex">
+                                                    Universidade Para Todos
+                                                </h4>
+                                                <p class="card-text">
+                                                    As ações de apoio ao Pré-vestibular Popular compreendem dois
+                                                    segmentos, o Universidade Para Todos e outros Pré-Vestibulares
+                                                    populares.
+                                                </p>
+                                                <a class="btn btn-light btn-sm shadow-sm gradient-nav-footer"
+                                                    href="projeto/upt.html">
+                                                    <p class="text-white m-1">Clique para saber mais</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="mt-5">
+                <div class="sec">
+                    <h1 class="text-center text-proex">
+                        Equipe
+                    </h1>
+                    <hr />
+                    <h3 class="text-center text-proex">
+                        Pró-Reitor de Extensão
+                    </h3>
+
+                    <div class="dropdown text-center hover-team rounded-sm">
+                        <a href="#" class="text-dark team-name" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Cristiano de Sant'Anna Bahia
+                        </a>
+                        <p style="opacity: 0.7; font-size: 13px">
+                            proex@uesc.br
+                        </p>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item">Email: proex@uesc.br</a>
+                        </div>
+                    </div>
+                    <h5 class="text-center text-proex mt-5">
+                        Analista Universitário Pró-reitoria
+                    </h5>
+                    <div class="dropdown text-center hover-team rounded-sm">
+                        <a href="#" class="text-dark team-name" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            José Wanderley Souza Oliveira
+                        </a>
+                        <p style="opacity: 0.7; font-size: 13px">
+                            (73) 3680-5300 <br>
+                            proex@uesc.br
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container my-5">
+                    <div class="row">
+                        <div class="col-sm">
+                            <h4 class="text-center text-proex">
+                                COINC
+                            </h4>
+                            <h5 class="text-center text-proex mb-5">
+                                Coord. de Integração Comunitária
+                            </h5>
+                            <h5 class="text-center text-proex">
+                                Coordenador
+                            </h5>
+                            <div class="dropdown text-center hover-team rounded-sm mb-5">
+                                <a href="#" class="text-dark team-name"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Emerson Antônio Rocha Melo de Lucena <br>
+                                </a>
+                                <p style="opacity: 0.7; font-size: 13px">
+                                    (73) 3680-5046 <br>
+                                    coincproex@uesc.br
+                                </p>
+                            </div>
+
+                            <h5 class="text-center text-proex">
+                                Subgerente
+                            </h5>
+                            <div class="dropdown text-center hover-team rounded-sm">
+                                <a href="#" class="text-dark text-center"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Cintya Santos Nobre <br>
+                                </a>
+                                <p style="opacity: 0.7; font-size: 13px">
+                                    (73) 3680-5046 <br>
+                                    coincproex@uesc.br 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm">
+                            <h4 class="text-center text-proex">
+                                GEREX
+                            </h4>
+                            <h5 class="text-center text-proex mb-5">
+                                Gerência de Extensão
+                            </h5>
+                            <h5 class="text-center text-proex">
+                                Gerente
+                            </h5>
+                            <div class="dropdown text-center hover-team rounded-sm">
+                                <a href="#" class="text-dark team-name"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Luiz Augusto Grimaldi Sampaio <br>
+                                </a>
+                                <p style="opacity: 0.7; font-size: 13px">
+                                    (73) 3680-5752 <br>
+                                    gerex@uesc.br
+                                </p>
+                            </div>
+
+                            <h5 class="text-center text-proex mt-5">
+                                Subgerente
+                            </h5>
+                            <div class="dropdown text-center hover-team rounded-sm">
+                                <a href="#" class="text-dark team-name"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Emanuelle Veloso Cezar <br>
+                                </a>
+                                <p style="opacity: 0.7; font-size: 13px">
+                                    (73) 3680-5752 <br>
+                                    gerex@uesc.br
+                                </p>
+                            </div>
+
+                            <h5 class="text-center text-proex mt-5">
+                                Secretária
+                            </h5>
+                            <div class="dropdown text-center hover-team rounded-sm">
+                                <a href="#" class="text-dark team-name"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Terezinha Pereira dos Santos Benicá <br>
+                                </a>
+                                <p style="opacity: 0.7; font-size: 13px">
+                                    (73) 3680-5030 <br>
+                                    probex@uesc.br
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm">
+                            <h4 class="text-center text-proex">
+                                NUCOM
+                            </h4>
+                            <h5 class="text-center text-proex mb-5">
+                                Núcleo de Comunicação
+                            </h5>
+
+                            <h5 class="text-center text-proex">
+                                Assessor de Comunicação
+                            </h5>
+                            <div class="dropdown text-center hover-team rounded-sm">
+                                <a href="#" class="text-dark team-name"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Alencar Júnior <br>
+                                </a>
+                                <p style="opacity: 0.7; font-size: 13px">
+                                    (73) 3680-5025 <br>
+                                    nucomproex@uesc.br
+                                </p>
+                            </div>
+
+                            <h5 class="text-center text-proex mt-5">
+                                Coordenação de Certificação
+                            </h5>
+                            <div class="dropdown text-center hover-team rounded-sm">
+                                <a href="#" class="text-dark team-name"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Adolpho José Fernandes Diederiche Lima <br>
+                                    
+                                </a>
+                                <p style="opacity: 0.7; font-size: 13px">
+                                    (73) 3680-5751 <br>
+                                    gerexcerti@uesc.br
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+        </section>
+
+        <div class="sec mt-5" id="google-map">
+            <hr />
+            <iframe class="map-uesc"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3253.7202557387072!2d-39.175174569066385!3d-14.79599426026345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739a9cffe548e19%3A0xe91ca23dc7294b8!2sUniversidade%20Estadual%20De%20Santa%20Cruz%20%E2%80%93%20UESC!5e1!3m2!1spt-BR!2sus!4v1689770929411!5m2!1spt-BR!2sus"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div id="footer"></div>
+        <script type="text/javascript" src="./Js/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./Js/include.js"></script>
+        <script type="text/javascript" src="./Js/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="./Js/custom.js"></script>
+        <!--<script type="text/javascript" src="./Js/bot.js"></script>-->
+    </body>
+
+
 </html>
