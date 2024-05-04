@@ -10,8 +10,14 @@ body {
 
 .card h2 a {
     font-size: 1.3rem; /* Aumenta o tamanho do texto */
-    color: #0047ab; /* Azul mais royal */
+    text-decoration: none;
+    color: #4a90e2; /* Azul mais claro */
     font-weight: bold; /* Deixa o texto em negrito */
+    transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+}
+
+.card h2 a:hover {
+    color: #003366; /* Azul mais escuro ao passar o mouse */
 }
 
 /* Estilo do coordenador */
