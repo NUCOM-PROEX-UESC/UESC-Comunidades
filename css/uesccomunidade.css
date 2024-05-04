@@ -1,0 +1,53 @@
+.corpo_projeto {
+    margin: auto;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.parte_baixo {
+    display: flex;
+    gap: 5rem;
+}
+
+.esquerda {
+    width: 82%!important;
+}
+
+.coordenadores {
+    font-style: italic;
+}
+
+.direita {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    gap: 2rem;
+}
+
+.info1 p{
+    line-height: 1rem;
+    font-size: 0.90rem;
+    margin-bottom: 1vh;
+}
+
+.info2 p{
+    line-height: 1rem;
+    font-size: 0.90rem;
+    margin-bottom: 1vh;
+}
+
+.info3 p{
+    line-height: 1rem;
+    font-size: 0.90rem;
+    margin-bottom: 1vh;
+}
+
+.projeto {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}

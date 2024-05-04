@@ -59,10 +59,9 @@ body {
 
 /* Estilo da imagem do card */
 .image-content {
-    height: 150px;
+    height: auto;
     background: #FFF;
     padding: 3px;
-    
     border-top-left-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior esquerdo */
     border-top-right-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior direito */
 }
