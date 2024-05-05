@@ -61,6 +61,26 @@
   display: block;
 }
 
+/*Icones*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24,
+}
+
+.gray {
+  color: gray;
+}
+
+.conjunto {
+  display: flex;
+  gap: 0.5vw;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /* Media Query para telas mobiles e tablets */
 @media screen and (max-width: 768px) {
   .corpo_projeto {
