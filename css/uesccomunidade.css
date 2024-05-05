@@ -1,84 +1,197 @@
-/* Define uma fonte mais séria */
-body {
-    font-family: Arial, sans-serif;
+.corpo_projeto {
+  margin: auto;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-/* Estilo do título do projeto */
-.card h2 {
-    font-size: 1rem;
+.corpo_projeto h3 {
+  margin-top: 0 !important;
+  margin-bottom: 5vh;
 }
 
-.card h2 a {
-    font-size: 1.3rem; /* Aumenta o tamanho do texto */
-    color: #0047ab; /* Azul mais royal */
-    font-weight: bold; /* Deixa o texto em negrito */
+.imagem-container {
+  width: auto; /* ajuste a largura conforme necessário */
+  text-align: center;
+  margin-bottom: 1vh;
+  margin-top: 10vh; /* Mantém a margem superior constante */
 }
 
-/* Estilo do coordenador */
-.card h3 {
-    font-size: 0.9rem;
-    color: #797979; /* Cinza mais escuro */
+.imagem-container img {
+  width: 100%; /* a imagem ocupará 100% da largura do contêiner */
+  height: 50vh;
+  max-width: 70vw; /* ajuste o tamanho máximo conforme necessário */
 }
 
-/* Container do card */
-.grid-container {
-    display: flex;
-    flex-wrap: wrap; /* Quebra de linha após cada terceiro card */
-    justify-content: space-between; /* Distribui os cards uniformemente */
-    padding: 60px;
+.parte_baixo {
+  display: flex;
+  gap: 5rem;
 }
 
-/* Estilo do card */
-.card {
-    background-color: #FFF;
-    width: calc(33.33% - 10px); /* 1/3 do espaço disponível, menos a margem entre os cards */
-    margin-bottom: 20px; /* Espaçamento entre as linhas */
-    border-radius: 8px; /* Adiciona bordas arredondadas */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
-    transition: box-shadow 0.3s ease; /* Adiciona transição suave para a sombra */
+.esquerda {
+  width: 82%;
 }
 
-/* Efeito hover */
-.card:hover {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); /* Aumenta a sombra quando o mouse passa por cima */
-    transform: translateY(-5px); /* Move o card para cima */
+.coordenadores {
+  font-style: italic;
 }
 
-/* Conteúdo do card */
-.card-content {
-    padding: 10px; /* Espaçamento interno */
-    align-items: flex-start;
+.direita {
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  gap: 2rem;
 }
 
-/* Estilo da imagem do card */
-.image-content {
-    height: 150px;
-    background: #FFF;
-    padding: 3px;
-    
-    border-top-left-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior esquerdo */
-    border-top-right-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior direito */
+.info1 p,
+.info2 p,
+.info3 p {
+  line-height: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 1vh;
 }
 
-/* Estilo da imagem do card */
-.image-content .card-img {
-    height: 100%;
+.projeto {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
+/*Galeria*/
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: calc(32% - 5px);
+}
+
+.image img {
+  width: 100%; /* Tamanho máximo */
+  height: auto;
+}
+
+/* Estilos quando passa o mouse */
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para imagem ampliada */
+/* Estilos para imagem ampliada */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Escurece mais a tela de fundo */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.overlay img {
+  max-width: 90%; /* Tamanho máximo */
+  max-height: 90%; /* Tamanho máximo */
+  object-fit: contain;
+  border: 4px solid #fff; /* Adiciona uma moldura branca */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+}
+
+.close,
+.prev,
+.next {
+  position: absolute;
+  color: #fff; /* Cor branca */
+  font-size: 60px; /* Aumenta mais o tamanho das setas */
+  cursor: pointer;
+  transition: color 0.3s; /* Adiciona uma transição suave */
+}
+
+.close:hover,
+.prev:hover,
+.next:hover {
+  color: royalblue; /* Altera para azul royal quando hover */
+}
+
+.close {
+  top: 20px;
+  right: 20px;
+}
+
+.prev,
+.next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 5rem; /* Aproxima mais a seta esquerda */
+}
+
+.next {
+  right: 5rem; /* Aproxima mais a seta direita */
+}
+
+
+/*Icones*/
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+
+.gray {
+  color: gray;
+}
+
+.conjunto {
+  display: flex;
+  gap: 0.5vw;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Media Query para telas mobiles e tablets */
+@media screen and (max-width: 768px) {
+  .corpo_projeto {
+    width: 90vw;
+  }
+
+  .parte_baixo {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .esquerda {
     width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior esquerdo */
-    border-top-right-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior direito */
-}
+  }
 
-/* Media Query para dispositivos com largura máxima de 768px (tablets) */
-@media (max-width: 770px) {
-    .card {
-        width: calc(50% - 10px); /* 1/2 do espaço disponível, menos a margem entre os cards */
-    }
-}
+  .imagem-container {
+    width: 90%; /* ajuste a largura conforme necessário */
+    margin: auto; /* Centraliza a imagem */
+    margin-top: 10vh; /* Mantém a margem superior constante */
+  }
 
-/* Media Query para dispositivos com largura máxima de 480px (celulares) */
-@media (max-width: 480px) {
-    .card {
-        width: calc(100% - 10px); /* 100% do espaço disponível, menos a margem entre os cards */
-    }
+  .imagem-container img {
+    max-width: 100%; /* a imagem ocupará 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+  }
 }
