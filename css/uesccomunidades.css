@@ -61,7 +61,7 @@ body {
 .image-content {
     height: auto;
     background: #FFF;
-    padding: 3px;
+    padding: 0;
     border-top-left-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior esquerdo */
     border-top-right-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior direito */
 }
