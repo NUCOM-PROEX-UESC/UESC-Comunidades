@@ -1,59 +1,89 @@
 .corpo_projeto {
-    margin: auto;
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  margin: auto;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.corpo_projeto h3 {
+  margin-top: 0 !important;
+  margin-bottom: 5vh;
+}
+
+.imagem-container {
+  width: auto; /* ajuste a largura conforme necessário */
+  text-align: center;
+  margin-bottom: 1vh;
+  margin-top: 10vh; /* Mantém a margem superior constante */
+}
+
+.imagem-container img {
+  width: 100%; /* a imagem ocupará 100% da largura do contêiner */
+  height: 50vh;
+  max-width: 70vw; /* ajuste o tamanho máximo conforme necessário */
 }
 
 .parte_baixo {
-    display: flex;
-    gap: 5rem;
+  display: flex;
+  gap: 5rem;
 }
 
 .esquerda {
-    width: 82%!important;
+  width: 82%;
 }
 
 .coordenadores {
-    font-style: italic;
+  font-style: italic;
 }
 
 .direita {
-    display: flex;
-    flex-direction: column;
-    justify-self: flex-start;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  gap: 2rem;
 }
 
 .info1 p,
 .info2 p,
 .info3 p {
-    line-height: 1rem;
-    font-size: 0.90rem;
-    margin-bottom: 1vh;
+  line-height: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 1vh;
 }
 
 .projeto {
-    display: none;
+  display: none;
 }
 
 .mostrar {
-    display: block;
+  display: block;
 }
 
 /* Media Query para telas mobiles e tablets */
 @media screen and (max-width: 768px) {
-    .corpo_projeto {
-        width: 90vw;
-    }
+  .corpo_projeto {
+    width: 90vw;
+  }
 
-    .parte_baixo {
-        flex-direction: column;
-        gap: 2rem;
-    }
+  .parte_baixo {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-    .esquerda {
-        width: 100%!important;
-    }
+  .esquerda {
+    width: 100%;
+  }
+
+  .imagem-container {
+    width: 90%; /* ajuste a largura conforme necessário */
+    margin: auto; /* Centraliza a imagem */
+    margin-top: 10vh; /* Mantém a margem superior constante */
+  }
+
+  .imagem-container img {
+    max-width: 100%; /* a imagem ocupará 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+  }
 }
