@@ -26,37 +26,68 @@ document.addEventListener("DOMContentLoaded", function () {
     // Chama a função mostrarProjeto após o carregamento completo da página
     mostrarProjeto();
   
-    //galeria
+    // Galeria de imagens
     const images = document.querySelectorAll(".image");
     const overlay = document.querySelector(".overlay");
     const overlayImage = overlay.querySelector("img");
     const closeBtn = overlay.querySelector(".close");
     const prevBtn = overlay.querySelector(".prev");
     const nextBtn = overlay.querySelector(".next");
+    const thumbs = document.querySelectorAll(".thumb");
+  
     let currentIndex = 0;
   
     images.forEach((image, index) => {
       image.addEventListener("click", () => {
         currentIndex = index;
-        overlayImage.src = image.querySelector("img").src;
+        updateOverlayImage();
         overlay.classList.add("active");
         document.body.style.overflow = "hidden"; // Impede o scroll da página
       });
     });
   
-    closeBtn.addEventListener("click", () => {
+    closeBtn.addEventListener("click", closeOverlay);
+    prevBtn.addEventListener("click", prevImage);
+    nextBtn.addEventListener("click", nextImage);
+    document.addEventListener("keydown", handleKeyPress);
+  
+    thumbs.forEach((thumb, index) => {
+      thumb.addEventListener("click", () => {
+        currentIndex = index;
+        updateOverlayImage();
+      });
+    });
+  
+    function closeOverlay() {
       overlay.classList.remove("active");
       document.body.style.overflow = ""; // Ativa o scroll da página
-    });
+    }
   
-    prevBtn.addEventListener("click", () => {
+    function prevImage() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
-      overlayImage.src = images[currentIndex].querySelector("img").src;
-    });
+      updateOverlayImage();
+    }
   
-    nextBtn.addEventListener("click", () => {
+    function nextImage() {
       currentIndex = (currentIndex + 1) % images.length;
+      updateOverlayImage();
+    }
+  
+    function updateOverlayImage() {
       overlayImage.src = images[currentIndex].querySelector("img").src;
-    });
+      thumbs.forEach((thumb, index) => {
+        thumb.classList.toggle("selected", index === currentIndex);
+      });
+    }
+  
+    function handleKeyPress(event) {
+      if (event.key === "ArrowLeft") {
+        prevImage();
+      } else if (event.key === "ArrowRight") {
+        nextImage();
+      } else if (event.key === "Escape") {
+        closeOverlay();
+      }
+    }
   });
   
