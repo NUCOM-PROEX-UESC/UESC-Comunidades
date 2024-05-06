@@ -11,13 +11,15 @@
   }
   
   .divcomunidade  {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    text-align: center;
   }
 
   .img-proex-home {
-    width: 60%;
-    height: auto;
+    max-width: 60%; /* Garante que a imagem não ultrapasse a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    display: inline-block; /* Permite centralizar verticalmente */
+    vertical-align: middle; /* Centraliza verticalmente */
     margin-top: 3.5rem;
 }
 
@@ -31,10 +33,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 400px 0 400px;
+    padding: 1% 26%;
 }
 
 .comunidade h2{
+    font-size: 2vw;
     text-decoration: none;
     color: #4a90e2; /* Azul mais claro */
     font-weight:normal; /* Deixa o texto em negrito */
@@ -42,6 +45,7 @@ body {
 }
 
 .comunidade h5{
+    font-size: 1.28vw;
     color: #797979;
 }
 
@@ -68,12 +72,17 @@ body {
     color: #797979; /* Cinza mais escuro */
 }
 
+.coordenador{
+    color: rgba(128, 128, 128, 0.575); 
+    margin-bottom: 0;
+}
+
 /* Container do card */
 .grid-container {
     display: flex;
     flex-wrap: wrap; /* Quebra de linha após cada terceiro card */
     justify-content: space-between; /* Distribui os cards uniformemente */
-    padding: 30px 400px 0 400px;
+    padding: 0.5% 25%;
 }
 
 /* Estilo do card */
@@ -119,15 +128,74 @@ body {
 }
 
 /* Media Query para dispositivos com largura máxima de 768px (tablets) */
-@media (max-width: 770px) {
+@media (max-width: 900px) {
     .card {
         width: calc(50% - 10px); /* 1/2 do espaço disponível, menos a margem entre os cards */
+    }
+
+    .comunidade h2{
+        font-size: 2.5vw;
+        text-decoration: none;
+        color: #4a90e2; /* Azul mais claro */
+        font-weight:normal; /* Deixa o texto em negrito */
+        transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+    }
+    
+    .comunidade h5{
+        font-size: 1.78vw;
+        color: #797979;
+    }
+
+    .card h2 a {
+        font-size: 1rem; /* Aumenta o tamanho do texto */
+        text-decoration: none;
+        color: #4a90e2; /* Azul mais claro */
+        font-weight:normal; /* Deixa o texto em negrito */
+        transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+    }
+}
+
+/* Media Query para dispositivos com largura máxima de 768px (tablets) */
+@media (max-width: 770px) {
+
+    .comunidade h2{
+        font-size: 3vw;
+        text-decoration: none;
+        color: #4a90e2; /* Azul mais claro */
+        font-weight:normal; /* Deixa o texto em negrito */
+        transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+    }
+    
+    .comunidade h5{
+        font-size: 2.28vw;
+        color: #797979;
+    }
+
+    .card h2 a {
+        font-size: 0.8rem; /* Aumenta o tamanho do texto */
+        text-decoration: none;
+        color: #4a90e2; /* Azul mais claro */
+        font-weight:normal; /* Deixa o texto em negrito */
+        transition: color 0.3s ease; /* Adiciona transição suave para a cor */
     }
 }
 
 /* Media Query para dispositivos com largura máxima de 480px (celulares) */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .card {
         width: calc(100% - 10px); /* 100% do espaço disponível, menos a margem entre os cards */
+    }
+
+    .comunidade h2{
+        font-size: 3.5vw;
+        text-decoration: none;
+        color: #4a90e2; /* Azul mais claro */
+        font-weight:normal; /* Deixa o texto em negrito */
+        transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+    }
+    
+    .comunidade h5{
+        font-size: 2.78vw;
+        color: #797979;
     }
 }
