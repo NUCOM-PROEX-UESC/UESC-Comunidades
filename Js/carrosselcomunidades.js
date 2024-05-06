@@ -42,6 +42,7 @@ const cardsData = [
     // Adicione dados para os outros 16 cards aqui...
 ];
 
+
 // Função para selecionar aleatoriamente 3 cards do array
 function selectRandomCards(cardsData) {
     const shuffledCards = cardsData.sort(() => Math.random() - 0.5); // Embaralha o array
@@ -90,22 +91,31 @@ function createCard(data) {
     return cardDiv;
 }
 
-// Função para adicionar os 3 cards aleatórios à página
-function addRandomCardsToPage(cardsData) {
+// Função para adicionar os cards à página
+function addCardsToPage(cardsData, numCards) {
     const cardContainer = document.getElementById("cardContainer");
     cardContainer.style.display = "flex"; // Definindo display flex
     cardContainer.style.justifyContent = "space-evenly"; // Definindo espaço uniforme entre os cards
     cardContainer.style.margin = "auto"; // Adicionando margem automática
-    cardContainer.style.marginTop = "3rem"; // Adicionando margem superior
+    cardContainer.style.marginTop = "1rem"; // Adicionando margem superior
     cardContainer.style.width = "60rem"; // Definindo largura fixa
     cardContainer.style.gap = "2rem"; // Adicionando espaçamento entre os cards
 
-    const randomCards = selectRandomCards(cardsData); // Seleciona aleatoriamente 3 cards
+    // Verifica o tamanho da tela
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+        // Se a tela for menor ou igual a 768px (tablet ou dispositivo móvel), ajusta o layout
+        cardContainer.style.width = "90vw"; // Definindo largura para ocupar 90% da largura da tela
+        cardContainer.style.padding = "1rem"; // Reduz o padding do carrossel
+        numCards = 1; // Define o número de cards para 1 em dispositivos móveis
+    }
+
+    const randomCards = selectRandomCards(cardsData).slice(0, numCards); // Seleciona aleatoriamente os cards
     randomCards.forEach((data) => {
         const card = createCard(data);
         cardContainer.appendChild(card);
     });
 }
 
-// Adiciona os 3 cards aleatórios à página
-addRandomCardsToPage(cardsData);
+// Adiciona os cards à página
+addCardsToPage(cardsData, 3); // Exibe 3 cards por padrão

@@ -152,7 +152,6 @@
   right: 5rem; /* Aproxima mais a seta direita */
 }
 
-
 /*Icones*/
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
@@ -194,6 +193,19 @@
     max-width: 100%; /* a imagem ocupará 100% da largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
   }
+
+  .carrosselcomunidade {
+    width: 90vw; /* Ajusta a largura do carrossel para ocupar 90% da largura da tela */
+    padding: 1rem; /* Reduz o padding do carrossel */
+  }
+
+  .carrosselcomunidade h2 {
+    font-size: 1.1rem; /* Reduz o tamanho do texto */
+  }
+
+  .card {
+    width: 90%; /* Define a largura dos cards para ocupar 90% da largura do carrossel */
+  }
 }
 
 @media screen and (max-width: 1020px) {
@@ -201,4 +213,24 @@
   .next {
     display: none; /* Oculta as setas de navegação */
   }
+}
+
+.carrosselcomunidade {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 70rem;
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+.carrosselcomunidade h2 {
+  font-size: 1.3rem; /* Aumenta o tamanho do texto */
+  text-decoration: none;
+  color: #0554ad; /* Azul mais claro */
+  font-weight: bold; /* Deixa o texto em negrito */
+  transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+  font-weight: bolder;
 }
