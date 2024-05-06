@@ -5,7 +5,7 @@ const cardsData = [
   {
     imgUrl: "./img/uesccomunidades/assistenciatecnica.jpg",
     titulo:
-      "Assistência Técnica em Processamento de Produtos Agropecuários na Agroindústria do Assentamento Frei Vantuy",
+      "Assistência Técnica em Processamento de Produtos Agropecuários",
     link: "./uesccomunidade.html?projeto=projeto1",
     coordenador: "Coordenador: Antônio Fábio Reis Figueiredo",
   },
@@ -61,7 +61,7 @@ const cardsData = [
   {
     imgUrl: "./img/uesccomunidades/implantacaohorta.jpg",
     titulo:
-      "Implantação de uma Horta Escolar na Escola Municipal Professora Jardelina Azevedo Leal, Salobrinho - Ilhéus, Bahia",
+      "Implantação de uma Horta Escolar, Salobrinho - Ilhéus, Bahia",
     link: "./uesccomunidade.html?projeto=projeto10",
     coordenador: "Coordenadora: Norma Eliane Pereira",
   },
@@ -99,7 +99,7 @@ const cardsData = [
   {
     imgUrl: "./img/uesccomunidades/percepcao.jpg",
     titulo:
-      "Percepção e diagnósticos socioambientais à luz do Plano Nacional de Prevenção de Desastres Naturais – Lei 12.608/2012: Estudo de caso dos bairros Salobrinho e Banco da Vitória",
+      "Plano Nacional de Prevenção de Desastres Naturais - Percepção e diagnósticos",
     link: "./uesccomunidade.html?projeto=projeto15",
     coordenador: "Coordenador: Cleverson Alves de Lima",
   },
@@ -136,7 +136,7 @@ const cardsData = [
   {
     imgUrl: "./img/uesccomunidades/tecnologiasinformacao.jpg",
     titulo:
-      "Tecnologias em Informação e Comunicação, Internet das Coisas e Ensino de Física para o exercício da Cidadania no Salobrinho",
+      "Tecnologias em Informação e Comunicação, Internet das Coisas e Ensino de Física",
     link: "./uesccomunidade.html?projeto=projeto21",
     coordenador: "Coordenador: Adriano Marcus Stuchi",
   },
