@@ -1,26 +1,3 @@
-.ropa-sans-regular {
-    font-family: "Ropa Sans", sans-serif!important;
-    font-weight: 400!important;
-    font-style: normal!important;
-  }
-  
-  .ropa-sans-regular-italic {
-    font-family: "Ropa Sans", sans-serif!important;
-    font-weight: 400!important;
-    font-style: italic!important;
-  }
-  
-  .divcomunidade  {
-    display: flex;
-    justify-content: center;
-  }
-
-  .img-proex-home {
-    width: 60%;
-    height: auto;
-    margin-top: 3.5rem;
-}
-
 /* Define uma fonte mais séria */
 body {
     font-family: "Ropa Sans", sans-serif;
@@ -31,30 +8,34 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 400px 0 400px;
+    gap: 1rem;
+    margin: 2rem auto;
+    width: 90%; /* Alterado para uma largura percentual mais flexível */
+    max-width: 900px; /* Limita a largura máxima */
+    text-align: center;
 }
 
-.comunidade h2{
+.comunidade h2 {
     text-decoration: none;
     color: #4a90e2; /* Azul mais claro */
-    font-weight:normal; /* Deixa o texto em negrito */
+    font-weight: normal; /* Deixa o texto em negrito */
     transition: color 0.3s ease; /* Adiciona transição suave para a cor */
 }
 
-.comunidade h5{
+.comunidade h5 {
     color: #797979;
 }
 
 /* Estilo do título do projeto */
 .card h2 {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Ajustado para um tamanho de fonte maior */
 }
 
 .card h2 a {
-    font-size: 1.3rem; /* Aumenta o tamanho do texto */
+    font-size: 1.4rem; /* Aumenta o tamanho do texto */
     text-decoration: none;
     color: #4a90e2; /* Azul mais claro */
-    font-weight:normal; /* Deixa o texto em negrito */
+    font-weight: normal; /* Deixa o texto em negrito */
     transition: color 0.3s ease; /* Adiciona transição suave para a cor */
 }
 
@@ -64,22 +45,24 @@ body {
 
 /* Estilo do coordenador */
 .card h3 {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Ajustado para um tamanho de fonte maior */
     color: #797979; /* Cinza mais escuro */
 }
 
 /* Container do card */
 .grid-container {
     display: flex;
-    flex-wrap: wrap; /* Quebra de linha após cada terceiro card */
-    justify-content: space-between; /* Distribui os cards uniformemente */
-    padding: 30px 400px 0 400px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%; /* Alterado para uma largura percentual mais flexível */
+    max-width: 1200px; /* Limita a largura máxima */
 }
 
 /* Estilo do card */
 .card {
     border: none;
-    background-color: #FFF;
+    background-color: #fff;
     width: calc(33.33% - 10px); /* 1/3 do espaço disponível, menos a margem entre os cards */
     margin-bottom: 20px; /* Espaçamento entre as linhas */
     border-radius: 8px; /* Adiciona bordas arredondadas */
@@ -96,14 +79,14 @@ body {
 
 /* Conteúdo do card */
 .card-content {
-    padding: 15px 0 0 15px; /* Espaçamento interno */
+    padding: 15px; /* Espaçamento interno uniforme */
     align-items: flex-start;
 }
 
 /* Estilo da imagem do card */
 .image-content {
     height: auto;
-    background: #FFF;
+    background: #fff;
     padding: 0;
     border-top-left-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior esquerdo */
     border-top-right-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior direito */
@@ -111,23 +94,27 @@ body {
 
 /* Estilo da imagem do card */
 .image-content .card-img {
-    height: 100%;
+    height: 20vh;
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior esquerdo */
     border-top-right-radius: 8px; /* Adiciona bordas arredondadas apenas no canto superior direito */
 }
 
-/* Media Query para dispositivos com largura máxima de 768px (tablets) */
-@media (max-width: 770px) {
+/* Media queries para tornar responsivo */
+@media only screen and (max-width: 1200px) {
     .card {
         width: calc(50% - 10px); /* 1/2 do espaço disponível, menos a margem entre os cards */
     }
 }
 
-/* Media Query para dispositivos com largura máxima de 480px (celulares) */
-@media (max-width: 480px) {
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        flex-direction: column; /* Muda a direção da flexbox para empilhar verticalmente */
+        align-items: center; /* Alinha os itens centralmente */
+    }
+
     .card {
-        width: calc(100% - 10px); /* 100% do espaço disponível, menos a margem entre os cards */
+        width: 100%; /* Define a largura para ocupar toda a largura do contêiner pai */
     }
 }
