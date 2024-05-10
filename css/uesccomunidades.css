@@ -10,7 +10,7 @@ body {
     align-items: center;
     gap: 1rem;
     margin: 2rem auto;
-    width: 70vw; /* Alterado para uma largura percentual mais flexível */
+    width: 80vw; /* Alterado para uma largura percentual mais flexível */
     max-width: 80vw; /* Limita a largura máxima */
     text-align: center;
 }
@@ -20,6 +20,23 @@ body {
     color: #4a90e2; /* Azul mais claro */
     font-weight: normal; /* Deixa o texto em negrito */
     transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+}
+
+
+@media only screen and (max-width: 768px) {
+    .comunidade h2 {
+        text-decoration: none;
+        width: 90vw;
+        font-size: 1.9rem;
+        color: #4a90e2; /* Azul mais claro */
+        font-weight: normal; /* Deixa o texto em negrito */
+        transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+    }
+    
+    .comunidade h5 {
+        width: 90vw;
+        text-align: justify;
+    }
 }
 
 .comunidade h5 {
@@ -109,6 +126,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+
     .grid-container {
         flex-direction: column; /* Muda a direção da flexbox para empilhar verticalmente */
         align-items: center; /* Alinha os itens centralmente */
