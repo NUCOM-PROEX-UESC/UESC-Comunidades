@@ -70,6 +70,14 @@ h5 {
   gap: 2rem;
 }
 
+.info1,
+.info2,
+.info3 {
+  display: flex;
+  flex-direction: column;
+  gap: .5vh;
+}
+
 .info1 p,
 .info2 p,
 .info3 p {
@@ -255,6 +263,7 @@ h5 {
   padding: 1rem;
   width: 69vw;
   margin: auto;
+  margin-bottom: 4vh;
   display: flex;
   flex-direction: column;
   border-radius: 8px; /* Adiciona bordas arredondadas */
