@@ -70,6 +70,14 @@ h5 {
   gap: 2rem;
 }
 
+.info1,
+.info2,
+.info3 {
+  display: flex;
+  flex-direction: column;
+  gap: .5vh;
+}
+
 .info1 p,
 .info2 p,
 .info3 p {
@@ -243,26 +251,6 @@ h5 {
   }
 }
 
-.carrosselcomunidade {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  width: 70rem;
-  border-radius: 8px; /* Adiciona bordas arredondadas */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
-  padding: 3rem;
-  margin-bottom: 2rem;
-}
-
-.carrosselcomunidade h2 {
-  font-size: 1.3rem; /* Aumenta o tamanho do texto */
-  text-decoration: none;
-  color: #0554ad; /* Azul mais claro */
-  font-weight: bold; /* Deixa o texto em negrito */
-  transition: color 0.3s ease; /* Adiciona transição suave para a cor */
-  font-weight: bolder;
-}
-
 @media screen and (max-width: 1020px) {
   .prev,
   .next {
@@ -270,15 +258,16 @@ h5 {
   }
 }
 
+/*Carrossel da pagina da comunidade*/
 .carrosselcomunidade {
+  padding: 1rem;
+  width: 69vw;
+  margin: auto;
+  margin-bottom: 4vh;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 69vw; /* Ajusta o width conforme a parte_baixo */
   border-radius: 8px; /* Adiciona bordas arredondadas */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
-  padding: 3rem;
-  margin-bottom: 2rem;
 }
 
 .carrosselcomunidade h2 {
@@ -288,22 +277,4 @@ h5 {
   font-weight: bold; /* Deixa o texto em negrito */
   transition: color 0.3s ease; /* Adiciona transição suave para a cor */
   font-weight: bolder;
-}
-
-@media screen and (max-width: 1020px) {
-  .carrosselcomunidade {
-    padding: 1.5rem; /* Diminui o padding para dispositivos menores */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .carrosselcomunidade {
-    width: 90%; /* Ajusta o width para ocupar a largura total da tela */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .carrosselcomunidade {
-    padding: 1rem; /* Diminui ainda mais o padding para dispositivos menores */
-  }
 }
