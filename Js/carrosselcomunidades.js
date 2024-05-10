@@ -163,7 +163,7 @@ function createCard(data) {
     cardDiv.style.marginTop = "1rem";
     cardDiv.style.width = "50vw"; // Definindo uma largura fixa para todos os cards
     cardDiv.style.borderRadius = "8px"; // Adicionando bordas arredondadas
-  }else{
+  } else {
     cardDiv.classList.add("card");
     cardDiv.style.marginTop = "1rem";
     cardDiv.style.width = "20vw"; // Definindo uma largura fixa para todos os cards
@@ -219,7 +219,6 @@ function addCardsToPage(cardsData, numCards) {
     const card = createCard(data);
     cardContainer.appendChild(card);
   });
-  
 }
 
 addCardsToPage(cardsData, cardsToShow); // Exibe 3 cards por padrão
