@@ -223,17 +223,29 @@ h5 {
     width: 90vw;
   }
 
+  .coordenadores {
+    display: flex;
+    gap: 5px;
+    margin: 0 6rem;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
   .parte_baixo {
     flex-direction: column;
+    width: 100%;
     gap: 2rem;
   }
 
-  .esquerda {
+  .esquerda,
+  .direita {
     width: 100%;
   }
 
   .imagem-container {
-    width: 90%; /* ajuste a largura conforme necessário */
+    width: 100%; /* ajuste a largura conforme necessário */
     margin: auto; /* Centraliza a imagem */
     margin-top: 10vh; /* Mantém a margem superior constante */
   }
