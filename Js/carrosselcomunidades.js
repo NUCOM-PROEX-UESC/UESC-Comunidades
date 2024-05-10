@@ -4,8 +4,7 @@ const cardsData = [
   // Exemplo:
   {
     imgUrl: "./img/uesccomunidades/assistenciatecnica.jpg",
-    titulo:
-      "Assistência Técnica em Processamento de Produtos Agropecuários",
+    titulo: "Assistência Técnica em Processamento de Produtos Agropecuários",
     link: "./uesccomunidade.html?projeto=projeto1",
     coordenador: "Coordenador: Antônio Fábio Reis Figueiredo",
   },
@@ -60,8 +59,7 @@ const cardsData = [
   },
   {
     imgUrl: "./img/uesccomunidades/implantacaohorta.jpg",
-    titulo:
-      "Implantação de uma Horta Escolar, Salobrinho - Ilhéus, Bahia",
+    titulo: "Implantação de uma Horta Escolar, Salobrinho - Ilhéus, Bahia",
     link: "./uesccomunidade.html?projeto=projeto10",
     coordenador: "Coordenadora: Norma Eliane Pereira",
   },
@@ -148,79 +146,80 @@ const cardsData = [
   },
 ];
 
+var cardsToShow;
+
 // Função para selecionar aleatoriamente 3 cards do array
-function selectRandomCards(cardsData) {
+function selectRandomCards(cardsData, numCards) {
   const shuffledCards = cardsData.sort(() => Math.random() - 0.5); // Embaralha o array
-  return shuffledCards.slice(0, 3); // Retorna os 3 primeiros cards
+  return shuffledCards.slice(0, numCards); // Retorna os cards aleatórios
 }
 
 // Função para criar um card
 function createCard(data) {
   const cardDiv = document.createElement("div");
-  cardDiv.classList.add("card");
-
-  const imageContentDiv = document.createElement("div");
-  imageContentDiv.classList.add("image-content");
+  if (window.innerWidth <= 768) {
+    cardsToShow = 1; // Se for uma tela móvel, mostra apenas 1 card
+    cardDiv.classList.add("card");
+    cardDiv.style.marginTop = "1rem";
+    cardDiv.style.width = "50vw"; // Definindo uma largura fixa para todos os cards
+    cardDiv.style.borderRadius = "8px"; // Adicionando bordas arredondadas
+  }else{
+    cardDiv.classList.add("card");
+    cardDiv.style.marginTop = "1rem";
+    cardDiv.style.width = "20vw"; // Definindo uma largura fixa para todos os cards
+    cardDiv.style.borderRadius = "8px"; // Adicionando bordas arredondadas
+  }
 
   const img = document.createElement("img");
   img.src = data.imgUrl;
   img.alt = "";
-  img.style.height = "100%"; // Adicionando a altura de 100%
-  img.style.width = "100%"; // Adicionando a largura de 100%
+  img.style.width = "100%";
   img.style.objectFit = "cover"; // Adicionando object-fit: cover
   img.style.borderTopLeftRadius = "8px"; // Adicionando border-top-left-radius
   img.style.borderTopRightRadius = "8px"; // Adicionando border-top-right-radius
 
-  const cardContentDiv = document.createElement("div");
-  cardContentDiv.classList.add("card-content");
-
-  const tituloH2 = document.createElement("h2");
-  tituloH2.classList.add("tituloprojeto");
+  const contentDiv = document.createElement("div");
+  contentDiv.classList.add("content");
+  contentDiv.style.padding = "0.5rem"; // Adicionando espaçamento interno apenas na div de conteúdo
 
   const tituloLink = document.createElement("a");
   tituloLink.href = data.link;
   tituloLink.textContent = data.titulo;
+  tituloLink.classList.add("tituloprojeto");
+  tituloLink.style.marginBottom = "0.5rem"; // Afastando o link da parte inferior
 
   const coordenadorH3 = document.createElement("h3");
-  coordenadorH3.classList.add("coordenador");
   coordenadorH3.textContent = data.coordenador;
+  coordenadorH3.classList.add("coordenador");
+  coordenadorH3.style.marginTop = "0"; // Removendo a margem superior do h3
 
-  tituloH2.appendChild(tituloLink);
-  cardContentDiv.appendChild(tituloH2);
-  cardContentDiv.appendChild(coordenadorH3);
+  contentDiv.appendChild(tituloLink);
+  contentDiv.appendChild(coordenadorH3);
 
-  imageContentDiv.appendChild(img);
-  cardDiv.appendChild(imageContentDiv);
-  cardDiv.appendChild(cardContentDiv);
+  cardDiv.appendChild(img);
+  cardDiv.appendChild(contentDiv);
 
   return cardDiv;
 }
 
-// Função para adicionar os cards à página
+// Função para adicionar os cards à página, ajustando o número com base no tipo de tela
 function addCardsToPage(cardsData, numCards) {
   const cardContainer = document.getElementById("cardContainer");
   cardContainer.style.display = "flex"; // Definindo display flex
-  cardContainer.style.justifyContent = "space-evenly"; // Definindo espaço uniforme entre os cards
-  cardContainer.style.margin = "auto"; // Adicionando margem automática
-  cardContainer.style.marginTop = "1rem"; // Adicionando margem superior
-  cardContainer.style.width = "60rem"; // Definindo largura fixa
-  cardContainer.style.gap = "2rem"; // Adicionando espaçamento entre os cards
+  cardContainer.style.flexWrap = "wrap";
+  cardContainer.style.justifyContent = "center";
+  cardContainer.style.gap = "1rem";
 
-  // Verifica o tamanho da tela
-  const screenWidth = window.innerWidth;
-  if (screenWidth <= 768) {
-    // Se a tela for menor ou igual a 768px (tablet ou dispositivo móvel), ajusta o layout
-    cardContainer.style.width = "90vw"; // Definindo largura para ocupar 90% da largura da tela
-    cardContainer.style.padding = "1rem"; // Reduz o padding do carrossel
-    numCards = 1; // Define o número de cards para 1 em dispositivos móveis
-  }
+  cardsToShow = 3; // Define o número padrão de cards a serem mostrados
 
-  const randomCards = selectRandomCards(cardsData).slice(0, numCards); // Seleciona aleatoriamente os cards
+  // Verifica se é uma tela móvel
+
+  const randomCards = selectRandomCards(cardsData, cardsToShow);
   randomCards.forEach((data) => {
     const card = createCard(data);
     cardContainer.appendChild(card);
   });
+  
 }
 
-// Adiciona os cards à página
-addCardsToPage(cardsData, 3); // Exibe 3 cards por padrão
+addCardsToPage(cardsData, cardsToShow); // Exibe 3 cards por padrão
