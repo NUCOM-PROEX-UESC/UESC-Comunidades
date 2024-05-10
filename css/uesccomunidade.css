@@ -223,6 +223,10 @@ h5 {
     width: 90vw;
   }
 
+  .corpo_projeto h3 {
+    margin-top: 1rem!important;
+  }
+
   .coordenadores {
     display: flex;
     gap: 5px;
