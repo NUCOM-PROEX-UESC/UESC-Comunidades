@@ -169,7 +169,7 @@ function createCard(data) {
     cardsToShow = 1; // Se for uma tela móvel, mostra apenas 1 card
     cardDiv.classList.add("card");
     cardDiv.style.marginTop = "1rem";
-    cardDiv.style.width = "50vw"; // Definindo uma largura fixa para todos os cards
+    cardDiv.style.width = "75vw"; // Definindo uma largura fixa para todos os cards
     cardDiv.style.borderRadius = "8px"; // Adicionando bordas arredondadas
 
     img.src = data.imgUrl;
