@@ -274,7 +274,6 @@ h5 {
   }
 }
 
-/*Carrossel da pagina da comunidade*/
 .carrosselcomunidade {
   padding: 1rem;
   width: 69vw;
@@ -293,4 +292,24 @@ h5 {
   font-weight: bold; /* Deixa o texto em negrito */
   transition: color 0.3s ease; /* Adiciona transição suave para a cor */
   font-weight: bolder;
+}
+
+.mais {
+  margin: .5rem 2.5rem;
+  align-self: flex-end; /* Alinha o botão à direita */
+}
+
+.mais a {
+  background-color: #0554ad; /* Azul royal */
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem; /* Espaçamento interno */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+@media screen and (max-width: 768px){
+  .mais {
+    margin: 1rem auto;
+    align-self: flex-end; /* Alinha o botão à direita */
+  }
 }
