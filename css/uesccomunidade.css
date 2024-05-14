@@ -274,7 +274,6 @@ h5 {
   }
 }
 
-/*Carrossel da pagina da comunidade*/
 .carrosselcomunidade {
   padding: 1rem;
   width: 69vw;
@@ -293,10 +292,4 @@ h5 {
   font-weight: bold; /* Deixa o texto em negrito */
   transition: color 0.3s ease; /* Adiciona transição suave para a cor */
   font-weight: bolder;
-}
-
-@media screen and (max-width: 768px) {
-  .carrosselcomunidade {
-    width: 90vw;
-  }
 }
