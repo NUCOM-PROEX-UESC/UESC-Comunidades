@@ -1,4 +1,5 @@
-var cardsData = [
+// Dados dos cards
+const cardsData = [
   // Aqui vão os dados dos 22 cards
   // Exemplo:
   {
@@ -147,11 +148,13 @@ var cardsData = [
 
 var cardsToShow;
 
+// Função para selecionar aleatoriamente 3 cards do array
 function selectRandomCards(cardsData, numCards) {
   const shuffledCards = cardsData.sort(() => Math.random() - 0.5); // Embaralha o array
   return shuffledCards.slice(0, numCards); // Retorna os cards aleatórios
 }
 
+// Função para criar um card
 function createCard(data) {
   /*Criando os elementos dos cards*/
   const cardDiv = document.createElement("div");
@@ -164,7 +167,6 @@ function createCard(data) {
   cardDiv.style.height = "auto";
   if (window.innerWidth <= 768) {
     cardsToShow = 1; // Se for uma tela móvel, mostra apenas 1 card
-    cardDiv.classList.add("swiper-slide");
     cardDiv.classList.add("card");
     cardDiv.style.marginTop = "1rem";
     cardDiv.style.width = "75vw"; // Definindo uma largura fixa para todos os cards
@@ -242,53 +244,23 @@ function createCard(data) {
   return cardDiv;
 }
 
-function addCardsToSwiper(cardsData, numCards) {
-  const swiperWrapper = document.querySelector(".swiper-wrapper");
-
-  cardsData.forEach((data) => {
-    const card = createCard(data);
-    swiperWrapper.appendChild(card);
-  });
-
-  // Inicializa o Swiper
-  const swiper = new Swiper(".swiper-container", {
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-      },
-    },
-  });
-}
-
+// Função para adicionar os cards à página, ajustando o número com base no tipo de tela
 function addCardsToPage(cardsData, numCards) {
-  if (window.innerWidth <= 768) {
-    const swiperContainer = document.createElement("div");
-    swiperContainer.classList.add("swiper-container");
+  const cardContainer = document.getElementById("cardContainer");
+  cardContainer.style.display = "flex"; // Definindo display flex
+  cardContainer.style.flexWrap = "wrap";
+  cardContainer.style.justifyContent = "center";
+  cardContainer.style.gap = "1rem";
 
-    const swiperWrapper = document.createElement("div");
-    swiperWrapper.classList.add("swiper-wrapper");
+  cardsToShow = 3; // Define o número padrão de cards a serem mostrados
 
-    swiperContainer.appendChild(swiperWrapper);
+  // Verifica se é uma tela móvel
 
-    const body = document.querySelector("body");
-    body.insertBefore(swiperContainer, body.firstChild);
-
-    addCardsToSwiper(cardsData, numCards);
-  } else {
-    const cardContainer = document.getElementById("cardContainer");
-    cardContainer.style.display = "flex"; // Definindo display flex
-    cardContainer.style.flexWrap = "wrap";
-    cardContainer.style.justifyContent = "center";
-    cardContainer.style.gap = "1rem";
-
-    const randomCards = selectRandomCards(cardsData, cardsToShow);
-    randomCards.forEach((data) => {
-      const card = createCard(data);
-      cardContainer.appendChild(card);
-    });
-  }
+  const randomCards = selectRandomCards(cardsData, cardsToShow);
+  randomCards.forEach((data) => {
+    const card = createCard(data);
+    cardContainer.appendChild(card);
+  });
 }
 
-addCardsToPage(cardsData, cardsToShow);
+addCardsToPage(cardsData, cardsToShow); // Exibe 3 cards por padrão
