@@ -164,6 +164,7 @@ function createCard(data) {
   cardDiv.style.height = "auto";
   if (window.innerWidth <= 768) {
     cardsToShow = 1; // Se for uma tela móvel, mostra apenas 1 card
+    cardDiv.classList.add("swiper-slide");
     cardDiv.classList.add("card");
     cardDiv.style.marginTop = "1rem";
     cardDiv.style.width = "75vw"; // Definindo uma largura fixa para todos os cards
@@ -241,23 +242,47 @@ function createCard(data) {
   return cardDiv;
 }
 
+function addCardsToSwiper(cardsData, numCards) {
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+  cardsData.forEach((data) => {
+    const card = createCard(data);
+    swiperWrapper.appendChild(card);
+  });
+
+  // Inicializa o Swiper
+  const swiper = new Swiper(".swiper-container", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+    },
+  });
+}
+
 function addCardsToPage(cardsData, numCards) {
-  const cardContainer = document.getElementById("cardContainer");
-  cardContainer.style.display = "flex"; // Definindo display flex
-  cardContainer.style.flexWrap = "wrap";
-  cardContainer.style.justifyContent = "center";
-  cardContainer.style.gap = "1rem";
-
   if (window.innerWidth <= 768) {
-    cardsToShow = 1; // Defina o número de cards a serem mostrados no carrossel
+    const swiperContainer = document.createElement("div");
+    swiperContainer.classList.add("swiper-container");
 
-    const randomCards = selectRandomCards(cardsData, cardsToShow);
-    randomCards.forEach((data) => {
-      const card = createCard(data);
-      cardContainer.appendChild(card);
-    });
+    const swiperWrapper = document.createElement("div");
+    swiperWrapper.classList.add("swiper-wrapper");
+
+    swiperContainer.appendChild(swiperWrapper);
+
+    const body = document.querySelector("body");
+    body.insertBefore(swiperContainer, body.firstChild);
+
+    addCardsToSwiper(cardsData, numCards);
   } else {
-    cardsToShow = 3; // Define o número padrão de cards a serem mostrados
+    const cardContainer = document.getElementById("cardContainer");
+    cardContainer.style.display = "flex"; // Definindo display flex
+    cardContainer.style.flexWrap = "wrap";
+    cardContainer.style.justifyContent = "center";
+    cardContainer.style.gap = "1rem";
+
     const randomCards = selectRandomCards(cardsData, cardsToShow);
     randomCards.forEach((data) => {
       const card = createCard(data);
@@ -266,4 +291,4 @@ function addCardsToPage(cardsData, numCards) {
   }
 }
 
-addCardsToPage(cardsData, cardsToShow); // Exibe 3 cards por padrão
+addCardsToPage(cardsData, cardsToShow);
