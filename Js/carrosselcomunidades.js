@@ -1,5 +1,4 @@
-// Dados dos cards
-const cardsData = [
+var cardsData = [
   // Aqui vão os dados dos 22 cards
   // Exemplo:
   {
@@ -148,13 +147,11 @@ const cardsData = [
 
 var cardsToShow;
 
-// Função para selecionar aleatoriamente 3 cards do array
 function selectRandomCards(cardsData, numCards) {
   const shuffledCards = cardsData.sort(() => Math.random() - 0.5); // Embaralha o array
   return shuffledCards.slice(0, numCards); // Retorna os cards aleatórios
 }
 
-// Função para criar um card
 function createCard(data) {
   /*Criando os elementos dos cards*/
   const cardDiv = document.createElement("div");
@@ -244,7 +241,6 @@ function createCard(data) {
   return cardDiv;
 }
 
-// Função para adicionar os cards à página, ajustando o número com base no tipo de tela
 function addCardsToPage(cardsData, numCards) {
   const cardContainer = document.getElementById("cardContainer");
   cardContainer.style.display = "flex"; // Definindo display flex
@@ -252,15 +248,22 @@ function addCardsToPage(cardsData, numCards) {
   cardContainer.style.justifyContent = "center";
   cardContainer.style.gap = "1rem";
 
-  cardsToShow = 3; // Define o número padrão de cards a serem mostrados
+  if (window.innerWidth <= 768) {
+    cardsToShow = 1; // Defina o número de cards a serem mostrados no carrossel
 
-  // Verifica se é uma tela móvel
-
-  const randomCards = selectRandomCards(cardsData, cardsToShow);
-  randomCards.forEach((data) => {
-    const card = createCard(data);
-    cardContainer.appendChild(card);
-  });
+    const randomCards = selectRandomCards(cardsData, cardsToShow);
+    randomCards.forEach((data) => {
+      const card = createCard(data);
+      cardContainer.appendChild(card);
+    });
+  } else {
+    cardsToShow = 3; // Define o número padrão de cards a serem mostrados
+    const randomCards = selectRandomCards(cardsData, cardsToShow);
+    randomCards.forEach((data) => {
+      const card = createCard(data);
+      cardContainer.appendChild(card);
+    });
+  }
 }
 
 addCardsToPage(cardsData, cardsToShow); // Exibe 3 cards por padrão
