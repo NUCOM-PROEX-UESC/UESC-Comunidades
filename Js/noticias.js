@@ -68,7 +68,7 @@ const news = [
     },
     {
         id: 8,
-        title: "PROEX promove II Reunião com Diretores e Coordenadores",
+        title: "LPU promove II Reunião com Diretores e Coordenadores",
         image: "./img/imagens-noticias/noticia_ii_reuniao_proex_card.jpg",
         description: "II Reunião com Diretores de Departamentos de Coordenadores aborda Desenvolvimento e Integração da Extensão Universitária",
         date: "22/09/2023",
@@ -208,6 +208,62 @@ const news = [
         image: "./img/imagens-noticias/noticia_proex_Seminario_Esportivo_card.png",
         description: "O evento possibilitou discussões entre a comunidade acadêmica acerca da importância e a organização do esporte na UESC.",
         date: "30/04/2024",
+        alt: ""
+    },
+    {
+        id: 26,
+        title: "Aulão do UPT debateu Políticas de Acesso e Permanência no Ensino Superior",
+        image: "./img/imagens-noticias/noticia_reuniao_upt_card.png",
+        description: "A aula online contou com a presença do Coordenador de Integração Comunitária Prof. Emerson Lucena",
+        date: "07/05/2024",
+        alt: ""
+    },
+    {
+        id: 27,
+        title: "Mutirão de Prevenção à Saúde da Tireoide acontecerá na UESC",
+        image: "./img/imagens-noticias/Mutirao_Tireoide_card.png",
+        description: "Especialistas e estudantes de Medicina realizarão atendimento a comunidade acadêmica na UESC no dia 17 de maio",
+        date: "07/05/2024",
+        alt: ""
+    },
+    {
+        id: 28,
+        title: "A COINC e o EPEC promovem escuta ativa com os assentamentos Buike e Panelinha",
+        image: "./img/imagens-noticias/noticia_escuta_EPEC_COINC_card.png",
+        description: "Na oportunidade os produtores do Buike (São José da Vitória) e Panelinha (Almadina) falaram sobre as suas necessidades",
+        date: "07/05/2024",
+        alt: ""
+    },
+    {
+        id: 29,
+        title: "Reunião ampliada com os dirigentes municipais de educação - FORSEC/AGIR 2.0",
+        image: "./img/imagens-noticias/noticia_reuniao_FORSEC_AGIR_card.png",
+        description: "Aconteceu na última sexta feira (03/05) o Fórum de Secretários Diretores e/ou Técnicos da Secretaria de Educação na UESC",
+        date: "08/05/2024",
+        alt: ""
+    },
+    {
+        id: 30,
+        title: "Projeto abre inscrições para transformar ideias em negócios consolidados",
+        image: "./img/imagens-noticias/noticia_incubadora_salobrinho_card.png",
+        description: "O projeto incubadoras de negócios do salobrinho do edital uesc comunidades abre inscrições para empreendedores",
+        date: "08/05/2024",
+        alt: ""
+    },
+    {
+        id: 31,
+        title: "A programa AGIR 2.0  realiza através do fórum regional de assistência social- fras na uesc ações do forte suas 2024",
+        image: "./img/imagens-noticias/forum_regional_assistencia_social_card.png",
+        description: "Acontece hoje e amanhã no auditório Paulo Souto palestras e debates sobre a promoção social.",
+        date: "08/05/2024",
+        alt: ""
+    },
+    {
+        id: 32,
+        title: "CONSU da UESC aprova concessão de uso da Fazenda Jassy",
+        image: "./img/imagens-noticias/noticia_aprovacao-consu_card.png",
+        description: "A área da Fazenda Jassy no município de Arataca será utilizada como Fazenda - Escola, num acordo inédito.",
+        date: "20/05/2024",
         alt: ""
     },
 ];
