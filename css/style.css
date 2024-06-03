@@ -680,3 +680,14 @@ a.navbar-brand:hover {
         width: 50% !important;
     }
 }
+
+.dados_proex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: white;
+    position: relative;
+    gap: 5vh;
+}
