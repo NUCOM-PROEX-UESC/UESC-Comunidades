@@ -70,6 +70,151 @@
   font-style: italic;
 }
 
+/* Estilos gerais */
+#numeros_proex .roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+/* Estilos gerais */
+#numeros_proex .roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+#numeros_proex .roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#numeros_proex .roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
 #numeros_proex .title {
   font-size: 2em;
   margin-bottom: 20px;
@@ -83,6 +228,7 @@
   justify-content: center;
   gap: 3vw;
   z-index: 1;
+  text-align: center;
 }
 
 #numeros_proex .number-item {
@@ -93,8 +239,8 @@
 
 #numeros_proex .circle {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 240px; /* Aumentado para desktop */
+  height: 240px; /* Aumentado para desktop */
   border-radius: 50%;
   background-color: white;
   color: #333;
@@ -105,7 +251,7 @@
   text-align: center;
   margin-bottom: 20px;
   overflow: hidden;
-  padding: 10px;
+  padding: 20px; /* Aumentado para desktop */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   gap: 1vh;
 }
@@ -136,7 +282,6 @@
 
 #numeros_proex .fontediv {
   margin: 0 auto;
-  width: 63vw;
   align-items: end;
   text-align: right;
 }
@@ -159,4 +304,43 @@
 @keyframes rotateBorder {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Media Query para mobile */
+@media (max-width: 768px) {
+  #numeros_proex .title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  #numeros_proex .numbers-container {
+    flex-direction: column;
+    gap: 5vw;
+    text-align: center;
+  }
+
+  #numeros_proex .circle {
+    width: 200px; /* Aumentado para mobile */
+    height: 200px; /* Aumentado para mobile */
+    margin-bottom: 15px;
+    padding: 15px; /* Aumentado para mobile */
+  }
+
+  #numeros_proex .circle-border {
+    height: 107%;
+  }
+
+  #numeros_proex .fontediv {
+    width: 80vw;
+    text-align: center;
+  }
+
+  #numeros_proex .number {
+    font-size: 1.5em;
+    margin-top: 1rem!important;
+  }
+
+  #numeros_proex .description {
+    font-size: 0.875em;
+  }
 }
