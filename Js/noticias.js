@@ -266,6 +266,54 @@ const news = [
         date: "20/05/2024",
         alt: ""
     },
+    {
+        id: 33,
+        title: "Studio de Dança do Salobrinho ganha documentário",
+        image: "./img/imagens-noticias/noticia_estudio_anferre_card.png",
+        description: "Descubra através do documentário Anferre Dance: Pequenos Bailarinos, Grandes Sonhos como o Studio de Dança Anferre está transformando vidas no bairro do Salobrinho",
+        date: "27/05/2024",
+        alt: ""
+    },
+    {
+        id: 34,
+        title: "COINC esteve presente na 7ª Edição do Formacampo",
+        image: "./img/imagens-noticias/noticia_forma_campo_card.png",
+        description: "Evento reuniu Instituições dos 27 Territórios de Identidade Baiano para debater a Educação no Campo e movimentos sociais",
+        date: "27/05/2024",
+        alt: ""
+    },
+    {
+        id: 35,
+        title: "FAEG-SUL realiza Encontro Territorial de Cultura na UESC",
+        image: "./img/imagens-noticias/noticia_encontro_FAEG_card.png",
+        description: "FAEG-SUL realiza Encontro Territorial de Cultura para formar os gestores municipais na consolidação dos Sistemas de Cultura de seus municípios",
+        date: "28/05/2024",
+        alt: ""
+    },
+    {
+        id: 36,
+        title: "A Proex através da COINC promove evento do Dia Nacional do Cigano",
+        image: "./img/imagens-noticias/noticia_ciganos_card.png",
+        description: "A PROEX através do Agir 2.0 em parceria com a AMURC e o Fórum de Procuradores realizam evento formativo sobre Licitações.",
+        date: "28/05/2024",
+        alt: ""
+    },
+    {
+        id: 37,
+        title: "Pró-reitor de Extensão se encontra com a Equipe Enactus Uesc",
+        image: "./img/imagens-noticias/noticia_enactus_card.png",
+        description: "Pró-reitor de Extensão, Cristiano Bahia, reuniu-se com a equipe Enactus Uesc para discutir o apoio da UESC através da Proex para a participação no ENEB, visando destacar seus projetos de empreendedorismo social.",
+        date: "29/05/2024",
+        alt: ""
+    },
+    {
+        id: 38,
+        title: "PROEX promove evento sobre a Lei de Licitações Municipais na UESC",
+        image: "./img/imagens-noticias/noticia_evento_FOPROM_card.png",
+        description: "A PROEX através do Agir 2.0 em parceria com a AMURC e o Fórum de Procuradores realizam evento formativo sobre Licitações.",
+        date: "30/05/2024",
+        alt: ""
+    },
 ];
 
 function createNewsElement(news) {

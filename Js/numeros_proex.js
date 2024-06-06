@@ -24,9 +24,33 @@ function updateNumbers() {
         elements[i].number.textContent = data[dataIndex].number;
         elements[i].description.textContent = data[dataIndex].description;
     }
-
-    currentIndex = (currentIndex + 4) % data.length;
 }
 
-setInterval(updateNumbers, 10000);
-updateNumbers();  // Initialize with first set of data
+function updateIndicators() {
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+        if (index === Math.floor(currentIndex / 4)) {
+            indicator.classList.add('active');
+        } else {
+            indicator.classList.remove('active');
+        }
+    });
+}
+
+function nextSet() {
+    currentIndex = (currentIndex + 4) % data.length;
+    updateNumbers();
+    updateIndicators();
+}
+
+document.querySelectorAll('.indicator').forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        currentIndex = index * 4;
+        updateNumbers();
+        updateIndicators();
+    });
+});
+
+setInterval(nextSet, 10000);
+updateNumbers();
+updateIndicators();  // Initialize with first set of data
