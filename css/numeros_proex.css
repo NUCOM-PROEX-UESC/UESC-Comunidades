@@ -61,6 +61,11 @@
   margin: 0;
 }
 
+#numeros_proex .carousel-indicators{
+  position:relative;
+  margin-top: 0;
+}
+
 #numeros_proex .fontediv {
   align-items: end;
   text-align: right;
