@@ -67,7 +67,6 @@
 }
 
 #numeros_proex .carousel-indicators {
-  position: relative;
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -85,6 +84,50 @@
 
 .carousel-indicators .indicator.active {
   background-color: blue;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s;
+  outline: none;
+}
+
+.carousel-control::before {
+  content: '';
+  border: solid blue;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.prev::before {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-control.next::before {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.carousel-control:hover {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 #numeros_proex .fontediv {
@@ -131,7 +174,7 @@
       flex-direction: row;
       gap: 5vw;
       text-align: center;
-      width: 300%;
+      width: 900%;
   }
 
   #numeros_proex .number-item {
