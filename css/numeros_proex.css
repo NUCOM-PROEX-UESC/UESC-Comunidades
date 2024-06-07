@@ -67,6 +67,7 @@
 }
 
 #numeros_proex .carousel-indicators {
+  position: relative;
   display: flex;
   justify-content: center;
   margin-top: 10px;
