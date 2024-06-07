@@ -11,24 +11,29 @@
   color: #2259a6!important;
 }
 
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
 #numeros_proex .numbers-container {
   display: flex;
-  justify-content: center;
-  gap: 3vw;
-  z-index: 1;
-  text-align: center;
+  transition: transform 0.5s ease-in-out;
 }
 
 #numeros_proex .number-item {
+  min-width: calc(100% / 3);
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 #numeros_proex .circle {
   position: relative;
-  width: 240px; /* Aumentado para desktop */
-  height: 240px; /* Aumentado para desktop */
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   background-color: white;
   color: #333;
@@ -39,7 +44,7 @@
   text-align: center;
   margin-bottom: 20px;
   overflow: hidden;
-  padding: 20px; /* Aumentado para desktop */
+  padding: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   gap: 1vh;
 }
@@ -61,9 +66,24 @@
   margin: 0;
 }
 
-#numeros_proex .carousel-indicators{
-  position:relative;
-  margin-top: 0;
+#numeros_proex .carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-indicators .indicator {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-indicators .indicator.active {
+  background-color: blue;
 }
 
 #numeros_proex .fontediv {
@@ -95,63 +115,50 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Estilo para os indicadores */
-.carousel-indicators {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.carousel-indicators .indicator {
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.carousel-indicators .indicator.active {
-  background-color: blue;
-}
-
 /* Media Query para mobile */
 @media (max-width: 768px) {
-
   #numeros_proex .title {
-    font-size: 1.5em;
-    margin-bottom: 15px;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+  }
+
+  .carousel {
+      width: 100%;
   }
 
   #numeros_proex .numbers-container {
-    flex-direction: column;
-    gap: 5vw;
-    text-align: center;
+      flex-direction: row;
+      gap: 5vw;
+      text-align: center;
+      width: 300%;
+  }
+
+  #numeros_proex .number-item {
+      min-width: 100%;
   }
 
   #numeros_proex .circle {
-    width: 200px; /* Aumentado para mobile */
-    height: 200px; /* Aumentado para mobile */
-    margin-bottom: 15px;
-    padding: 15px; /* Aumentado para mobile */
+      width: 200px;
+      height: 200px;
+      margin-bottom: 15px;
+      padding: 15px;
   }
 
   #numeros_proex .circle-border {
-    height: 107%;
+      height: 107%;
   }
 
   #numeros_proex .fontediv {
-    text-align: center;
-    color: rgba(196, 196, 196, 0.062);
+      text-align: center;
+      color: rgba(196, 196, 196, 0.062);
   }
 
   #numeros_proex .number {
-    font-size: 1.5em;
-    margin-top: 1rem!important;
+      font-size: 1.5em;
+      margin-top: 1rem!important;
   }
 
   #numeros_proex .description {
-    font-size: 0.875em;
+      font-size: 0.875em;
   }
 }
