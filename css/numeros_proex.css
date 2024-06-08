@@ -67,6 +67,7 @@
 }
 
 #numeros_proex .carousel-indicators {
+  position: relative;
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -97,7 +98,6 @@
   cursor: pointer;
   z-index: 2;
   transition: background-color 0.3s;
-  outline: none;
 }
 
 .carousel-control::before {
@@ -110,6 +110,7 @@
 
 .carousel-control.prev {
   left: 10px;
+  outline: none;
 }
 
 .carousel-control.prev::before {
@@ -119,6 +120,7 @@
 
 .carousel-control.next {
   right: 10px;
+  outline: none;
 }
 
 .carousel-control.next::before {
