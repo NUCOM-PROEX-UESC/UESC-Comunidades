@@ -8,7 +8,7 @@
 #numeros_proex .title {
   font-size: 1.5em;
   margin-bottom: 20px;
-  color: #2259a6!important;
+  color: #2259a6 !important;
 }
 
 .carousel {
@@ -144,9 +144,9 @@
 
 #numeros_proex .number {
   font-size: 2em;
-  color: #007bff!important;
+  color: #007bff !important;
   font-family: "Roboto", sans-serif;
-  font-weight: 900!important;
+  font-weight: 900 !important;
 }
 
 #numeros_proex .description {
@@ -157,54 +157,59 @@
 }
 
 @keyframes rotateBorder {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* Media Query para mobile */
-@media (max-width: 768px) {
-  #numeros_proex .title {
-      font-size: 1.5em;
-      margin-bottom: 15px;
-  }
-
-  .carousel {
-      width: 100%;
-  }
-
-  #numeros_proex .numbers-container {
-      flex-direction: row;
-      gap: 5vw;
-      text-align: center;
-      width: 900%;
-  }
-
+@media (max-width: 767px) {
   #numeros_proex .number-item {
-      min-width: 100%;
+    min-width: 100%;
   }
 
-  #numeros_proex .circle {
-      width: 200px;
-      height: 200px;
-      margin-bottom: 15px;
-      padding: 15px;
+  .carousel-indicators {
+    justify-content: center;
   }
 
-  #numeros_proex .circle-border {
-      height: 107%;
+  .carousel-indicators .indicator {
+    display: none;
   }
 
-  #numeros_proex .fontediv {
-      text-align: center;
-      color: rgba(196, 196, 196, 0.062);
+  .carousel-indicators .indicator:nth-child(-n+9) {
+    display: inline-block;
   }
 
-  #numeros_proex .number {
-      font-size: 1.5em;
-      margin-top: 1rem!important;
+  .carousel-control {
+    width: 45px;
+    height: 45px;
   }
 
-  #numeros_proex .description {
-      font-size: 0.875em;
+  .carousel-control::before {
+    padding: 10px;
+  }
+
+  .carousel-control.next {
+    right: -5px;
+  }
+
+  .carousel-control.prev {
+    left: -5px;
+  }
+
+  #numeros_proex .fonte {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-indicators .indicator {
+    display: none;
+  }
+
+  .carousel-indicators .indicator:nth-child(-n+3) {
+    display: inline-block;
   }
 }

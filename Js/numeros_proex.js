@@ -3,13 +3,19 @@ let autoSlideInterval;
 
 function updateCarousel() {
     const container = document.querySelector('.numbers-container');
-    container.style.transform = `translateX(-${currentIndex * 100 / 3}%)`;
+    const isMobile = window.innerWidth <= 767;
+    const itemsPerView = isMobile ? 1 : 3;
+    container.style.transform = `translateX(-${currentIndex * 100 / itemsPerView}%)`;
 }
 
 function updateIndicators() {
     const indicators = document.querySelectorAll('.indicator');
+    const isMobile = window.innerWidth <= 767;
+    const itemsPerView = isMobile ? 1 : 3;
+    const indicatorIndex = Math.floor(currentIndex / itemsPerView);
+
     indicators.forEach((indicator, index) => {
-        if (index === Math.floor(currentIndex / 3)) {
+        if (index === indicatorIndex) {
             indicator.classList.add('active');
         } else {
             indicator.classList.remove('active');
@@ -18,13 +24,21 @@ function updateIndicators() {
 }
 
 function nextSet() {
-    currentIndex = (currentIndex + 3) % 9;
+    const isMobile = window.innerWidth <= 767;
+    const itemsPerView = isMobile ? 1 : 3;
+    const totalItems = document.querySelectorAll('.number-item').length;
+
+    currentIndex = (currentIndex + itemsPerView) % totalItems;
     updateCarousel();
     updateIndicators();
 }
 
 function prevSet() {
-    currentIndex = (currentIndex - 3 + 9) % 9;
+    const isMobile = window.innerWidth <= 767;
+    const itemsPerView = isMobile ? 1 : 3;
+    const totalItems = document.querySelectorAll('.number-item').length;
+
+    currentIndex = (currentIndex - itemsPerView + totalItems) % totalItems;
     updateCarousel();
     updateIndicators();
 }
@@ -41,7 +55,10 @@ document.querySelector('.prev').addEventListener('click', () => {
 
 document.querySelectorAll('.indicator').forEach((indicator, index) => {
     indicator.addEventListener('click', () => {
-        currentIndex = index * 3;
+        const isMobile = window.innerWidth <= 767;
+        const itemsPerView = isMobile ? 1 : 3;
+
+        currentIndex = index * itemsPerView;
         updateCarousel();
         updateIndicators();
         resetAutoSlide();
