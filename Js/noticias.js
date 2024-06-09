@@ -266,6 +266,94 @@ const news = [
         date: "20/05/2024",
         alt: ""
     },
+    {
+        id: 33,
+        title: "Studio de Dança do Salobrinho ganha documentário",
+        image: "./img/imagens-noticias/noticia_estudio_anferre_card.png",
+        description: "Descubra através do documentário Anferre Dance: Pequenos Bailarinos, Grandes Sonhos como o Studio de Dança Anferre está transformando vidas no bairro do Salobrinho",
+        date: "27/05/2024",
+        alt: ""
+    },
+    {
+        id: 34,
+        title: "COINC esteve presente na 7ª Edição do Formacampo",
+        image: "./img/imagens-noticias/noticia_forma_campo_card.png",
+        description: "Evento reuniu Instituições dos 27 Territórios de Identidade Baiano para debater a Educação no Campo e movimentos sociais",
+        date: "27/05/2024",
+        alt: ""
+    },
+    {
+        id: 35,
+        title: "FAEG-SUL realiza Encontro Territorial de Cultura na UESC",
+        image: "./img/imagens-noticias/noticia_encontro_FAEG_card.png",
+        description: "FAEG-SUL realiza Encontro Territorial de Cultura para formar os gestores municipais na consolidação dos Sistemas de Cultura de seus municípios",
+        date: "28/05/2024",
+        alt: ""
+    },
+    {
+        id: 36,
+        title: "A Proex através da COINC promove evento do Dia Nacional do Cigano",
+        image: "./img/imagens-noticias/noticia_ciganos_card.png",
+        description: "A PROEX através do Agir 2.0 em parceria com a AMURC e o Fórum de Procuradores realizam evento formativo sobre Licitações.",
+        date: "28/05/2024",
+        alt: ""
+    },
+    {
+        id: 37,
+        title: "Pró-reitor de Extensão se encontra com a Equipe Enactus Uesc",
+        image: "./img/imagens-noticias/noticia_enactus_card.png",
+        description: "Pró-reitor de Extensão, Cristiano Bahia, reuniu-se com a equipe Enactus Uesc para discutir o apoio da UESC através da Proex para a participação no ENEB, visando destacar seus projetos de empreendedorismo social.",
+        date: "29/05/2024",
+        alt: ""
+    },
+    {
+        id: 38,
+        title: "PROEX promove evento sobre a Lei de Licitações Municipais na UESC",
+        image: "./img/imagens-noticias/noticia_evento_FOPROM_card.png",
+        description: "A PROEX através do Agir 2.0 em parceria com a AMURC e o Fórum de Procuradores realizam evento formativo sobre Licitações.",
+        date: "30/05/2024",
+        alt: ""
+    },
+    {
+        id: 39,
+        title: "FAEG-SUL realiza Encontro Territorial de Cultura na UESC",
+        image: "./img/imagens-noticias/noticia_encontro_territorial_de_cultura_card.png",
+        description: "FAEG-SUL realiza Encontro Territorial de Cultura para formar os gestores municipais na consolidação dos Sistemas de Cultura de seus municípios",
+        date: "05/06/2024",
+        alt: ""
+    },
+    {
+        id: 40,
+        title: "Cientista baiana que mapeou o genoma do Coronavírus vem a UESC em Palestra Aberta",
+        image: "./img/imagens-noticias/noticia_jaqueline_goes_card.png",
+        description: "Cientista Jaqueline Goes, que liderou o sequenciamento do genoma do coronavírus no Brasil, dará uma palestra aberta sobre Iniciativas e Estratégias para a Popularização da Ciência",
+        date: "05/06/2024",
+        alt: ""
+    },
+    {
+        id: 41,
+        title: "Projeto de Extensão Horto Florestal Realiza Ação de Doação de Árvores na UESC",
+        image: "./img/imagens-noticias/noticia_horto_florestal_card.png",
+        description: "Com a distribuição de centenas de mudas nativas e plantas medicinais, a iniciativa destacou, no Dia Mundial do Meio Ambiente, a importância de ações como o plantio de árvores para a preservação ambiental. A ação foi um sucesso e superou as expectativas dos organizadores",
+        date: "06/06/2024",
+        alt: ""
+    },
+    {
+        id: 42,
+        title: "PROEX/COINC participou do 1º Seminário do Curso Técnico em Meio Ambiente",
+        image: "./img/imagens-noticias/noticia_palestra_taboquinhas_card.png",
+        description: "O evento ocorreu no Colégio Estadual do Campo Professora Lúcia Maria Batista da Silva em Taboquinhas",
+        date: "06/06/2024",
+        alt: ""
+    },
+    {
+        id: 43,
+        title: "Encontro de Egressos do Curso de Iniciação à Regência Coral e Instrumental na UESC",
+        image: "./img/imagens-noticias/noticias_encontro_cantado_card.png",
+        description: "I Encontro de Alunos Egressos do Curso de Iniciação à Regência Coral e Instrumental ocorreu no Auditório Paulo Souto",
+        date: "07/06/2024",
+        alt: ""
+    },
 ];
 
 function createNewsElement(news) {

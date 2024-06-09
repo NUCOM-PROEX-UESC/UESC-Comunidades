@@ -1,4 +1,9 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body, h1, h2, h3, h4, h5, h6, p, a, li, blockquote, pre, code, em, strong, b, i, u, small, mark {
+    font-family: 'Roboto', sans-serif !important;
+}
 
 #team {
     background: #eee !important;
@@ -679,4 +684,9 @@ a.navbar-brand:hover {
     .edit {
         width: 50% !important;
     }
+}
+
+.links_internos {
+    display: unset!important;
+    font-weight: bolder;
 }

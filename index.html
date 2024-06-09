@@ -34,6 +34,7 @@
       integrity=""
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/numeros_proex.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/icons.css" />
     <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css" />
@@ -51,75 +52,17 @@
   <body>
     <div id="header"></div>
 
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
 
     <section class="pt-2">
-      <!-- Icones de Acesso rápido e acessivel -->
-      <div id="conteiner_accessibility">
-        <div id="text-and-icon-container">
-          <div id="text-Acessibility">
-            <p id="Acess_Title">Acesso Rápido</p>
-          </div>
-          <div class="container_Icons_accessibility" style="border: none">
-            <a class="box_Icon text-and-icon-container" href="./form.html">
-              <img
-                class="Accessibility-Icons"
-                src="./img/cards/Formulários-01.svg"
-                alt="Icone de acesso  ao formulário"
-              />
-              <h6 class="Icon_Text">Formulários</h6>
-            </a>
-            <a class="box_Icon" href="./instrucoes.html">
-              <img
-                class="Accessibility-Icons"
-                src="./img/cards/Instruções-01.svg"
-                alt="Icone de acesso  as instruções"
-              />
-              <h6 class="Icon_Text">Instruções</h6>
-            </a>
-
-            <a class="box_Icon" href="./voluntario.html">
-              <img
-                class="Accessibility-Icons"
-                src="./img/cards/voluntarios.svg"
-                alt="Icone de acesso  as tramitações"
-              />
-              <h6 class="Icon_Text">Voluntários</h6>
-            </a>
-
-            <a class="box_Icon" href="./certificacao.html">
-              <img
-                class="Accessibility-Icons"
-                src="./img/cards/Certificação-01.svg"
-                alt="Icone de acesso rápido as certificações"
-              />
-              <h6 class="Icon_Text">Certificação</h6>
-            </a>
-            <a
-              class="box_Icon"
-              href="./doc/instrucoes/passo_a_passo_relatorio_acao_cotinuada.pdf"
-              target="_blank"
-            >
-              <img
-                class="Accessibility-Icons"
-                src="./img/cards/Relatórios-01.svg"
-                alt="Icone de acesso rápido ao Relatórios"
-              />
-              <h6 class="Icon_Text">Relatórios</h6>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="container card rounded-lg py-2" style="border: none">
+      <div class="card rounded-lg py-2" style="border: none">
         <div
           id="carouselExampleControls"
           class="carousel slide px-3"
           data-ride="carousel"
         >
-          <div class="carousel-inner rounded">
+          <div class="carousel-inner">
             <div class="carousel-item active">
               <a
                 href="https://www.instagram.com/feiradoservidoruesc/"
@@ -129,18 +72,6 @@
                   class="d-block w-100"
                   src="./img/carousel/carousel_7.png"
                   alt="banner Feira dos Servidores"
-                />
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a
-                href="https://www2.uesc.br/eventos/677/I-Mutirao-de-Tireoide"
-                target="_blank"
-              >
-                <img
-                  class="d-block w-100"
-                  src="./img/carousel/carousel_8.png"
-                  alt="banner I-Mutirao-de-Tireoide"
                 />
               </a>
             </div>
@@ -199,6 +130,63 @@
         </div>
       </div>
 
+      <!-- Icones de Acesso rápido e acessivel -->
+      <div id="conteiner_accessibility">
+        <div id="text-and-icon-container">
+          <div id="text-Acessibility">
+            <p id="Acess_Title">Acesso Rápido</p>
+          </div>
+          <div class="container_Icons_accessibility" style="border: none">
+            <a class="box_Icon text-and-icon-container" href="./form.html">
+              <img
+                class="Accessibility-Icons"
+                src="./img/cards/Formulários-01.svg"
+                alt="Icone de acesso  ao formulário"
+              />
+              <h6 class="Icon_Text">Formulários</h6>
+            </a>
+            <a class="box_Icon" href="./instrucoes.html">
+              <img
+                class="Accessibility-Icons"
+                src="./img/cards/Instruções-01.svg"
+                alt="Icone de acesso  as instruções"
+              />
+              <h6 class="Icon_Text">Instruções</h6>
+            </a>
+
+            <a class="box_Icon" href="./voluntario.html">
+              <img
+                class="Accessibility-Icons"
+                src="./img/cards/voluntarios.svg"
+                alt="Icone de acesso  as tramitações"
+              />
+              <h6 class="Icon_Text">Voluntários</h6>
+            </a>
+
+            <a class="box_Icon" href="./certificacao.html">
+              <img
+                class="Accessibility-Icons"
+                src="./img/cards/Certificação-01.svg"
+                alt="Icone de acesso rápido as certificações"
+              />
+              <h6 class="Icon_Text">Certificação</h6>
+            </a>
+            <a
+              class="box_Icon"
+              href="./doc/instrucoes/passo_a_passo_relatorio_acao_cotinuada.pdf"
+              target="_blank"
+            >
+              <img
+                class="Accessibility-Icons"
+                src="./img/cards/Relatórios-01.svg"
+                alt="Icone de acesso rápido ao Relatórios"
+              />
+              <h6 class="Icon_Text">Relatórios</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <!-- Notícias -->
       <div class="body-slider pt-3 mb-5">
         <div class="container card rounded-lg py-3" style="border: none">
@@ -210,19 +198,20 @@
                   <!-- Noticia 1 -->
                   <div class="card card-slider swiper-slide">
                     <div>
-                      <a href="./noticia.html#news32">
+                      <a href="./noticia.html#news43">
                         <img
                           class="card-image"
-                          src="./img/imagens-noticias/noticia_aprovacao-consu_card.png"
+                          src="./img/imagens-noticias/noticias_encontro_cantado_card.png"
                           alt=""
                         />
                       </a>
                     </div>
                     <div class="card-content news-card-home">
                       <div>
-                        <a href="./noticia.html#news32">
+                        <a href="./noticia.html#news43">
                           <h2 class="name">
-                            CONSU da UESC aprova concessão de uso da Fazenda Jassy
+                            Encontro de Egressos do Curso de Iniciação à
+                            Regência Coral e Instrumental na UESC
                           </h2>
                         </a>
                       </div>
@@ -231,19 +220,20 @@
                   <!-- Noticia 2 -->
                   <div class="card card-slider swiper-slide">
                     <div>
-                      <a href="./noticia.html#news31">
+                      <a href="./noticia.html#news42">
                         <img
                           class="card-image"
-                          src="./img/imagens-noticias/forum_regional_assistencia_social_card.png"
+                          src="./img/imagens-noticias/noticia_palestra_taboquinhas_card.png"
                           alt=""
                         />
                       </a>
                     </div>
                     <div class="card-content news-card-home">
                       <div>
-                        <a href="./noticia.html#news31">
+                        <a href="./noticia.html#news42">
                           <h2 class="name">
-                            Programa AGIR 2.0 através do Fórum de Assistência Social- FRAS realiza ações do Forte SUAS 
+                            PROEX/COINC participou do 1º Seminário do Curso
+                            Técnico em Meio Ambiente
                           </h2>
                         </a>
                       </div>
@@ -252,19 +242,20 @@
                   <!-- Noticia 3 -->
                   <div class="card card-slider swiper-slide">
                     <div>
-                      <a href="./noticia.html#news30">
+                      <a href="./noticia.html#news41">
                         <img
                           class="card-image"
-                          src="./img/imagens-noticias/noticia_incubadora_salobrinho_card.png"
+                          src="./img/imagens-noticias/noticia_horto_florestal_card.png"
                           alt=""
                         />
                       </a>
                     </div>
                     <div class="card-content news-card-home">
                       <div>
-                        <a href="./noticia.html#news30">
+                        <a href="./noticia.html#news41">
                           <h2 class="name">
-                            Projeto abre inscrições para transformar ideias em negócios consolidados 
+                            Projeto de Extensão Horto Florestal Realiza Ação de
+                            Doação de Árvores na UESC
                           </h2>
                         </a>
                       </div>
@@ -273,19 +264,20 @@
                   <!-- Noticia 4 -->
                   <div class="card card-slider swiper-slide">
                     <div>
-                      <a href="./noticia.html#news29">
+                      <a href="./noticia.html#news40">
                         <img
                           class="card-image"
-                          src="./img/imagens-noticias/noticia_reuniao_FORSEC_AGIR_card.png"
+                          src="./img/imagens-noticias/noticia_jaqueline_goes_card.png"
                           alt=""
                         />
                       </a>
                     </div>
                     <div class="card-content news-card-home">
                       <div>
-                        <a href="./noticia.html#news29">
+                        <a href="./noticia.html#news40">
                           <h2 class="name">
-                            Reunião ampliada com os dirigentes municipais de educação - FORSEC/AGIR 2.0 
+                            Cientista baiana que mapeou o genoma do Coronavírus
+                            vem a UESC em Palestra Aberta
                           </h2>
                         </a>
                       </div>
@@ -294,19 +286,20 @@
                   <!-- Noticia 5 -->
                   <div class="card card-slider swiper-slide">
                     <div>
-                      <a href="./noticia.html#news28">
+                      <a href="./noticia.html#news39">
                         <img
                           class="card-image"
-                          src="./img/imagens-noticias/noticia_escuta_EPEC_COINC_card.png"
+                          src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_card.png"
                           alt=""
                         />
                       </a>
                     </div>
                     <div class="card-content news-card-home">
                       <div>
-                        <a href="./noticia.html#news28">
+                        <a href="./noticia.html#news39">
                           <h2 class="name">
-                            A COINC e o EPEC promovem escuta ativa com os assentamentos Buike e Panelinha
+                            FAEG-SUL realiza Encontro Territorial de Cultura na
+                            UESC
                           </h2>
                         </a>
                       </div>
@@ -315,19 +308,20 @@
                   <!-- Noticia 6 -->
                   <div class="card card-slider swiper-slide">
                     <div>
-                      <a href="./noticia.html#news27">
+                      <a href="./noticia.html#news38">
                         <img
                           class="card-image"
-                          src="./img/imagens-noticias/Mutirao_Tireoide_card.png"
+                          src="./img/imagens-noticias/noticia_evento_FOPROM_card.png"
                           alt=""
                         />
                       </a>
                     </div>
                     <div class="card-content news-card-home">
                       <div>
-                        <a href="./noticia.html#news27">
+                        <a href="./noticia.html#news38">
                           <h2 class="name">
-                            I multirão de tireoide da UESC: abordagem prática de nódulos tireoideanos
+                            PROEX promove evento sobre a Lei de Licitações
+                            Municipais na UESC
                           </h2>
                         </a>
                       </div>
@@ -366,89 +360,99 @@
                     class="card card-slider-youtube swiper-slide"
                     style="width: 100%; height: 100%"
                   >
-                  <div>
-                    <a href="https://www.youtube.com/watch?v=-0ZD8f3XKPc" target="_blank">
-                      <img
-                        class="card-image"
-                        src="./img/Tumbnail-Documentário-Anferre.png"
-                        alt=""
-                      />
-                    </a>
-                  </div>
+                    <div>
+                      <a
+                        href="https://www.youtube.com/watch?v=-0ZD8f3XKPc"
+                        target="_blank"
+                      >
+                        <img
+                          class="card-image"
+                          src="./img/Tumbnail-Documentário-Anferre.png"
+                          alt=""
+                        />
+                      </a>
+                    </div>
                     <div class="card-content-youtube news-card-home">
                       <div>
-                        <a href="https://www.youtube.com/watch?v=-0ZD8f3XKPc" target="_blank">
-                          <h2 class="name">Anferre Dance: Pequenos Bailarinos, Grandes Sonhos</h2>
+                        <a
+                          href="https://www.youtube.com/watch?v=-0ZD8f3XKPc"
+                          target="_blank"
+                        >
+                          <h2 class="name">
+                            Anferre Dance: Pequenos Bailarinos, Grandes Sonhos
+                          </h2>
                         </a>
                       </div>
                     </div>
                   </div>
                   <!-- Vídeo 2 -->
                   <div
-                  class="card card-slider-youtube swiper-slide"
-                  style="width: 100%; height: 100%"
-                >
-                  <div style="position: relative; padding-top: 56.25%">
-                    <iframe
-                      class="video_frame"
-                      src="https://www.youtube.com/embed/h27Kx47jvwA?si=efJtIYxqk18LpS_i"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                      style="
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                      "
-                    >
-                    </iframe>
-                  </div>
-                  <div class="card-content-youtube news-card-home">
-                    <div>
-                      <a href="https://www.youtube.com/watch?v=h27Kx47jvwA" target="_blank">
-                        <h2 class="name">
-                          O que é Termo de Outorga?
-                        </h2>
-                      </a>
+                    class="card card-slider-youtube swiper-slide"
+                    style="width: 100%; height: 100%"
+                  >
+                    <div style="position: relative; padding-top: 56.25%">
+                      <iframe
+                        class="video_frame"
+                        src="https://www.youtube.com/embed/h27Kx47jvwA?si=efJtIYxqk18LpS_i"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                      </iframe>
+                    </div>
+                    <div class="card-content-youtube news-card-home">
+                      <div>
+                        <a
+                          href="https://www.youtube.com/watch?v=h27Kx47jvwA"
+                          target="_blank"
+                        >
+                          <h2 class="name">O que é Termo de Outorga?</h2>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
                   <!-- Vídeo 3 -->
                   <div
-                  class="card card-slider-youtube swiper-slide"
-                  style="width: 100%; height: 100%"
-                >
-                  <div style="position: relative; padding-top: 56.25%">
-                    <iframe
-                      class="video_frame"
-                      src="https://www.youtube.com/embed/f3lsYbG7ZZY?si=Cc7f3ajwbtfuTdCL"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                      style="
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                      "
-                    >
-                    </iframe>
-                  </div>
-                  <div class="card-content-youtube news-card-home">
-                    <div>
-                      <a href="https://www.youtube.com/watch?v=f3lsYbG7ZZY&t=8s" target="_blank">
-                        <h2 class="name">
-                          Acordes Salobrinho
-                        </h2>
-                      </a>
+                    class="card card-slider-youtube swiper-slide"
+                    style="width: 100%; height: 100%"
+                  >
+                    <div style="position: relative; padding-top: 56.25%">
+                      <iframe
+                        class="video_frame"
+                        src="https://www.youtube.com/embed/f3lsYbG7ZZY?si=Cc7f3ajwbtfuTdCL"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        style="
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                        "
+                      >
+                      </iframe>
+                    </div>
+                    <div class="card-content-youtube news-card-home">
+                      <div>
+                        <a
+                          href="https://www.youtube.com/watch?v=f3lsYbG7ZZY&t=8s"
+                          target="_blank"
+                        >
+                          <h2 class="name">Acordes Salobrinho</h2>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
                   <!-- Vídeo 4 -->
                   <div
                     class="card card-slider-youtube swiper-slide"
@@ -474,9 +478,13 @@
                     </div>
                     <div class="card-content-youtube news-card-home">
                       <div>
-                        <a href="https://www.youtube.com/watch?v=1LPMVSrHrd8&t=148s" target="_blank">
+                        <a
+                          href="https://www.youtube.com/watch?v=1LPMVSrHrd8&t=148s"
+                          target="_blank"
+                        >
                           <h2 class="name">
-                            III Congresso Internacional de Educação Empreendedora e Cidadania (CIEECi 2023)
+                            III Congresso Internacional de Educação
+                            Empreendedora e Cidadania (CIEECi 2023)
                           </h2>
                         </a>
                       </div>
@@ -494,6 +502,133 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="numero_proex container">
+      <div id="numeros_proex">
+        <div class="titulo">
+          <h5 class="text-proex"><strong>Nossos Números</strong></h5>
+        </div>
+        <div class="carousel">
+          <button class="carousel-control prev"></button>
+          <div class="numbers-container">
+            <div class="number-item">
+              <div class="circle">
+                <div class="conteudo">
+                  <div class="circle-border"></div>
+                  <p class="number">20%</p>
+                  <p class="description">
+                    de aumento no número de atividades de extensão em 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="number-item">
+              <div class="circle">
+                <div class="conteudo">
+                  <div class="circle-border"></div>
+                  <p class="number">329</p>
+                  <p class="description">
+                    atividades de extensão realizadas em 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="number-item">
+              <div class="circle">
+                <div class="conteudo">
+                  <div class="circle-border"></div>
+                  <p class="number">283.390</p>
+                  <p class="description">
+                    pessoas beneficiadas pelas atividades de extensão em 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="number-item">
+              <div class="circle">
+                <div class="conteudo">
+                  <div class="circle-border"></div>
+                  <p class="number">652</p>
+                  <p class="description">
+                    discentes envolvidos nas atividades de extensão em 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="number-item">
+              <div class="circle">
+                <div class="conteudo">
+                  <div class="circle-border"></div>
+                  <p class="number">296</p>
+                  <p class="description">
+                    bolsas beneficiando 452 discentes ao longo do ano de 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="number-item">
+              <div class="circle">
+                <div class="conteudo">
+                  <div class="circle-border"></div>
+                  <p class="number">210</p>
+                  <p class="description">
+                    discentes exerceram atividades como voluntários
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="number-item">
+              <div class="circle">
+                <div class="conteudo">
+                  <div class="circle-border"></div>
+                  <p class="number">44.527</p>
+                  <p class="description">
+                    pessoas beneficiadas na área da Cultura em 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="number-item">
+              <div class="circle">
+                <div class="conteudo">
+                  <div class="circle-border"></div>
+                  <p class="number">35.884</p>
+                  <p class="description">
+                    pessoas beneficiadas na área da Saúde em 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="number-item">
+              <div class="circle">
+                <div class="conteudo">
+                  <div class="circle-border"></div>
+                  <p class="number">+270%</p>
+                  <p class="description">
+                    Crescimento do alcance no Instagram de 2022 para 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control next"></button>
+        </div>
+        <div class="carousel-indicators">
+          <span class="indicator active" data-index="0"></span>
+          <span class="indicator" data-index="1"></span>
+          <span class="indicator" data-index="2"></span>
+          <span class="indicator" data-index="3"></span>
+          <span class="indicator" data-index="4"></span>
+          <span class="indicator" data-index="5"></span>
+          <span class="indicator" data-index="6"></span>
+          <span class="indicator" data-index="7"></span>
+          <span class="indicator" data-index="8"></span>
+        </div>
+        <div class="fontediv">
+          <p class="fonte">Fonte: Relatório UESC 2023</p>
         </div>
       </div>
     </section>
@@ -597,7 +732,7 @@
                         </p>
                         <a
                           class="btn btn-light btn-sm shadow-sm gradient-nav-footer"
-                          href="projeto/bolsas.html"
+                          href="bolsas.html"
                         >
                           <p class="text-white m-1">Clique para saber mais</p>
                         </a>
@@ -1013,6 +1148,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="./Js/include.js"></script>
+    <script type="text/javascript" src="./Js/numeros_proex.js"></script>
     <script type="text/javascript" src="./Js/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="./Js/custom.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
