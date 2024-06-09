@@ -110,6 +110,7 @@ h5 {
   cursor: pointer;
   transition: transform 0.3s ease;
   width: calc(32% - 5px);
+  height: 10vh;
 }
 
 .image img {

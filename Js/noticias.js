@@ -314,6 +314,46 @@ const news = [
         date: "30/05/2024",
         alt: ""
     },
+    {
+        id: 39,
+        title: "FAEG-SUL realiza Encontro Territorial de Cultura na UESC",
+        image: "./img/imagens-noticias/noticia_encontro_territorial_de_cultura_card.png",
+        description: "FAEG-SUL realiza Encontro Territorial de Cultura para formar os gestores municipais na consolidação dos Sistemas de Cultura de seus municípios",
+        date: "05/06/2024",
+        alt: ""
+    },
+    {
+        id: 40,
+        title: "Cientista baiana que mapeou o genoma do Coronavírus vem a UESC em Palestra Aberta",
+        image: "./img/imagens-noticias/noticia_jaqueline_goes_card.png",
+        description: "Cientista Jaqueline Goes, que liderou o sequenciamento do genoma do coronavírus no Brasil, dará uma palestra aberta sobre Iniciativas e Estratégias para a Popularização da Ciência",
+        date: "05/06/2024",
+        alt: ""
+    },
+    {
+        id: 41,
+        title: "Projeto de Extensão Horto Florestal Realiza Ação de Doação de Árvores na UESC",
+        image: "./img/imagens-noticias/noticia_horto_florestal_card.png",
+        description: "Com a distribuição de centenas de mudas nativas e plantas medicinais, a iniciativa destacou, no Dia Mundial do Meio Ambiente, a importância de ações como o plantio de árvores para a preservação ambiental. A ação foi um sucesso e superou as expectativas dos organizadores",
+        date: "06/06/2024",
+        alt: ""
+    },
+    {
+        id: 42,
+        title: "PROEX/COINC participou do 1º Seminário do Curso Técnico em Meio Ambiente",
+        image: "./img/imagens-noticias/noticia_palestra_taboquinhas_card.png",
+        description: "O evento ocorreu no Colégio Estadual do Campo Professora Lúcia Maria Batista da Silva em Taboquinhas",
+        date: "06/06/2024",
+        alt: ""
+    },
+    {
+        id: 43,
+        title: "Encontro de Egressos do Curso de Iniciação à Regência Coral e Instrumental na UESC",
+        image: "./img/imagens-noticias/noticias_encontro_cantado_card.png",
+        description: "I Encontro de Alunos Egressos do Curso de Iniciação à Regência Coral e Instrumental ocorreu no Auditório Paulo Souto",
+        date: "07/06/2024",
+        alt: ""
+    },
 ];
 
 function createNewsElement(news) {
