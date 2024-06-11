@@ -66,7 +66,7 @@ document.querySelectorAll('.indicator').forEach((indicator, index) => {
 });
 
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSet, 5000);
+    autoSlideInterval = setInterval(nextSet, 10000);
 }
 
 function resetAutoSlide() {
