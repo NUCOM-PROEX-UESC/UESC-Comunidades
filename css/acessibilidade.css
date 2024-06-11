@@ -1,0 +1,240 @@
+/* CSS para o menu de acessibilidade */
+#pojo-a11y-toolbar {
+    position: fixed;
+    right: 0;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.pojo-a11y-toolbar-toggle a {
+    background-color: #00AEEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.pojo-a11y-toolbar-toggle a:hover {
+    background-color: #008CBA;
+}
+
+.pojo-a11y-toolbar-toggle svg {
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+}
+
+#pojo-a11y-toolbar > div > div {
+    display: none;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    padding-right: 0px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#pojo-a11y-toolbar > div > div p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+#pojo-a11y-toolbar > div > div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#pojo-a11y-toolbar > div > div ul li {
+    margin-bottom: 10px;
+}
+
+#pojo-a11y-toolbar > div > div ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+#pojo-a11y-toolbar > div > div ul li a:hover {
+    color: #00AEEF;
+}
+
+.pojo-a11y-toolbar-icon {
+    margin-right: 10px;
+}
+
+.pojo-a11y-toolbar-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Mostrar o menu de acessibilidade ao clicar */
+#pojo-a11y-toolbar.active > div > div {
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #pojo-a11y-toolbar {
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+        transform: none;
+        flex-direction: column;
+    }
+
+    .pojo-a11y-toolbar-toggle a {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #pojo-a11y-toolbar > div > div {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Ajustes adicionais para alinhar ao lado do ícone */
+#pojo-a11y-toolbar.active {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+#pojo-a11y-toolbar.active > div > div {
+    display: block;
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+/*Estilos para funcionalidades domenu acessibilidade*/
+.grayscale {
+    filter: grayscale(0%);
+}
+
+/* Estilo de Alto Contraste com fundo preto e destaques visuais */
+.high-contrast {
+    background-color: #000; /* Cor de fundo preto */
+    color: #000000; /* Cor de texto branca */
+}
+
+.high-contrast h2{
+    color: #ff9100 !important; /* Cor de texto branca */
+}
+
+.high-contrast h1{
+    color: #ff9100 !important; /* Cor de texto branca */
+}
+
+.high-contrast h3{
+    color: #ff9100 !important; /* Cor de texto branca */
+}
+
+.high-contrast h4{
+    color: #ff9100 !important; /* Cor de texto branca */
+}
+
+.high-contrast h5{
+    color: #ff9100 !important; /* Cor de texto branca */
+}
+
+.high-contrast h6{
+    color: #ff9100 !important; /* Cor de texto branca */
+}
+
+.high-contrast p{
+    color: #ff9100 !important; /* Cor de texto branca */
+}
+
+.high-contrast th{
+    color: #ff9100 !important; /* Cor de texto branca */
+}
+
+.high-contrast td{
+    color: #ff9100 !important; /* Cor de texto branca */
+}
+
+.high-contrast a {
+    color: #00BFFF; /* Cor azul clara para links */
+    text-decoration: none; /* Sem sublinhado por padrão */
+}
+
+.high-contrast #team {
+    background-color: rgb(41, 37, 37) !important; /* Cor de fundo escura especificada */
+}
+
+.high-contrast #conteiner_accessibility {
+    background-color: rgb(41, 37, 37); /* Cor de fundo escura especificada */
+}
+
+.high-contrast a:hover,
+.high-contrast a:focus {
+    color: #FFA500; /* Cor laranja para destaque ao focar/houver */
+    text-decoration: underline; /* Adiciona sublinhado para maior destaque */
+    background-color: #333; /* Fundo mais escuro para contraste */
+}
+
+.high-contrast button,
+.high-contrast .btn {
+    background-color: #222; /* Fundo dos botões mais escuro */
+    color: #fff; /* Texto branco */
+    border: 1px solid #00BFFF; /* Borda azul clara */
+    padding: 10px 20px; /* Padding para maior área de clique */
+}
+
+.high-contrast button:hover,
+.high-contrast .btn:hover,
+.high-contrast button:focus,
+.high-contrast .btn:focus {
+    background-color: #00BFFF; /* Azul claro ao houver ou focar */
+    color: #ff0000; /* Texto preto para contraste */
+    border-color: #FFA500; /* Borda laranja */
+}
+
+/* Personalizações adicionais para outros elementos interativos */
+.high-contrast .card {
+    background-color: #111; /* Fundo dos cards muito escuro */
+    color: #fff; /* Texto branco */
+    border: 1px solid #333; /* Borda sutil */
+}
+
+.high-contrast .card:hover {
+    background-color: #222; /* Fundo dos cards ao houver */
+    border-color: #00BFFF; /* Borda azul clara ao houver */
+}
+
+.high-contrast .navbar,
+.high-contrast .dropdown-menu {
+    background-color: #000; /* Fundo para navbar e menus dropdown */
+    color: #fff; /* Texto para navbar e menus dropdown */
+}
+
+.high-contrast .gradient-nav-footer{
+    background-color: #1d1b1b; /* Fundo para navbar e menus dropdown */
+    color: #fff; /* Texto para navbar e menus dropdown */
+}
+
+.high-contrast .navbar a,
+.high-contrast .dropdown-menu a {
+    color: #00BFFF; /* Cor dos links no navbar e menus dropdown */
+}
+
+.high-contrast .navbar a:hover,
+.high-contrast .dropdown-menu a:hover {
+    background-color: #333; /* Fundo ao houver nos links do navbar e dropdown */
+    color: #FFA500; /* Texto laranja ao houver */
+}
