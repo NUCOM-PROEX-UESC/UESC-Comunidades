@@ -13,7 +13,7 @@ function ocultarElementosPorID() {
             elemento.style.display = "none";
         }
     }
-    
+
     var elementoEspecifico = document.getElementById(id);
     if (elementoEspecifico) {
         elementoEspecifico.style.display = "block";
