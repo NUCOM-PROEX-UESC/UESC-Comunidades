@@ -1,3 +1,8 @@
+window.onload = function() {
+    ocultarElementosPorID();
+    document.body.style.display = 'block'; // Mostra o corpo da página
+};
+
 function ocultarElementosPorID() {
     var url = window.location.href;
     var id = url.substring(url.lastIndexOf("#") + 1);
@@ -21,7 +26,9 @@ function ocultarElementosPorID() {
         for (var j = 0; j < filhos.length; j++) {
             filhos[j].style.display = "block";
         }
+        // Adiciona ajuste na rolagem para posicionar acima do elemento específico
+        var offset = -200; // Ajuste de 200 pixels acima do elemento, pode ajustar conforme necessário
+        var elementPosition = elementoEspecifico.getBoundingClientRect().top + window.pageYOffset + offset;
+        window.scrollTo({ top: elementPosition, behavior: 'smooth' });
     }
 }
-
-ocultarElementosPorID();
