@@ -433,6 +433,14 @@ const news = [
     date: "10/06/2024",
     alt: "",
   },
+  {
+    id: 45,
+    title: "Educação inclusiva é tema do VIII Simpósio de Pedagogia",
+    image: "./img/imagens-noticias/noticias_simposio_de_pedagogia_card.png",
+    description: "O evento aconteceu trouxe um debate amplo, de forma gratuita e aberta ao público acerca da acessibilidade e inclusão",
+    date: "12/06/2024",
+    alt: "",
+  },
 ];
 
 function generateSlug(title) {
