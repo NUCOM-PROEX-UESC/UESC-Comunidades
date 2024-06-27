@@ -441,6 +441,38 @@ const news = [
     date: "12/06/2024",
     alt: "",
   },
+  {
+    id: 46,
+    title: "PROEX Participa de Reunião com Agricultores do Assentamento João Amazonas em Uruçuca-BA",
+    image: "./img/imagens-noticias/noticia_reuniao_com_agricutores_card.png",
+    description: "A convite da COOPAFEBA, a Proex se reuniu com o assentamento em uma palestra sobre Certificação Participativa, ministrada pelo agroecologista Francisco Villas, além disso, foi realizado o cadastro dos assentados para inclusão em projetos governamentais",
+    date: "18/06/2024",
+    alt: "",
+  },
+  {
+    id: 47,
+    title: "Projeto Praia Limpa Realiza Ações de Limpeza em Ilhéus e Uruçuca e coletam 600 kg de resíduos sólidos",
+    image: "./img/imagens-noticias/noticia_semana_do_meio_ambiente_card.png",
+    description: "Como parte das comemorações da Semana do Meio Ambiente, no dia 08 de Junho, o projeto realizou duas importantes atividades de limpeza nas praias de Ilhéus e Uruçuca. Com a participação de estudantes, moradores locais e turistas, foram retirados cerca de 600 kg de resíduos sólidos das praias do Malhado e Sargi.",
+    date: "18/06/2024",
+    alt: "",
+  },
+  {
+    id: 48,
+    title: "FAEG-SUL realiza Encontro Territorial de Cultura em Santa Luzia",
+    image: "./img/imagens-noticias/noticia_encontro_territorial_de_cultura_em_santa_luzia_card.png",
+    description: "FAEG-SUL realiza Encontro Territorial de Cultura para formar os gestores municipais na consolidação dos Sistemas de Cultura de seus municípios",
+    date: "18/06/2024",
+    alt: "",
+  },
+  {
+    id: 49,
+    title: "E Q Play realiza mais uma edição de jogos com Estudantes de Engenharia Química da UESC",
+    image: "./img/imagens-noticias/noticia_edicao_de_jogos_com_estudantes_de_engenharia_quimica_da_uesc_card.png",
+    description: "Em parceria com a Veracel Celulose, o evento foi uma edição especial focada no aprendizado e inovação na indústria de papel e celulose com a imersão prática através de minicursos e palestras.",
+    date: "18/06/2024",
+    alt: "",
+  },
 ];
 
 function generateSlug(title) {
