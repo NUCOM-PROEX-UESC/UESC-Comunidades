@@ -9,6 +9,10 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, blockquote, pre, code, em, strong, b, u,
     background: #eee !important;
 }
 
+.no-bullet {
+    list-style-type: none;
+  }
+
 .space_list{
     margin-left: 5ch;
     width: 90%;
