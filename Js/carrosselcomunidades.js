@@ -148,6 +148,21 @@ const cardsData = [
 
 var cardsToShow;
 
+// Obtém o parâmetro 'projeto' da URL atual
+function getProjetoFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("projeto");
+}
+
+// Filtra os cards para excluir o projeto atualmente aberto na URL
+function filterCards(cardsData) {
+  const currentProjeto = getProjetoFromURL();
+  if (currentProjeto) {
+    return cardsData.filter(card => !card.link.includes(currentProjeto));
+  }
+  return cardsData;
+}
+
 // Função para selecionar aleatoriamente 3 cards do array
 function selectRandomCards(cardsData, numCards) {
   const shuffledCards = cardsData.sort(() => Math.random() - 0.5); // Embaralha o array
@@ -156,7 +171,6 @@ function selectRandomCards(cardsData, numCards) {
 
 // Função para criar um card
 function createCard(data) {
-  /*Criando os elementos dos cards*/
   const cardDiv = document.createElement("div");
   const img = document.createElement("img");
   const contentDiv = document.createElement("div");
@@ -254,9 +268,8 @@ function addCardsToPage(cardsData, numCards) {
 
   cardsToShow = 3; // Define o número padrão de cards a serem mostrados
 
-  // Verifica se é uma tela móvel
-
-  const randomCards = selectRandomCards(cardsData, cardsToShow);
+  const filteredCardsData = filterCards(cardsData); // Filtra os cards
+  const randomCards = selectRandomCards(filteredCardsData, cardsToShow);
   randomCards.forEach((data) => {
     const card = createCard(data);
     cardContainer.appendChild(card);

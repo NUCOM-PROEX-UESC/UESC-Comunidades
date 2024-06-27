@@ -39,6 +39,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/carossel_interno.css" />
     <link rel="stylesheet" type="text/css" href="./css/acessibilidade.css" />
     <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
     <link
@@ -55,118 +56,402 @@
 
   <body>
     <div id="header"></div>
-    <nav id="pojo-a11y-toolbar" class="pojo-a11y-toolbar-right grayscale" role="navigation">
-      <div class="pojo-a11y-toolbar-toggle">
-          <a href="">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="placeholder" width="1em">
-                  <title>Acessibilidade</title>
-                  <g>
-                      <path d="M60.4,78.9c-2.2,4.1-5.3,7.4-9.2,9.8c-4,2.4-8.3,3.6-13,3.6c-6.9,0-12.8-2.4-17.7-7.3c-4.9-4.9-7.3-10.8-7.3-17.7c0-5,1.4-9.5,4.1-13.7c2.7-4.2,6.4-7.2,10.9-9.2l-0.9-7.3c-6.3,2.3-11.4,6.2-15.3,11.8C7.9,54.4,6,60.6,6,67.3c0,5.8,1.4,11.2,4.3,16.1s6.8,8.8,11.7,11.7c4.9,2.9,10.3,4.3,16.1,4.3c7,0,13.3-2.1,18.9-6.2c5.7-4.1,9.6-9.5,11.7-16.2l-5.7-11.4C63.5,70.4,62.5,74.8,60.4,78.9z"></path>
-                      <path d="M93.8,71.3l-11.1,5.5L70,51.4c-0.6-1.3-1.7-2-3.2-2H41.3l-0.9-7.2h22.7v-7.2H39.6L37.5,19c2.5,0.3,4.8-0.5,6.7-2.3c1.9-1.8,2.9-4,2.9-6.6c0-2.5-0.9-4.6-2.6-6.3c-1.8-1.8-3.9-2.6-6.3-2.6c-2,0-3.8,0.6-5.4,1.8c-1.6,1.2-2.7,2.7-3.2,4.6c-0.3,1-0.4,1.8-0.3,2.3l5.4,43.5c0.1,0.9,0.5,1.6,1.2,2.3c0.7,0.6,1.5,0.9,2.4,0.9h26.4l13.4,26.7c0.6,1.3,1.7,2,3.2,2c0.6,0,1.1-0.1,1.6-0.4L97,77.7L93.8,71.3z"></path>
-                  </g>					
-              </svg>
-          </a>
-      </div>
-      <div>
-          <div>
-              <p>Acessibilidade</p>
-              <ul>
-                  <li>
-                      <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-plus" data-action="resize-plus" data-action-group="resize" tabindex="0" role="link">
-                          <span class="pojo-a11y-toolbar-icon">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448">
-                                  <title>Aumentar Texto</title>
-                                  <path fill="" d="M256 200v16c0 4.25-3.75 8-8 8h-56v56c0 4.25-3.75 8-8 8h-16c-4.25 0-8-3.75-8-8v-56h-56c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h56v-56c0-4.25 3.75-8 8-8h16c4.25 0 8 3.75 8 8v56h56c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
-                              </svg>
-                          </span>
-                          <span class="pojo-a11y-toolbar-text">Aumentar Texto</span>
-                      </a>
-                  </li>
-                  <li class="pojo-a11y-toolbar-item">
-                      <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-minus" data-action="resize-minus" data-action-group="resize" tabindex="0" role="link">
-                          <span class="pojo-a11y-toolbar-icon">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448">
-                                  <title>Diminuir Texto</title>
-                                  <path fill="" d="M256 200v16c0 4.25-3.75 8-8 8h-144c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h144c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
-                              </svg>
-                          </span>
-                          <span class="pojo-a11y-toolbar-text">Diminuir Texto</span>								
-                      </a>
-                  </li>
-                  <li class="pojo-a11y-toolbar-item">
-                      <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-grayscale" data-action="grayscale" data-action-group="schema" tabindex="0" role="link">
-                          <span class="pojo-a11y-toolbar-icon">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448">
-                                  <title>Escala de cinza</title>
-                                  <path fill="" d="M15.75 384h-15.75v-352h15.75v352zM31.5 383.75h-8v-351.75h8v351.75zM55 383.75h-7.75v-351.75h7.75v351.75zM94.25 383.75h-7.75v-351.75h7.75v351.75zM133.5 383.75h-15.5v-351.75h15.5v351.75zM165 383.75h-7.75v-351.75h7.75v351.75zM180.75 383.75h-7.75v-351.75h7.75v351.75zM196.5 383.75h-7.75v-351.75h7.75v351.75zM235.75 383.75h-15.75v-351.75h15.75v351.75zM275 383.75h-15.75v-351.75h15.75v351.75zM306.5 383.75h-15.75v-351.75h15.75v351.75zM338 383.75h-15.75v-351.75h15.75v351.75zM361.5 383.75h-15.75v-351.75h15.75v351.75zM408.75 383.75h-23.5v-351.75h23.5v351.75zM424.5 383.75h-8v-351.75h8v351.75zM448 384h-15.75v-352h15.75v352z"></path>
-                              </svg>
-                          </span>
-                          <span class="pojo-a11y-toolbar-text">Escala de cinza</span>								
-                      </a>
-                  </li>
-                  <li class="pojo-a11y-toolbar-item">
-                      <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-high-contrast" data-action="high-contrast" data-action-group="schema" tabindex="0" role="link">
-                          <span class="pojo-a11y-toolbar-icon">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448">
-                                  <title>Alto contraste</title>
-                                  <path fill="" d="M192 360v-272c-75 0-136 61-136 136s61 136 136 136zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
-                              </svg>
-                          </span>
-                          <span class="pojo-a11y-toolbar-text">Alto contraste</span>								
-                      </a>
-                  </li>
-                  <li class="pojo-a11y-toolbar-item">
-                      <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-negative-contrast" data-action="negative-contrast" data-action-group="schema" tabindex="0" role="link">
-  
-                          <span class="pojo-a11y-toolbar-icon">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448">
-                                  <title>Contraste  negativo</title>
-                                  <path fill="" d="M416 240c-23.75-36.75-56.25-68.25-95.25-88.25 10 17 15.25 36.5 15.25 56.25 0 61.75-50.25 112-112 112s-112-50.25-112-112c0-19.75 5.25-39.25 15.25-56.25-39 20-71.5 51.5-95.25 88.25 42.75 66 111.75 112 192 112s149.25-46 192-112zM236 144c0-6.5-5.5-12-12-12-41.75 0-76 34.25-76 76 0 6.5 5.5 12 12 12s12-5.5 12-12c0-28.5 23.5-52 52-52 6.5 0 12-5.5 12-12zM448 240c0 6.25-2 12-5 17.25-46 75.75-130.25 126.75-219 126.75s-173-51.25-219-126.75c-3-5.25-5-11-5-17.25s2-12 5-17.25c46-75.5 130.25-126.75 219-126.75s173 51.25 219 126.75c3 5.25 5 11 5 17.25z"></path>
-                              </svg>
-                          </span>
-                          <span class="pojo-a11y-toolbar-text">Contraste  negativo</span>								
-                      </a>
-                  </li>
-                  <li class="pojo-a11y-toolbar-item">
-                      <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-links-underline" data-action="links-underline" data-action-group="toggle" tabindex="0" role="link">
-                          <span class="pojo-a11y-toolbar-icon">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448">
-                                  <title>Links Sublinhados</title>
-                                  <path fill="" d="M364 304c0-6.5-2.5-12.5-7-17l-52-52c-4.5-4.5-10.75-7-17-7-7.25 0-13 2.75-18 8 8.25 8.25 18 15.25 18 28 0 13.25-10.75 24-24 24-12.75 0-19.75-9.75-28-18-5.25 5-8.25 10.75-8.25 18.25 0 6.25 2.5 12.5 7 17l51.5 51.75c4.5 4.5 10.75 6.75 17 6.75s12.5-2.25 17-6.5l36.75-36.5c4.5-4.5 7-10.5 7-16.75zM188.25 127.75c0-6.25-2.5-12.5-7-17l-51.5-51.75c-4.5-4.5-10.75-7-17-7s-12.5 2.5-17 6.75l-36.75 36.5c-4.5 4.5-7 10.5-7 16.75 0 6.5 2.5 12.5 7 17l52 52c4.5 4.5 10.75 6.75 17 6.75 7.25 0 13-2.5 18-7.75-8.25-8.25-18-15.25-18-28 0-13.25 10.75-24 24-24 12.75 0 19.75 9.75 28 18 5.25-5 8.25-10.75 8.25-18.25zM412 304c0 19-7.75 37.5-21.25 50.75l-36.75 36.5c-13.5 13.5-31.75 20.75-50.75 20.75-19.25 0-37.5-7.5-51-21.25l-51.5-51.75c-13.5-13.5-20.75-31.75-20.75-50.75 0-19.75 8-38.5 22-52.25l-22-22c-13.75 14-32.25 22-52 22-19 0-37.5-7.5-51-21l-52-52c-13.75-13.75-21-31.75-21-51 0-19 7.75-37.5 21.25-50.75l36.75-36.5c13.5-13.5 31.75-20.75 50.75-20.75 19.25 0 37.5 7.5 51 21.25l51.5 51.75c13.5 13.5 20.75 31.75 20.75 50.75 0 19.75-8 38.5-22 52.25l22 22c13.75-14 32.25-22 52-22 19 0 37.5 7.5 51 21l52 52c13.75 13.75 21 31.75 21 51z"></path>
-                              </svg>
-                          </span>
-                          <span class="pojo-a11y-toolbar-text">Links Sublinhados</span>								
-                      </a>
-                  </li>
-                  <li class="pojo-a11y-toolbar-item">
-                      <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-readable-font" data-action="readable-font" data-action-group="toggle" tabindex="0" role="link">
-                          <span class="pojo-a11y-toolbar-icon">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448">
-                                  <title>Fonte Legível</title>
-                                  <path fill="" d="M181.25 139.75l-42.5 112.5c24.75 0.25 49.5 1 74.25 1 4.75 0 9.5-0.25 14.25-0.5-13-38-28.25-76.75-46-113zM0 416l0.5-19.75c23.5-7.25 49-2.25 59.5-29.25l59.25-154 70-181h32c1 1.75 2 3.5 2.75 5.25l51.25 120c18.75 44.25 36 89 55 133 11.25 26 20 52.75 32.5 78.25 1.75 4 5.25 11.5 8.75 14.25 8.25 6.5 31.25 8 43 12.5 0.75 4.75 1.5 9.5 1.5 14.25 0 2.25-0.25 4.25-0.25 6.5-31.75 0-63.5-4-95.25-4-32.75 0-65.5 2.75-98.25 3.75 0-6.5 0.25-13 1-19.5l32.75-7c6.75-1.5 20-3.25 20-12.5 0-9-32.25-83.25-36.25-93.5l-112.5-0.5c-6.5 14.5-31.75 80-31.75 89.5 0 19.25 36.75 20 51 22 0.25 4.75 0.25 9.5 0.25 14.5 0 2.25-0.25 4.5-0.5 6.75-29 0-58.25-5-87.25-5-3.5 0-8.5 1.5-12 2-15.75 2.75-31.25 3.5-47 3.5z"></path>
-                              </svg>
-                          </span>
-                          <span class="pojo-a11y-toolbar-text">Fonte Legível</span>								
-                      </a>
-                  </li>
-                  <li class="pojo-a11y-toolbar-item">
-                      <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-reset" data-action="reset" tabindex="0" role="link">
-                          <span class="pojo-a11y-toolbar-icon">
-                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448">
-                                  <title>Reiniciar</title>
-                                  <path fill="" d="M384 224c0 105.75-86.25 192-192 192-57.25 0-111.25-25.25-147.75-69.25-2.5-3.25-2.25-8 0.5-10.75l34.25-34.5c1.75-1.5 4-2.25 6.25-2.25 2.25 0.25 4.5 1.25 5.75 3 24.5 31.75 61.25 49.75 101 49.75 70.5 0 128-57.5 128-128s-57.5-128-128-128c-32.75 0-63.75 12.5-87 34.25l34.25 34.5c4.75 4.5 6 11.5 3.5 17.25-2.5 6-8.25 10-14.75 10h-112c-8.75 0-16-7.25-16-16v-112c0-6.5 4-12.25 10-14.75 5.75-2.5 12.75-1.25 17.25 3.5l32.5 32.25c35.25-33.25 83-53 132.25-53 105.75 0 192 86.25 192 192z"></path>
-                              </svg>
-                          </span>
-                          <span class="pojo-a11y-toolbar-text">Reiniciar</span>
-                      </a>
-                  </li>
-              </ul>
+    
+    <section id="newsSection" class="container my-5 py-5 return-pagination">
+      <div
+        id="e-q-play-realiza-mais-uma-edicao-de-jogos-com-estudantes-de-engenharia-quimica-da-uesc"
+        class="sec"
+      >
+        <div class="text-proex">
+          <h3 class="font-weight-bold">
+            E.Q Play realiza mais uma edição com Estudantes de Engenharia Química da UESC
+          </h3>
+          <hr />
+        </div>
+        <div class="container">
+          <div class="sec my-5">
+            <div>
+              <div>
+                <p>
+                  Durante o mês de maio, o projeto de extensão E.Q Play, em colaboração com a Veracel Celulose, realizou uma edição especial focada na indústria de Papel e Celulose. O evento tratou-se de uma competição online, composta por minicursos, palestra, visita técnica e um Quiz de perguntas e respostas. A competição proporcionou aos(às) estudantes de Engenharia Química da UESC e à comunidade externa uma imersão no universo da indústria de papel e celulose através de minicursos e palestras ministrados por profissionais da Veracel, abordando temas que foram desde a produção de celulose até inclusão e diversidade. Ao final das etapas do jogo, seis estudantes concorreram a uma vaga de estágio na empresa.
+                </p>
+                <p>
+                  As coordenadoras do projeto, Jéssica Barbosa e Geovana Pires, destacam que o uso de jogos como metodologia ativa oferece benefícios acadêmicos e a oportunidade de estágio em indústrias químicas. Além de aprimorar habilidades técnicas, "os(as) participantes discutem temáticas tais como gênero, relações étnico raciais e direitos humanos”, afirmam as professoras.
+                </p>
+                <div class="pb-4 div-img-news">
+                  <img
+                    class="img-news"
+                    src="./img/imagens-noticias/noticia_edicao_de_jogos_com_estudantes_de_engenharia_quimica_da_uesc.noticiacompleta3.png"
+                    alt=""
+                  />
+                  <p class="float-right text-secondary">
+                    Foto: Aldair Silva, estudante campeão da edição. Projeto E.Q. Play
+                  </p>
+                </div>
+                <p>
+                  Aldair Silva, participante e campeão da edição, ressaltou a importância do contato direto com profissionais da área e do debate das relações étnico-raciais e de gênero. O estudante de Engenharia Química da UESC também mencionou a importância da visita técnica à empresa Veracel e do prêmio de estágio como oportunidades cruciais para ingressar no mercado de trabalho. "Recomendo que participem do E.Q Play, não apenas pelo prêmio, mas pelas experiências enriquecedoras ao longo do projeto. Nas duas edições em que participei, amadureci muito e hoje me vejo como um profissional mais capacitado," afirmou Aldair. Ele ainda destacou a dificuldade de um engenheiro químico em formação ingressar no mercado de trabalho na região e como o projeto E.Q. Play cria oportunidades. "Vai ser um desafio completamente novo para mim. As expectativas estão altas, e espero poder ser efetivado após a conclusão do estágio e da formatura".
+                </p>
+                <div class="pb-4 div-img-news">
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_edicao_de_jogos_com_estudantes_de_engenharia_quimica_da_uesc.noticiacompleta2.png" alt="Image 7">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_edicao_de_jogos_com_estudantes_de_engenharia_quimica_da_uesc.noticiacompleta.png" alt="Image 8">
+                          </div>
+                          <div class="carousel-interno-item">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_edicao_de_jogos_com_estudantes_de_engenharia_quimica_da_uesc.noticiacompleta5.png" alt="Image 2">
+                          </div>
+                          <div class="carousel-interno-item carousel-interno-active">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_edicao_de_jogos_com_estudantes_de_engenharia_quimica_da_uesc.noticiacompleta6.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_edicao_de_jogos_com_estudantes_de_engenharia_quimica_da_uesc.noticiacompleta7.png" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Projeto E.Q. Play
+                  </p>
+                </div>
+                <p>
+                  As professoras afirmam que “os feedbacks dos(as) alunos(as) são muito gratificantes, especialmente daqueles(as) que foram premiados(as) com estágios, representando um importante passo para suas vidas profissionais.” Elas destacam que o E.Q Play é um projeto de extensão da UESC que busca aprimorar a formação dos estudantes de Engenharia Química, oferecendo módulos de formação disponíveis de forma online que são acessíveis também à comunidade externa. Os conteúdos abordam temas específicos da Engenharia Química, empreendedorismo, inovação e humanidades, elaborados em parceria com empresas e profissionais das áreas das humanidades.
+                </p>
+                <p>
+                  A UESC, por meio da Pró-reitoria de Extensão, parabeniza a equipe e os participantes de mais uma edição do E.Q. Play, saudando a todos pelo trabalho realizado e o compromisso com a educação de qualidade e a formação de futuros profissionais. A universidade reconhece que o esforço conjunto de alunos, professores, técnicos e parceiros é fundamental para fortalecer o vínculo entre academia, comunidade e indústria, promovendo o crescimento pessoal e profissional de todos os envolvidos.
+                </p>
+                <div class="float-right text-right text-secondary">
+                  <p>
+                    Por:  Allana Almeida<br />
+                    Supervisão: Alencar Júnior<br />
+                    18 de Junho de 2024
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-    </nav>
-
-    <section id="newsSection" class="container my-5 py-5 return-pagination grayscale">
-      <div id="news44" class="sec">
+      <div
+        id="faeg-sul-realiza-encontro-territorial-de-cultura-em-santa-luzia"
+        class="sec"
+      >
+        <div class="text-proex">
+          <h3 class="font-weight-bold">
+            A itinerância continua com mais um encontro, e o FAEG-SUL chegou ao município de Santa Luzia
+          </h3>
+          <hr />
+        </div>
+        <div class="container">
+          <div class="sec my-5">
+            <div>
+              <div>
+                <p>
+                  O FAEG-SUL (Fórum de Agentes, Empreendedores e Gestores Culturais do Território Litoral Sul) segue com sua itinerância e através dos seus encontros mensais tem levado formação, integração e fortalecimento da rede de cultura para os quatro cantos do território. Desta vez a caravana desembarcou no município de Santa Luzia, no dia 13 de junho.
+                </p>
+                <p>
+                  Com o tema “Cultura e Cidadania” esse encontro teve em sua programação um workshop sobre elaboração de projetos, com Victor Aziz; orientação sobre implantação de Pontos de Cultura, com Maria Áurea; e formação sobre prazos dos editais de cultura, com a mestre Lainha.
+                </p>
+                <div class="pb-4 div-img-news">
+                  <img
+                    class="img-news"
+                    src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_em_santa_luzia_noticiacompleta.png"
+                    alt=""
+                  />
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+                </div>
+                <p>
+                  A passagem do FAEG-SUL por Santa Luzia foi permeado por diversos momentos culturais, com apresentação da Fanfarra Marcial FANCEJA, do grupo Associação Cultural Capoeira Raça, com o mestre Léo; Boi Estrela, e muito mais. Tudo isso com a presença de gestores e fazedores de cultura, além de estudantes da rede pública de ensino do município, em uma importante relação de parceria entre cultura e educação.
+                </p>
+                <div class="pb-4 div-img-news">
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_em_santa_luzia_noticiacompleta2.png" alt="Image 7">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_em_santa_luzia_noticiacompleta3.png" alt="Image 8">
+                          </div>
+                          <div class="carousel-interno-item carousel-interno-active">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_em_santa_luzia_noticiacompleta4.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_em_santa_luzia_noticiacompleta5.png" alt="Image 2">
+                          </div>
+                          <div class="carousel-interno-item carousel-interno-active">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_em_santa_luzia_noticiacompleta6.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_em_santa_luzia_noticiacompleta7.png" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+                </div>
+                <p>
+                  O FAEG-SUL é um dos fóruns que compõem o Programa AGIR 2.0 (Apoio Gerencial Institucional às Prefeituras) – uma ação integrada entre a UESC (Universidade Estadual de Santa Cruz), através da PROEX (Pró-Reitoria de Extensão) e A AMURC (Associação dos Municípios do Sul, Extremo Sul e Sudoeste da Bahia).
+                </p>
+                <div class="float-right text-right text-secondary">
+                  <p>
+                    Por:  Camila Neves<br />
+                    Supervisão: Alencar Júnior<br />
+                    18 de Junho de 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="projeto-praia-limpa-realiza-acoes-de-limpeza-em-ilheus-e-urucuca-e-coletam-600-kg-de-residuos-solidos"
+        class="sec"
+      >
+        <div class="text-proex">
+          <h3 class="font-weight-bold">
+            Projeto Praia Limpa Realiza Ações de Limpeza em Ilhéus e Uruçuca e coletam 600 kg de resíduos sólidos
+          </h3>
+          <hr />
+        </div>
+        <div class="container">
+          <div class="sec my-5">
+            <div>
+              <div>
+                <p>
+                  No dia 08 de junho, o projeto de extensão Praia Limpa da UESC promoveu duas significativas atividades de limpeza nas praias, em celebração à Semana de Meio Ambiente. A primeira ação ocorreu às 8h na Praia do Malhado, em Ilhéus. Esta iniciativa contou com a colaboração dos discentes do CEEP do Chocolate Nelson Schaun, sob a orientação dos biólogos e professores Emerson Lucena e Sebastiana Menezes. Ao fim, a coleta resultou na retirada de mais de 400 kg de resíduos sólidos.
+                </p>
+                <p>
+                  A segunda ação de limpeza ocorreu às 15h, do mesmo dia, na Praia do Sargi, em Uruçuca. Esta atividade foi realizada em parceria com o biólogo Magno Ferraz Filho, moradores locais e turistas da região. A colaboração de todos os participantes resultou na remoção de cerca de 200 kg de resíduos sólidos da praia.
+                </p>
+                <div class="pb-4 div-img-news">
+                  <img
+                    class="img-news"
+                    src="./img/imagens-noticias/noticia_semana_do_meio_ambiente_noticiacompleta.png"
+                    alt=""
+                  />
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+                </div>
+                <p>
+                  Para o coordenador do projeto, professor Emerson Lucena, “a população ainda não tem consciência, nem sensibilização a respeito do problema que é jogar o lixo de maneira inadequada e não dar o destino correto”. Nesse sentido, o projeto Praia Limpa trabalha com uma ação simbólica de limpeza das praias, cujo objetivo é chamar a atenção para o problema sério do descarte irregular de resíduos sólidos, e que “a intenção não é limpar a praia por completo, mas provocar uma reflexão e sensibilizar a população sobre a importância de descartar o lixo corretamente."
+                </p>
+                <div class="pb-4 div-img-news">
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_semana_do_meio_ambiente_noticiacompleta7.png" alt="Image 7">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_semana_do_meio_ambiente_noticiacompleta8.png" alt="Image 8">
+                          </div>
+                          <div class="carousel-interno-item carousel-interno-active">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_semana_do_meio_ambiente_noticiacompleta2.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_semana_do_meio_ambiente_noticiacompleta3.png" alt="Image 2">
+                          </div>
+                          <div class="carousel-interno-item carousel-interno-active">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_semana_do_meio_ambiente_noticiacompleta4.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_semana_do_meio_ambiente_noticiacompleta5.png" alt="Image 2">
+                          </div>
+                          <div class="carousel-interno-item carousel-interno-active">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_semana_do_meio_ambiente_noticiacompleta6.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_semana_do_meio_ambiente_noticiacompleta9.png" alt="Image 8">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+                </div>
+                <p>
+                  O professor aponta ainda que a participação da comunidade é um ponto forte do projeto, atraindo tanto estudantes interessados em aprender e contribuir quanto moradores e turistas que se envolvem voluntariamente. “Os estudantes participam porque têm interesse na causa e curiosidade sobre o assunto. A comunidade local, muitas vezes, se junta ao ver a ação acontecendo”, explica Lucena.
+                </p>
+                <p>
+                  Além de limpar as praias, o projeto Praia Limpa tem como um de seus objetivos estimular outras iniciativas similares. “O principal impacto dessa atividade é inspirar outras pessoas a criar projetos de limpeza de praias em outros lugares. Aqui em Ilhéus, temos o Praia Limpa Surf Limpo e o Grupo de Amigos da Praia (GAP), que foram baseados no nosso projeto”, destaca Lucena. O projeto Praia Limpa, que celebra 25 anos em julho, possui uma importância histórica e socioambiental significativa na região.
+                </p>
+                <p>
+                  Atividades como essas, do Projeto de Extensão Praia Limpa, não só contribuem significativamente para a preservação ambiental, como também reforçaram a importância da conscientização e do envolvimento comunitário na proteção das praias. A Uesc expressa seu profundo agradecimento aos educadores ambientais envolvidos e reitera sua oposição à privatização das praias, defendendo o acesso livre e a conservação dos espaços naturais.
+                </p>
+                <div class="float-right text-right text-secondary">
+                  <p>
+                    Por: Allana Almeida<br />
+                    Supervisão: Alencar Júnior<br />
+                    18 de Junho de 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="proex-participa-de-reuniao-com-agricultores-do-assentamento-joao-amazonas-em-urucuca-ba"
+        class="sec"
+      >
+        <div class="text-proex">
+          <h3 class="font-weight-bold">
+            PROEX Participa de Reunião com Agricultores do Assentamento João Amazonas em Uruçuca-BA
+          </h3>
+          <hr />
+        </div>
+        <div class="container">
+          <div class="sec my-5">
+            <div>
+              <div>
+                <p>
+                  No dia 09 de junho, a Proex, por meio da Coordenação de Integração Comunitária (Coinc), participou de uma reunião significativa com os agricultores e agricultoras do Assentamento João Amazonas, localizado no município de Uruçuca-BA. A reunião, promovida a convite da Cooperativa dos Assentados da Reforma Agraria e Agricultores Familiares do Estado da Bahia (COOPAFEBA), teve como objetivo principal discutir a Certificação Participativa. Durante o encontro, o agroecologista Francisco Villas, membro da Rede de Agroecologia Povos da Mata, ministrou uma palestra detalhada sobre o tema, explicando seus benefícios e como implementar essa certificação na prática.
+                </p>
+                <p>
+                  A atividade também focou no cadastro dos assentados e das assentadas, visando à inclusão dos mesmos nos diversos projetos dos governos estadual e federal. A iniciativa visa facilitar a esses agricultores o acesso ao crédito e ao financiamento governamental, proporcionando melhores condições para o desenvolvimento agrícola sustentável e familiar.
+                </p>
+                <div class="pb-4 div-img-news">
+                  <img
+                    class="img-news"
+                    src="./img/imagens-noticias/noticia_reuniao_com_agricutores_noticiacompleta.png"
+                    alt=""
+                  />
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+                </div>
+                <p>
+                  A comunidade local participou ativamente das atividades realizadas, e promoveram um almoço coletivo para os visitantes. O encontro marca o fortalecimento dos laços comunitários e proporciona um momento de confraternização e troca de experiências entre universidade e comunidade. O engajamento e participação ativa da comunidade nos projetos de certificação e inclusão são fundamentais para o fortalecimento da agricultura sustentável e familiar, bem como, para a melhoria das condições de vida no Assentamento João Amazonas.
+                </p>
+                <div class="pb-4 div-img-news">
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_reuniao_com_agricutores_noticiacompleta2.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_reuniao_com_agricutores_noticiacompleta3.png" alt="Image 2">
+                          </div>
+                          <div class="carousel-interno-item carousel-interno-active">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_reuniao_com_agricutores_noticiacompleta4.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_reuniao_com_agricutores_noticiacompleta5.png" alt="Image 2">
+                          </div>
+                          <div class="carousel-interno-item carousel-interno-active">
+                            <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_reuniao_com_agricutores_noticiacompleta6.png" alt="Image 1">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+                </div>
+                <p>
+                  A comunidade local participou ativamente das atividades realizadas e promoveu um almoço coletivo para os visitantes. O encontro marcou o fortalecimento dos laços comunitários e proporcionou um momento de confraternização e troca de experiências entre universidade e comunidade. O engajamento e a participação ativa da comunidade são fundamentais para o fortalecimento da agricultura sustentável e familiar, bem como para a melhoria das condições de vida no Assentamento João Amazonas.
+                </p>
+                <p>
+                  A Uesc, por meio da Proex, expressa seus sinceros agradecimentos aos assentados e as assentadas pela acolhida carinhosa e pela troca enriquecedora, e reafirma seu compromisso com o apoio ao desenvolvimento local e à promoção da agroecologia, trabalhando em parceria com organizações locais e governamentais para fomentar práticas sustentáveis e inclusivas na região.
+                </p>
+                <div class="float-right text-right text-secondary">
+                  <p>
+                    Por: Allana Almeida<br />
+                    Supervisão: Alencar Júnior<br />
+                    18 de Junho de 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="educacao-inclusiva-e-tema-do-viii-simposio-de-pedagogia"
+        class="sec"
+      >
+        <div class="text-proex">
+          <h3 class="font-weight-bold">
+            Educação inclusiva é tema do VIII Simpósio de Pedagogia
+          </h3>
+          <hr />
+        </div>
+        <div class="container">
+          <div class="sec my-5">
+            <div>
+              <div>
+                <p>
+                  Entre os dias 27 e 29 de maio, a Universidade Estadual de Santa Cruz (UESC) sediou o VIII Simpósio de Pedagogia, com o tema "Educação Inclusiva: desafios, tensões e perspectivas". O evento contou com apresentações culturais de dança realizadas por ex-alunos da UESC e trouxe à tona questões cruciais sobre a inclusão no ambiente educacional.
+                </p>
+                <p>
+                  A abertura do simpósio foi marcada pela fala da Coordenadora do evento, Professora Lílian Moreira, que ressaltou o compromisso político da educação na redução das desigualdades. "A educação é uma ferramenta fundamental para promover a equidade social", destacou a professora. O Pró-Reitor de Extensão, Cristiano Bahia, também enfatizou a importância da integração entre pesquisa, extensão e graduação, além de sublinhar a relevância da formação dialógica na abordagem educativa para uma sociedade mais inclusiva.
+                </p>
+                <div class="pb-4 div-img-news">
+                  <img
+                    class="img-news"
+                    src="./img/imagens-noticias/noticias_simposio_de_pedagogia_noticiacompleta.png"
+                    alt=""
+                  />
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+                </div>
+                <p>
+                  O VIII Simpósio de Pedagogia discutiu os enfrentamentos e desafios da educação inclusiva que podem dificultar sua implementação eficaz. A Professora Genigleide, uma militante da causa, afirmou que "a educação inclusiva deve ser o pilar da educação, forçando assim que ela saia do papel". Segundo ela, a inclusão vai além das adaptações no currículo, metodologia de ensino, avaliação e infraestrutura escolar, devendo promover uma cultura de respeito, aceitação e valorização da diferença.
+                </p>
+                <div class="pb-4 div-img-news">
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticias_simposio_de_pedagogia_noticiacompleta2.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticias_simposio_de_pedagogia_noticiacompleta3.png" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+                </div>
+                <p>
+                  Durante o evento, o Reitor Alessandro Fernandes de Santana abordou os esforços contínuos da UESC para se tornar uma instituição mais inclusiva. O Reitor mencionou a necessidade de melhorar a acessibilidade no campus, citando a construção de um novo Restaurante Universitário em um local mais acessível, projeto que já está em fase de estudo pela Prefeitura do Campus.
+                </p>
+                <p>
+                  A UESC compreende a importância vital da educação inclusiva para o desenvolvimento social tanto local quanto nacional. Reconhecendo que a inclusão educacional é essencial para construir uma sociedade mais justa e equitativa, a universidade reafirma seu compromisso em implementar ações concretas para atender essas demandas. Entre as iniciativas destacadas estão a melhoria da infraestrutura para acessibilidade, a promoção de uma formação acadêmica dialógica e inclusiva, e o incentivo a práticas pedagógicas que valorizem a diversidade.
+                </p>
+                <div class="float-right text-right text-secondary">
+                  <p>
+                    Por: Lis Fonseca<br />
+                    Supervisão: Alencar Júnior<br />
+                    12 de Junho de 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="naf-uesc-recebera-certificacao-da-receita-federal" class="sec">
         <div class="text-proex">
           <h3 class="font-weight-bold">
             NAF-Uesc receberá certificação da Receita Federal
@@ -188,20 +473,61 @@
                   </p>
                 </div>
                 <p>
-                  Os estudos e serviços realizados pelo Núcleo de Apoio Contábil e Fiscal (NAF) da Universidade Estadual de Santa Cruz (Uesc), vinculado ao Departamento de Ciências Administrativas e Contábeis (DCAC), vai receber certificação pela 5ª Região Fiscal da Receita Federal do Brasil. O evento acontece no dia 11 de junho, na Superintendência Regional da Receita Federal, em Salvador, em reconhecimento aos Núcleos de Apoio Contábil e Fiscal dos Estados da Bahia e Sergipe pelos serviços prestados no ano de 2023.
+                  Os estudos e serviços realizados pelo Núcleo de Apoio Contábil
+                  e Fiscal (NAF) da Universidade Estadual de Santa Cruz (Uesc),
+                  vinculado ao Departamento de Ciências Administrativas e
+                  Contábeis (DCAC), vai receber certificação pela 5ª Região
+                  Fiscal da Receita Federal do Brasil. O evento acontece no dia
+                  11 de junho, na Superintendência Regional da Receita Federal,
+                  em Salvador, em reconhecimento aos Núcleos de Apoio Contábil e
+                  Fiscal dos Estados da Bahia e Sergipe pelos serviços prestados
+                  no ano de 2023.
                 </p>
                 <p>
-                  O NAF-Uesc será certificado em duas categorias: Diamante, que se define pelos altos estudos e inovações dos NAFs. O Núcleo da Uesc produziu e apresentou, no período, dois trabalhos científicos em eventos conceituados: o Resumo Expandido "Contribuição Social e Acadêmica do NAF", escrito pelos discentes Gabriela Machado e Raphael Conrado e pelos docentes Genesy Martins e Iracildo Silva, apresentado no III Congresso Internacional de Educação Empreendedora e Cidadania; e o Resumo "Impacto e alcance do NAF Uesc: um olhar sobre suas ações e resultados", produzido pelos docentes Cacá Gonçalves, Genesy Martins, Iracildo Silva e Luzilea Brito (UFSB), e que foi apresentado no V Congresso de Extensão da Universidade Federal do Sul da Bahia.
+                  O NAF-Uesc será certificado em duas categorias: Diamante, que
+                  se define pelos altos estudos e inovações dos NAFs. O Núcleo
+                  da Uesc produziu e apresentou, no período, dois trabalhos
+                  científicos em eventos conceituados: o Resumo Expandido
+                  "Contribuição Social e Acadêmica do NAF", escrito pelos
+                  discentes Gabriela Machado e Raphael Conrado e pelos docentes
+                  Genesy Martins e Iracildo Silva, apresentado no III Congresso
+                  Internacional de Educação Empreendedora e Cidadania; e o
+                  Resumo "Impacto e alcance do NAF Uesc: um olhar sobre suas
+                  ações e resultados", produzido pelos docentes Cacá Gonçalves,
+                  Genesy Martins, Iracildo Silva e Luzilea Brito (UFSB), e que
+                  foi apresentado no V Congresso de Extensão da Universidade
+                  Federal do Sul da Bahia.
                 </p>
                 <p>
-                  A outra certificação é na categoria Prata, que considera o número de atendimentos prestados pelos NAFs anualmente. Em 10 meses, o NAF-Uesc atendeu a 1.574 cidadãos, no ano de 2023. O coordenador do projeto, professor Genesy Martins, acompanhado pela docente e colaboradora Maria Clara Magalhães e os voluntários Eric Duarte, João Carvalho e Raphael Conrado, participarão do evento de certificação.
+                  A outra certificação é na categoria Prata, que considera o
+                  número de atendimentos prestados pelos NAFs anualmente. Em 10
+                  meses, o NAF-Uesc atendeu a 1.574 cidadãos, no ano de 2023. O
+                  coordenador do projeto, professor Genesy Martins, acompanhado
+                  pela docente e colaboradora Maria Clara Magalhães e os
+                  voluntários Eric Duarte, João Carvalho e Raphael Conrado,
+                  participarão do evento de certificação.
                 </p>
                 <p>
-                  O projeto do Núcleo de Apoio Contábil e Fiscal é desenvolvido pela Receita Federal do Brasil em parceria com as Instituições de Ensino Superior, a fim de proporcionar aos acadêmicos a aplicação dos conhecimentos teóricos e também prestar serviços contábeis, fiscais e jurídicos gratuitos para pessoas físicas e jurídicas de menor poder aquisitivo. O reitor Alessandro Fernandes destaca que o NAF-Uesc é um importante projeto de extensão que contribui para o desenvolvimento acadêmico dos estudantes, unindo os conteúdos abordados em sala de aula às práticas realizadas pelo projeto.
+                  O projeto do Núcleo de Apoio Contábil e Fiscal é desenvolvido
+                  pela Receita Federal do Brasil em parceria com as Instituições
+                  de Ensino Superior, a fim de proporcionar aos acadêmicos a
+                  aplicação dos conhecimentos teóricos e também prestar serviços
+                  contábeis, fiscais e jurídicos gratuitos para pessoas físicas
+                  e jurídicas de menor poder aquisitivo. O reitor Alessandro
+                  Fernandes destaca que o NAF-Uesc é um importante projeto de
+                  extensão que contribui para o desenvolvimento acadêmico dos
+                  estudantes, unindo os conteúdos abordados em sala de aula às
+                  práticas realizadas pelo projeto.
                 </p>
                 <div class="float-right text-right text-secondary">
                   <p>
-                    Por: <a title="link para a matéria original" class="links_internos" href="https://www2.uesc.br/noticias/1066/NAF-Uesc-recebera-certificacao-da-Receita-Federal">Ascom</a><br />
+                    Por:
+                    <a
+                      title="link para a matéria original"
+                      class="links_internos"
+                      href="https://www2.uesc.br/noticias/1066/NAF-Uesc-recebera-certificacao-da-Receita-Federal"
+                      >Ascom</a
+                    ><br />
                     10 de Junho de 2024
                   </p>
                 </div>
@@ -210,7 +536,6 @@
           </div>
         </div>
       </div>
-    <section id="newsSection" class="container my-5 py-5 return-pagination">
       <div
         id="encontro-de-egressos-do-curso-de-iniciacao-a-regencia-coral-e-instrumental-na-uesc"
         class="sec"
@@ -325,7 +650,7 @@
                 <div class="pb-4 div-img-news">
                   <img
                     class="img-news"
-                    src="./img/imagens-noticias/noticia_palestra_taboquinhas_noticiacompleta.png"
+                    src="./img/imagens-noticias/noticia_palestra_taboquinhas_noticiacompleta2.png"
                     alt=""
                   />
                   <p class="float-right text-secondary">
@@ -343,11 +668,19 @@
                   equilibrado e justo para todos.
                 </p>
                 <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_palestra_taboquinhas_noticiacompleta2.png"
-                    alt=""
-                  />
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_palestra_taboquinhas_noticiacompleta.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_palestra_taboquinhas_noticiacompleta3.png" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
                   <p class="float-right text-secondary">
                     Foto: Assessoria UESC
                   </p>
@@ -627,15 +960,31 @@
                   Sistemas de Cultura de seus municípios.
                 </p>
                 <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_noticiacompleta2.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">
-                    Foto: Assessoria UESC
-                  </p>
-                </div>
+                  <div class="pb-4 div-img-news">
+                    <div class="carousel-interno" id="carousel-1">
+                        <div class="carousel-interno-inner">
+                            <div class="carousel-interno-item carousel-interno-active">
+                                <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_noticiacompleta2.png" alt="Image 1">
+                            </div>
+                            <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_noticiacompleta3.png" alt="Image 1">
+                            </div>
+                            <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_noticiacompleta4.png" alt="Image 1">
+                            </div>
+                            <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_encontro_territorial_de_cultura_noticiacompleta5.png" alt="Image 1">
+                            </div>
+                        </div>
+                        <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                        <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                        <div class="carousel-interno-indicators"></div>
+                    </div>
+                  </div>
+                    <p class="float-right text-secondary">
+                      Foto: Assessoria UESC
+                    </p>
+                 </div>
                 <p>
                   O FAEG-SUL é um dos fóruns que compõem o Programa AGIR 2.0
                   (Apoio Gerencial Institucional às Prefeituras) – uma ação
@@ -925,13 +1274,23 @@
                   Nazistas.
                 </p>
                 <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_ciganos_noticiacompleta2.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_ciganos_noticiacompleta2.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_ciganos_noticiacompleta3.png" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+              </div>
                 <p>
                   Com o tempo alguns países proibiram a entrada destes por conta
                   de alguns estereótipos, que ainda os perseguem até os dias
@@ -945,14 +1304,6 @@
                   preconceito, o que dificulta o acesso a oportunidades
                   educacionais, empregos e serviços básicos.
                 </p>
-                <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_ciganos_noticiacompleta3.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
                 <p>
                   Esforços para combater esse preconceito e promover a inclusão
                   têm sido feitos em várias partes do mundo, mas ainda há muito
@@ -1048,7 +1399,7 @@
           </div>
         </div>
       </div>
-      <div id="news34" class="sec">
+      <div id="coinc-esteve-presente-na-7-edicao-do-formacampo" class="sec">
         <div class="text-proex">
           <h3 class="font-weight-bold">
             COINC representa a UESC na 4ª Edição do Formacampo reafirmando assim
@@ -1129,7 +1480,7 @@
           </div>
         </div>
       </div>
-      <div id="news33" class="sec">
+      <div id="studio-de-danca-do-salobrinho-ganha-documentario" class="sec">
         <div class="text-proex">
           <h3 class="font-weight-bold">
             Studio de Dança do Salobrinho ganha Documentário - Anferre Dance:
@@ -1174,13 +1525,31 @@
                   transformando o futuro dessas crianças.
                 </p>
                 <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_estudio_anferre_noticiacompleta3.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
+                  <div class="pb-4 div-img-news">
+                    <div class="carousel-interno" id="carousel-1">
+                        <div class="carousel-interno-inner">
+                            <div class="carousel-interno-item carousel-interno-active">
+                                <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_estudio_anferre_noticiacompleta2.png" alt="Image 1">
+                            </div>
+                            <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_estudio_anferre_noticiacompleta3.png" alt="Image 1">
+                            </div>
+                            <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_estudio_anferre_noticiacompleta4.png" alt="Image 1">
+                            </div>
+                            <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_estudio_anferre_noticiacompleta5.png" alt="Image 1">
+                            </div>
+                        </div>
+                        <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                        <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                        <div class="carousel-interno-indicators"></div>
+                    </div>
+                  </div>
+                    <p class="float-right text-secondary">
+                      Foto: Assessoria UESC
+                    </p>
+                 </div>
                 <p>
                   Além das aulas de dança, o Studio Anferre também organiza
                   eventos e apresentações que envolvem toda a comunidade,
@@ -1302,13 +1671,23 @@
                   ciclos hidrológicos.
                 </p>
                 <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_aprovacao-consu_noticiacompleta3.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_aprovacao-consu_noticiacompleta2.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_aprovacao-consu_noticiacompleta3.png" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+              </div>
                 <p>
                   A fazenda-escola desempenha um papel crucial no ensino
                   prático, na extensão universitária e na pesquisa em
@@ -1684,13 +2063,23 @@
                   criativa local e regional.
                 </p>
                 <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_escuta_EPEC_COINC_noticiacompleta2.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_escuta_EPEC_COINC_noticiacompleta2.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_escuta_EPEC_COINC_noticiacompleta3.png" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+              </div>
                 <div class="float-right text-right text-secondary">
                   <p>
                     Por: Lis Fonseca<br />
@@ -1968,13 +2357,23 @@
                   estas.
                 </p>
                 <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_proex_Lancamento_Comunidades_noticiacompleta2.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_proex_Lancamento_Comunidades_noticiacompleta2.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_proex_Lancamento_Comunidades_noticiacompleta3.png" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+              </div>
                 <p>
                   Na abertura das apresentações, Emerson Lucena explicou as
                   prerrogativas do edital assegurando o compromisso da equipe
@@ -1991,14 +2390,6 @@
                   estimulando assim a participação da família em atividades que
                   tenha como objetivo a requalificação dos espaços.
                 </p>
-                <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_proex_Lancamento_Comunidades_noticiacompleta3.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
                 <p>
                   Os projetos trazem no seu escopo a relevância sócio-ambiental
                   que executado de forma coordenada e integrada fortalecerá a
@@ -2143,13 +2534,23 @@
                   promoção da conscientização ambiental.
                 </p>
                 <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_proex_composta_noticiacompleta2.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_proex_composta_noticiacompleta2.png" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_proex_composta_noticiacompleta3.png" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+              </div>
                 <p>
                   Essa iniciativa faz parte dos esforços contínuos da Proex para
                   promover práticas eco-friendly no campus universitário, como o
@@ -2167,14 +2568,7 @@
                   sustentável, não apenas para a comunidade universitária, mas
                   para toda a sociedade.
                 </p>
-                <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_proex_composta_noticiacompleta3.png"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
+                
                 <div class="float-right text-right text-secondary">
                   <p>
                     Por: Allana Almeida<br />
@@ -2972,8 +3366,10 @@
           </div>
         </div>
       </div>
-      <div id="proex-uesc-realiza-escuta-ativa-colaborativa-com-a-comunidade-do-salobrinho-para-lancar-o-edital-uesc-comunidades"
-        class="sec">
+      <div
+        id="proex-uesc-realiza-escuta-ativa-colaborativa-com-a-comunidade-do-salobrinho-para-lancar-o-edital-uesc-comunidades"
+        class="sec"
+      >
         <div class="text-proex">
           <h3 class="font-weight-bold">
             PROEX realizou duas reuniões consultivas para propor uma comissão
@@ -3451,13 +3847,23 @@
                   e da Prefeitura de Camacã.
                 </p>
                 <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_faeg_camaca_noticiacompleta2.jpg"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
+                  <div class="carousel-interno" id="carousel-1">
+                      <div class="carousel-interno-inner">
+                          <div class="carousel-interno-item carousel-interno-active">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_faeg_camaca_noticiacompleta2.jpg" alt="Image 1">
+                          </div>
+                          <div class="carousel-interno-item">
+                              <img class="image_carousel_intern" src="./img/imagens-noticias/noticia_faeg_camaca_noticiacompleta3.jpg" alt="Image 2">
+                          </div>
+                      </div>
+                      <button class="carousel-interno-control carousel-interno-prev">&#10094;</button>
+                      <button class="carousel-interno-control carousel-interno-next">&#10095;</button>
+                      <div class="carousel-interno-indicators"></div>
+                  </div>
+                  <p class="float-right text-secondary">
+                    Foto: Assessoria UESC
+                  </p>
+              </div>
                 <p>
                   O evento visa reunir servidores e gestores de cultura dos
                   municípios do Território Litoral Sul, com a finalidade de
@@ -3473,14 +3879,6 @@
                   comunidade, e contou com transporte gratuito saindo de Ilhéus,
                   passando por Itabuna e Buerarema.
                 </p>
-                <div class="pb-4 div-img-news">
-                  <img
-                    class="img-news"
-                    src="./img/imagens-noticias/noticia_faeg_camaca_noticiacompleta3.jpg"
-                    alt=""
-                  />
-                  <p class="float-right text-secondary">Foto: Assessoria</p>
-                </div>
                 <div class="float-right text-right text-secondary">
                   <p>
                     Por: Allana Almeida<br />
@@ -3979,6 +4377,7 @@
   ></script>
   <script src="Js/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="./Js/custom.js"></script>
+  <script type="text/javascript" src="./Js/carrossel_interno.js"></script>
   <script type="text/javascript" src="./Js/noticia_específica.js"></script>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
