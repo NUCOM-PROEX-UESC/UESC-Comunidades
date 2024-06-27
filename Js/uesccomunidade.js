@@ -45,9 +45,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Galeria de imagens
   const overlay = document.querySelector(".overlay");
   const overlayImage = overlay.querySelector("img");
-  const closeBtn = overlay.querySelector(".close");
-  const prevBtn = overlay.querySelector(".prev");
-  const nextBtn = overlay.querySelector(".next");
+
+  // Criar botões de navegação dinamicamente
+  const closeBtn = document.createElement("button");
+  closeBtn.classList.add("close");
+  closeBtn.textContent = "X";
+  overlay.appendChild(closeBtn);
+
+  const prevBtn = document.createElement("button");
+  prevBtn.classList.add("prev");
+  prevBtn.textContent = "<";
+  overlay.appendChild(prevBtn);
+
+  const nextBtn = document.createElement("button");
+  nextBtn.classList.add("next");
+  nextBtn.textContent = ">";
+  overlay.appendChild(nextBtn);
 
   let currentIndex = 0;
 
@@ -133,4 +146,26 @@ document.addEventListener("DOMContentLoaded", function () {
       startX = 0; // Resetar o valor inicial para evitar múltiplos swipes
     }
   }
+
+  // Ajustes de CSS para setas em dispositivos móveis
+  const style = document.createElement('style');
+  style.innerHTML = `
+    @media screen and (max-width: 768px) {
+      .prev,
+      .next {
+        top: auto;
+        bottom: 20px;
+        transform: translateY(0);
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+    }
+  `;
+  document.head.appendChild(style);
 });
