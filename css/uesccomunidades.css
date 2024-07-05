@@ -10,6 +10,7 @@ body {
     align-items: center;
     gap: 1rem;
     margin: 2rem auto;
+    margin-bottom: 0rem;
     width: 80vw; /* Alterado para uma largura percentual mais flexível */
     max-width: 80vw; /* Limita a largura máxima */
     text-align: center;
@@ -73,6 +74,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
+    margin-top: 1rem;
     width: 70vw; /* Alterado para uma largura percentual mais flexível */
     max-width: 80vw; /* Limita a largura máxima */
 }
