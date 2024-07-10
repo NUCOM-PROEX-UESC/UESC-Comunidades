@@ -473,6 +473,14 @@ const news = [
     date: "18/06/2024",
     alt: "",
   },
+  {
+    id: 50,
+    title: "Curricularização da Extensão atende a Escola Fé e Alegria no município de Ilhéus",
+    image: "./img/imagens-noticias/noticia_extensao_atende_a_escola_Fe_e_alegria_card.png",
+    description: "A Escola Fé e Alegria, em Ilhéus, participou de atividades de extensão com Plantas Medicinais e PANC, coordenadas pela Dr.ª Larissa Costa. Houve reforma da horta, introdução de PANC no cardápio escolar e criação de um livreto de receitas. ​",
+    date: "10/07/2024",
+    alt: "",
+  },
 ];
 
 function generateSlug(title) {
