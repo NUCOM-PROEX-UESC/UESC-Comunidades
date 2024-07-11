@@ -4,8 +4,8 @@ window.onload = function() {
 };
 
 function ocultarElementosPorID() {
-  var url = window.location.href;
-  var id = url.substring(url.lastIndexOf("#") + 1);
+  var urlParams = new URLSearchParams(window.location.search);
+  var id = urlParams.get("id"); // Busca o parâmetro "id" na URL
   var section = document.getElementById("newsSection");
   var elementos = section.getElementsByTagName("*");
   for (var i = 0; i < elementos.length; i++) {

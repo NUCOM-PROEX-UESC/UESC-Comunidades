@@ -483,7 +483,6 @@ a.navbar-brand:hover {
     border-radius: 11px;
     background-color: #FFF;
     overflow: hidden;
-    justify-content: space-between;
 }
 
 .image-content,

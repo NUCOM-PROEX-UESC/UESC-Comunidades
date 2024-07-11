@@ -477,144 +477,144 @@ const news = [
     id: 50,
     title: "Curricularização da Extensão atende a Escola Fé e Alegria no município de Ilhéus",
     image: "./img/imagens-noticias/noticia_extensao_atende_a_escola_Fe_e_alegria_card.png",
-    description: "A Escola Fé e Alegria, em Ilhéus, participou de atividades de extensão com Plantas Medicinais e PANC, coordenadas pela Dr.ª Larissa Costa. Houve reforma da horta, introdução de PANC no cardápio escolar e criação de um livreto de receitas. ​",
+    description: " A iniciativa foi planejada a partir da integração das disciplinas Plantas Medicinais e Plantas Alimentícias Não Convencionais (PANC), ambas ministradas pela Dr.ª Larissa Costa, professora vinculada ao Departamento de Ciências Biológicas.​",
     date: "10/07/2024",
     alt: "",
   },
 ];
 
 function generateSlug(title) {
-    return title.toLowerCase()
-        .normalize('NFD') // Normaliza a string em decomposição de caracteres Unicode (NFD)
-        .replace(/[\u0300-\u036f]/g, '') // Remove os diacríticos (acentos, cedilha, etc.)
-        .replace(/[^a-z0-9]+/g, '-') // Substitui caracteres não alfanuméricos por hífens
-        .replace(/^-+|-+$/g, ''); // Remove hífens no início e no fim
+  return title.toLowerCase()
+      .normalize('NFD') // Normaliza a string em decomposição de caracteres Unicode (NFD)
+      .replace(/[\u0300-\u036f]/g, '') // Remove os diacríticos (acentos, cedilha, etc.)
+      .replace(/[^a-z0-9]+/g, '-') // Substitui caracteres não alfanuméricos por hífens
+      .replace(/^-+|-+$/g, ''); // Remove hífens no início e no fim
 }
 
 // Example of generating a slug for new news entries
 news.forEach(n => {
-    n.slug = generateSlug(n.title);
+n.slug = generateSlug(n.title);
 });
 
 function createNewsElement(news) {
-  const newsDiv = document.createElement("div");
-  newsDiv.classList.add("noticia");
-  newsDiv.id = news.slug; // Usar o slug em vez do id
-  newsDiv.onclick = function () {
-    window.location.href = `noticia.html#${this.id}`;
-  };
+const newsDiv = document.createElement("div");
+newsDiv.classList.add("noticia");
+newsDiv.id = news.slug; // Usar o slug em vez do id
+newsDiv.onclick = function () {
+window.location.href = `noticia.html?id=${this.id}`; // Alteração feita aqui
+};
 
-  const divImage = document.createElement("div");
-  divImage.classList.add("div-noticia-image");
+const divImage = document.createElement("div");
+divImage.classList.add("div-noticia-image");
 
-  const image = document.createElement("img");
-  image.src = news.image;
-  image.alt = news.alt;
-  divImage.appendChild(image);
-  newsDiv.appendChild(divImage);
+const image = document.createElement("img");
+image.src = news.image;
+image.alt = news.alt;
+divImage.appendChild(image);
+newsDiv.appendChild(divImage);
 
-  const descriptionDiv = document.createElement("div");
-  descriptionDiv.classList.add("p-2", "resumo-descricao");
+const descriptionDiv = document.createElement("div");
+descriptionDiv.classList.add("p-2", "resumo-descricao");
 
-  const title = document.createElement("h5");
-  title.classList.add("font-weight-bold", "text-proex");
-  title.textContent = news.title;
-  descriptionDiv.appendChild(title);
+const title = document.createElement("h5");
+title.classList.add("font-weight-bold", "text-proex");
+title.textContent = news.title;
+descriptionDiv.appendChild(title);
 
-  const description = document.createElement("p");
-  description.textContent = news.description;
-  descriptionDiv.appendChild(description);
+const description = document.createElement("p");
+description.textContent = news.description;
+descriptionDiv.appendChild(description);
 
-  const date = document.createElement("p");
-  date.classList.add("py-2", "text-secondary");
-  date.textContent = news.date;
-  descriptionDiv.appendChild(date);
+const date = document.createElement("p");
+date.classList.add("py-2", "text-secondary");
+date.textContent = news.date;
+descriptionDiv.appendChild(date);
 
-  newsDiv.appendChild(descriptionDiv);
+newsDiv.appendChild(descriptionDiv);
 
-  return newsDiv;
+return newsDiv;
 }
 
 function showNews() {
-  const newsContainer = document.querySelector(".noticias-container");
-  newsContainer.innerHTML = "";
+const newsContainer = document.querySelector(".noticias-container");
+newsContainer.innerHTML = "";
 
-  let start = news.length - currentPage * 10;
-  let end = 0;
-  if (start < 0) {
-    start = 0;
-    end = start + (newsPerPage - -1 * (news.length - currentPage * 10));
-  } else {
-    end = start + newsPerPage;
-  }
-  const newsPage = news.slice(start, end);
-  const newsElements = [];
+let start = news.length - currentPage * 10;
+let end = 0;
+if (start < 0) {
+start = 0;
+end = start + (newsPerPage - -1 * (news.length - currentPage * 10));
+} else {
+end = start + newsPerPage;
+}
+const newsPage = news.slice(start, end);
+const newsElements = [];
 
-  for (let i = newsPage.length - 1; i >= 0; i--) {
-    const newNews = newsPage[i];
-    const newsElement = createNewsElement(newNews);
-    newsElements.push(newsElement);
-  }
+for (let i = newsPage.length - 1; i >= 0; i--) {
+const newNews = newsPage[i];
+const newsElement = createNewsElement(newNews);
+newsElements.push(newsElement);
+}
 
-  for (const element of newsElements) {
-    newsContainer.appendChild(element);
-  }
+for (const element of newsElements) {
+newsContainer.appendChild(element);
+}
 }
 
 function showSpecifNews() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const targetSlug = urlParams.get("slug");
+const urlParams = new URLSearchParams(window.location.search);
+const targetSlug = urlParams.get("id"); // Alteração feita aqui para buscar "id"
 
-  const newsSection = document.getElementById("newsSection");
+const newsSection = document.getElementById("newsSection");
 
-  const children = newsSection.children;
+const children = newsSection.children;
 
-  for (let i = 0; i < children.length; i++) {
-    const child = children[i];
-    if (child.id !== targetSlug) {
-      child.style.display = "none";
-    }
-  }
+for (let i = 0; i < children.length; i++) {
+const child = children[i];
+if (child.id !== targetSlug) {
+  child.style.display = "none";
+}
+}
 }
 
 function createPagination() {
-  const pagination = document.querySelector(".pagination");
-  pagination.innerHTML = "";
+const pagination = document.querySelector(".pagination");
+pagination.innerHTML = "";
 
-  const numbersPage = Math.ceil(news.length / newsPerPage);
+const numbersPage = Math.ceil(news.length / newsPerPage);
 
-  for (let i = 1; i <= numbersPage; i++) {
-    const pageLink = document.createElement("a");
-    pageLink.href = "#";
-    pageLink.textContent = i;
-    pageLink.onclick = function () {
-      currentPage = i;
-      showNews();
-      updatePagination();
-      return false;
-    };
+for (let i = 1; i <= numbersPage; i++) {
+const pageLink = document.createElement("a");
+pageLink.href = "#";
+pageLink.textContent = i;
+pageLink.onclick = function () {
+  currentPage = i;
+  showNews();
+  updatePagination();
+  return false;
+};
 
-    if (i === currentPage) {
-      pageLink.classList.add("current-page");
-    }
+if (i === currentPage) {
+  pageLink.classList.add("current-page");
+}
 
-    pagination.appendChild(pageLink);
-  }
+pagination.appendChild(pageLink);
+}
 }
 
 function updatePagination() {
-  const pagesLink = document.querySelectorAll(".pagination a");
-  pagesLink.forEach(function (link) {
-    link.classList.remove("current-page");
-  });
+const pagesLink = document.querySelectorAll(".pagination a");
+pagesLink.forEach(function (link) {
+link.classList.remove("current-page");
+});
 
-  const currentLink = document.querySelector(
-    `.pagination a:nth-child(${currentPage})`
-  );
-  currentLink.classList.add("current-page");
+const currentLink = document.querySelector(
+`.pagination a:nth-child(${currentPage})`
+);
+currentLink.classList.add("current-page");
 
-  const newsContainer = document.querySelector(".return-pagination");
-  newsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+const newsContainer = document.querySelector(".return-pagination");
+newsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 showNews();
