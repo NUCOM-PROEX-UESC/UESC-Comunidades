@@ -481,6 +481,14 @@ const news = [
     date: "10/07/2024",
     alt: "",
   },
+  {
+    id: 51,
+    title: "UESC sedia o Núcleo da Escolinha de Triathlon Formando Campeões",
+    image: "./img/imagens-noticias/noticia_uesc_sedia_escolinha_de_triathlon_card.png",
+    description: "A Escolinha de Triathlon Formando Campeões nasceu em 2015, em Curitiba-PR, cidade natal de seu idealizador, padrinho e gestor, o triatleta olímpico Juraci Moreira, medalhista pan- americano, hexacampeão brasileiro da modalidade e três vezes representante olímpico.​",
+    date: "15/07/2024",
+    alt: "",
+  },
 ];
 
 function generateSlug(title) {
