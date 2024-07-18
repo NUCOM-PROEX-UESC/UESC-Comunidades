@@ -353,7 +353,7 @@ const news = [
     title: "A Proex através da COINC promove evento do Dia Nacional do Cigano",
     image: "./img/imagens-noticias/noticia_ciganos_card.png",
     description:
-      "A PROEX através do Agir 2.0 em parceria com a AMURC e o Fórum de Procuradores realizam evento formativo sobre Licitações.",
+      "Aconteceu na sala do UNATI uma roda de conversa em comemoração ao Dia Nacional do Cigano.",
     date: "28/05/2024",
     alt: "",
   },
@@ -417,11 +417,9 @@ const news = [
   },
   {
     id: 43,
-    title:
-      "Encontro de Egressos do Curso de Iniciação à Regência Coral e Instrumental na UESC",
+    title:"Encontro de Egressos do Curso de Iniciação à Regência Coral e Instrumental na UESC",
     image: "./img/imagens-noticias/noticias_encontro_cantado_card.png",
-    description:
-      "I Encontro de Alunos Egressos do Curso de Iniciação à Regência Coral e Instrumental ocorreu no Auditório Paulo Souto",
+    description:"I Encontro de Alunos Egressos do Curso de Iniciação à Regência Coral e Instrumental ocorreu no Auditório Paulo Souto",
     date: "07/06/2024",
     alt: "",
   },

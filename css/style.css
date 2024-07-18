@@ -5,6 +5,21 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, blockquote, pre, code, em, strong, b, u,
     font-family: 'Roboto', sans-serif !important;
 }
 
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Título com fonte Roboto negrito */
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600; /* Subtítulo com fonte Roboto semi-negrito */
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; /* Texto comum com fonte Roboto regular */
+}
+
 #team {
     background: #eee !important;
 }
@@ -37,9 +52,27 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, blockquote, pre, code, em, strong, b, u,
     text-align: justify;
 }
 
+/* Estilo padrão para dispositivos desktop */
 .sec {
     padding-left: 5%;
     padding-right: 5%;
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 668px) {
+    .sec {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .container {
+        padding-right: 8px;
+        padding-left: 8px;
+      }
+
+      .mt-5, .my-5 {
+        margin-top: 1rem !important;
+    }
 }
 
 .bottom-align {
@@ -244,6 +277,25 @@ section .section-title {
     color: #2259a6;
 }
 
+/* Estilo do cabeçalho da notícia */
+.text-proex h3 {
+    font-size: 2.25rem; /* Ajustar para o tamanho desejado */
+    margin-bottom: 1rem; /* Espaçamento inferior */
+  }
+  
+  .text-proex h6 {
+    font-size: 1.125rem; /* Ajustar para o tamanho desejado */
+    margin-bottom: 0rem; /* Espaçamento inferior */
+    color: #212529d5;
+
+  }
+  
+  /* Linha de separação */
+  .text-proex hr {
+    border-top: 2px solid #d9d9d9; /* Cor e espessura da linha */
+    margin-bottom: 1.5rem; /* Espaçamento vertical */
+  }
+
 .img-nav {
     width: 5% !important;
     height: 1.6rem;
@@ -447,6 +499,7 @@ a.navbar-brand:hover {
 .img-news {
     width: 100%;
     height: 100%;
+    border-radius: 0.7rem;
 }
 
 /* ---------------------------------------------- */

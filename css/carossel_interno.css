@@ -1,27 +1,37 @@
 .carousel-interno {
     position: relative;
-    width: auto;
-    height: auto;
+    width: 100%; /* Ajusta o carrossel para a largura do elemento pai */
     overflow: hidden;
-    border-radius: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0.7rem;
 }
 
 .image_carousel_intern {
-    width: auto;
-    height: auto;
+    width: 100%; /* Ajusta a largura da imagem para 100% do carrossel */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.carousel-interno-inner {
+    display: flex !important;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-interno::before {
+    content: "";
+    display: block;
+    padding-top: 52.94%; /* Proporção de 8.5:4.5 */
 }
 
 .carousel-interno .carousel-interno-inner {
-    display: flex !important;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-interno .carousel-interno-item {
     min-width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,8 +40,7 @@
 
 .carousel-interno .carousel-interno-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 100%; /* Mantém a proporção da imagem */
 }
 
 .carousel-interno .carousel-interno-control {
@@ -80,16 +89,10 @@
     border: 1px solid #ffffff8f;
 }
 
-/* Media Queries para responsividade */
 @media (max-width: 1200px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
     .carousel-interno .carousel-interno-item img {
-        width: 726px;
-        height: 461px;
+        width: 100%;
+        height: 100%;
     }
 
     .carousel-interno .carousel-interno-control {
@@ -103,19 +106,14 @@
 }
 
 @media (max-width: 991px) {
-    .carousel-interno {
+    .image_carousel_intern {
         width: 100%;
         height: auto;
     }
 
-    .image_carousel_intern {
-        width: 700px;
-        height: 400px;
-    }
-
     .carousel-interno .carousel-interno-item img {
-        width: 531px;
-        height: 281px;
+        width: 100%;
+        height: 100%;
     }
 
     .carousel-interno .carousel-interno-control {
@@ -129,14 +127,9 @@
 }
 
 @media (max-width: 767px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
     .carousel-interno .carousel-interno-item img {
-        width: 387px;
-        height: 205px;
+        width: 100%;
+        height: 100%;
     }
 
     .carousel-interno .carousel-interno-control {
@@ -149,103 +142,11 @@
     }
 }
 
-@media (max-width: 575px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-interno .carousel-interno-item img {
-        width: 72vw;
-        object-fit: contain;
-    }
-
-    .carousel-interno .carousel-interno-control {
-        padding: 4px;
-    }
-
-    .carousel-interno .indicador-carousel-interno {
-        width: 7px;
-        height: 7px;
-    }
-}
-
-@media (max-width: 510px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-interno .carousel-interno-item img {
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .carousel-interno .carousel-interno-control {
-        padding: 4px;
-    }
-
-    .carousel-interno .indicador-carousel-interno {
-        width: 7px;
-        height: 7px;
-    }
-}
-
-@media (max-width: 400px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-interno .carousel-interno-item img {
-        width: 37.8vh;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .carousel-interno .carousel-interno-control {
-        padding: 4px;
-    }
-
-    .carousel-interno .indicador-carousel-interno {
-        width: 7px;
-        height: 7px;
-    }
-}
-
-@media (max-width: 350px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-interno .carousel-interno-item img {
-        width: 35.8vh;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .carousel-interno .carousel-interno-control {
-        padding: 4px;
-    }
-
-    .carousel-interno .indicador-carousel-interno {
-        width: 7px;
-        height: 7px;
-    }
-}
-
 /* Media Query específica para o Samsung Galaxy S8+ */
 @media (max-width: 360px) and (min-height: 740px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
     .carousel-interno .carousel-interno-item img {
-        width: 240px;
-        height: auto;
-        object-fit: contain;
+        width: 100%;
+        height: 100%;
     }
 
     .carousel-interno .carousel-interno-control {
@@ -260,15 +161,9 @@
 
 /* Media Query específica para o Google Pixel 7 */
 @media (max-width: 412px) and (min-height: 915px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
     .carousel-interno .carousel-interno-item img {
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: 100%;
     }
 
     .carousel-interno .carousel-interno-control {
@@ -283,15 +178,9 @@
 
 /* Media Query específica para dimensões 430px e 932px */
 @media (max-width: 430px) and (min-height: 932px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
     .carousel-interno .carousel-interno-item img {
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: 100%;
     }
 
     .carousel-interno .carousel-interno-control {
@@ -306,15 +195,9 @@
 
 /* Media Query específica para dimensões 390px e 844px */
 @media (max-width: 390px) and (min-height: 844px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
     .carousel-interno .carousel-interno-item img {
-        width: 260px;
-        height: 138px;
-        object-fit: contain;
+        width: 100%;
+        height: 100%;
     }
 
     .carousel-interno .carousel-interno-control {
@@ -329,15 +212,9 @@
 
 /* Media Query específica para dimensões 414px e 896px */
 @media (max-width: 414px) and (min-height: 896px) {
-    .carousel-interno {
-        width: 100%;
-        height: auto;
-    }
-
     .carousel-interno .carousel-interno-item img {
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: 100%;
     }
 
     .carousel-interno .carousel-interno-control {

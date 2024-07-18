@@ -83,3 +83,16 @@ function setSlide(carouselIndex, slideIndex) {
         setTimeout(() => { isThrottled = false; }, 500);
     }
 }
+
+function adjustCarouselImageSizes() {
+    const carousels = document.querySelectorAll('.carousel-interno');
+    carousels.forEach(carousel => {
+        const width = carousel.clientWidth;
+        const height = (4.5 / 8.5) * width;
+        const images = carousel.querySelectorAll('.carousel-interno-item img');
+        images.forEach(img => {
+            img.style.height = `${height}px`;
+        });
+    });
+}
+
