@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // Parallax de fundo
     $window = $(window);
     $('section[data-type="background"]').each(function () {
         var $scroll = $(this);
@@ -8,9 +9,7 @@ $(document).ready(function () {
             $scroll.css({ backgroundPosition: coords });
         });
     });
-});
 
-$(document).ready(function () {
     // Carrossel de Notícias
     var noticiasSwiper = new Swiper("#noticias-slider", {
         slidesPerView: 3,
@@ -65,6 +64,23 @@ $(document).ready(function () {
             520: {
                 slidesPerView: 2,
             },
+        },
+    });
+
+    // Carrossel de Banner
+    var bannerSwiper = new Swiper("#banner-slider", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        fade: true,
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-navBtnBannerNext", // Definindo o botão Next para o banner
+            prevEl: ".swiper-navBtnBannerPrev", // Definindo o botão Prev para o banner
         },
     });
 

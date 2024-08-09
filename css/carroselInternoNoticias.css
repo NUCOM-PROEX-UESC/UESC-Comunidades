@@ -1,0 +1,102 @@
+.carrosselnoticias {
+    padding: 1rem;
+    width: 69vw;
+    margin: auto;
+    margin-bottom: 4vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+  }
+  
+  .carrosselnoticias h2 {
+    font-size: 1.3rem; /* Aumenta o tamanho do texto */
+    text-decoration: none;
+    color: #0554ad; /* Azul mais claro */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+    font-weight: bolder;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .card {
+    width: 20vw;
+    max-width: 300px; /* Define uma largura máxima para os cards */
+    margin-top: 1rem;
+    border-radius: 8px; /* Adicionando bordas arredondadas */
+    overflow: hidden; /* Para garantir que o conteúdo não ultrapasse os limites do card */
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px; /* Adicionando border-top-left-radius */
+    border-top-right-radius: 8px; /* Adicionando border-top-right-radius */
+  }
+  
+  .card .content {
+    padding: 0.5rem; /* Adicionando espaçamento interno apenas na div de conteúdo */
+  }
+  
+  .card .content a {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem; /* Afastando o link da parte inferior */
+  }
+  
+  .card .content p {
+    color: rgba(128, 128, 128, 0.575);
+    margin-top: 0; /* Removendo a margem superior */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .carrosselnoticias {
+        width: 90vw;
+    }
+  
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .card {
+        width: 80vw; /* Ocupa 80% da largura do contêiner pai */
+        max-width: 500px; /* Define uma largura máxima para os cards em layouts verticais */
+        margin-left: auto; /* Centraliza horizontalmente */
+        margin-right: auto; /* Centraliza horizontalmente */
+    }
+  
+    .card .content a {
+        font-size: 1rem;
+    }
+  
+    .card .content p {
+        font-size: 0.7rem;
+    }
+  }
+  
+  .mais {
+    margin: 0.5rem 2.5rem;
+    align-self: center; /* Alinha o botão no centro */
+    margin: 1rem;
+  }
+  
+  .mais a {
+    background-color: #0554ad; /* Azul royal */
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mais {
+        margin: 1rem auto;
+        align-self: flex-end; /* Alinha o botão à direita */
+    }
+  }
+  

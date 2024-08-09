@@ -34,3 +34,5 @@ function includeHTML() {
   
   includeHTML();
   
+  //Adicionando indicadores no carrossel(Gabriel de Souza)
+

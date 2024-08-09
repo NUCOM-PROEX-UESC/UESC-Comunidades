@@ -6379,8 +6379,9 @@ a.close.disabled {
   box-sizing: content-box;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
+  width: 12px; /* Defina o tamanho do círculo */
+  height: 12px; /* Defina o tamanho do círculo */
+  border-radius: 50%; /* Torna o indicador circular */
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
@@ -8041,7 +8042,7 @@ button.bg-dark:focus {
 
 .mt-5,
 .my-5 {
-  margin-top: 3rem !important;
+  margin-top: 1.5rem !important;
 }
 
 .mr-5,
