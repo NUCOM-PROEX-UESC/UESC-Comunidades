@@ -506,6 +506,14 @@ const news = [
     date: "01 de agosto de 2024",
     alt: ""
   },
+  {
+    id: 51,
+    title: "UESC sedia o Núcleo da Escolinha de Triathlon Formando Campeões",
+    image: "./img/imagens-noticias/noticia_uesc_sedia_escolinha_de_triathlon_card.png",
+    description: "A Escolinha de Triathlon Formando Campeões nasceu em 2015, em Curitiba-PR, cidade natal de seu idealizador, padrinho e gestor, o triatleta olímpico Juraci Moreira, medalhista pan- americano, hexacampeão brasileiro da modalidade e três vezes representante olímpico.​",
+    date: "15/07/2024",
+    alt: "",
+  },
 ];
 
 function generateSlug(title) {
@@ -530,14 +538,14 @@ function createNewsElement(news) {
       window.location.href = `noticia.html?id=${this.id}`;
   };
 
-  const divImage = document.createElement("div");
-  divImage.classList.add("div-noticia-image");
+const divImage = document.createElement("div");
+divImage.classList.add("div-noticia-image");
 
-  const image = document.createElement("img");
-  image.src = news.image;
-  image.alt = news.alt;
-  divImage.appendChild(image);
-  newsDiv.appendChild(divImage);
+const image = document.createElement("img");
+image.src = news.image;
+image.alt = news.alt;
+divImage.appendChild(image);
+newsDiv.appendChild(divImage);
 
   const descriptionDiv = document.createElement("div");
   descriptionDiv.classList.add("resumo-descricao");
@@ -556,9 +564,9 @@ function createNewsElement(news) {
   titleDiv.appendChild(title);
   descriptionDiv.appendChild(titleDiv);
 
-  const description = document.createElement("p");
-  description.textContent = news.description;
-  descriptionDiv.appendChild(description);
+const description = document.createElement("p");
+description.textContent = news.description;
+descriptionDiv.appendChild(description);
 
   const footerDiv = document.createElement("div");
   footerDiv.classList.add("footer-div");
@@ -612,8 +620,8 @@ function createDividerElement() {
 }
 
 function showNews() {
-  const newsContainer = document.querySelector(".noticias-container");
-  newsContainer.innerHTML = "";
+const newsContainer = document.querySelector(".noticias-container");
+newsContainer.innerHTML = "";
 
   let start = news.length - currentPage * 10;
   let end = 0;
@@ -647,56 +655,56 @@ function showSpecifNews() {
   const urlParams = new URLSearchParams(window.location.search);
   const targetSlug = urlParams.get("id"); // Alteração feita aqui para buscar "id"
 
-  const newsSection = document.getElementById("newsSection");
+const newsSection = document.getElementById("newsSection");
 
-  const children = newsSection.children;
+const children = newsSection.children;
 
-  for (let i = 0; i < children.length; i++) {
-    const child = children[i];
-    if (child.id !== targetSlug) {
-      child.style.display = "none";
-    }
-  }
+for (let i = 0; i < children.length; i++) {
+const child = children[i];
+if (child.id !== targetSlug) {
+  child.style.display = "none";
+}
+}
 }
 
 function createPagination() {
-  const pagination = document.querySelector(".pagination");
-  pagination.innerHTML = "";
+const pagination = document.querySelector(".pagination");
+pagination.innerHTML = "";
 
-  const numbersPage = Math.ceil(news.length / newsPerPage);
+const numbersPage = Math.ceil(news.length / newsPerPage);
 
-  for (let i = 1; i <= numbersPage; i++) {
-    const pageLink = document.createElement("a");
-    pageLink.href = "#";
-    pageLink.textContent = i;
-    pageLink.onclick = function () {
-      currentPage = i;
-      showNews();
-      updatePagination();
-      return false;
-    };
+for (let i = 1; i <= numbersPage; i++) {
+const pageLink = document.createElement("a");
+pageLink.href = "#";
+pageLink.textContent = i;
+pageLink.onclick = function () {
+  currentPage = i;
+  showNews();
+  updatePagination();
+  return false;
+};
 
-    if (i === currentPage) {
-      pageLink.classList.add("current-page");
-    }
+if (i === currentPage) {
+  pageLink.classList.add("current-page");
+}
 
-    pagination.appendChild(pageLink);
-  }
+pagination.appendChild(pageLink);
+}
 }
 
 function updatePagination() {
-  const pagesLink = document.querySelectorAll(".pagination a");
-  pagesLink.forEach(function (link) {
-    link.classList.remove("current-page");
-  });
+const pagesLink = document.querySelectorAll(".pagination a");
+pagesLink.forEach(function (link) {
+link.classList.remove("current-page");
+});
 
-  const currentLink = document.querySelector(
-    `.pagination a:nth-child(${currentPage})`
-  );
-  currentLink.classList.add("current-page");
+const currentLink = document.querySelector(
+`.pagination a:nth-child(${currentPage})`
+);
+currentLink.classList.add("current-page");
 
-  const newsContainer = document.querySelector(".return-pagination");
-  newsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+const newsContainer = document.querySelector(".return-pagination");
+newsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 

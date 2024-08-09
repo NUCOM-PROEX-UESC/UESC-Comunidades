@@ -342,70 +342,22 @@ section .section-title {
 
 /* Estilo do cabeçalho da notícia */
 .text-proex h3 {
-    font-size: 2.25rem;
-    /* Ajustar para o tamanho desejado */
-    margin-bottom: 1rem;
-    /* Espaçamento inferior */
-}
-
-.text-proex h6 {
-    font-size: 1.125rem;
-    /* Ajustar para o tamanho desejado */
-    margin-bottom: 0rem;
-    /* Espaçamento inferior */
+    font-size: 2.25rem; /* Ajustar para o tamanho desejado */
+    margin-bottom: 1rem; /* Espaçamento inferior */
+  }
+  
+  .text-proex h6 {
+    font-size: 1.125rem; /* Ajustar para o tamanho desejado */
+    margin-bottom: 0rem; /* Espaçamento inferior */
     color: #212529d5;
 
-}
-
-.Notica-dados{
-    display: flex!important;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.end-notice-sec {
-    display: flex !important;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    margin-top: 1.3rem;
-}
-
-.share-sec {
-    display: flex !important;
-    gap: 20px; /* Ajuste o valor para controlar o espaçamento entre os botões */
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    margin-top: 1rem;
-}
-
-.share-btn {
-    display: flex!important;
-    justify-content: center;
-    align-items: center;
-    width: 14vw;
-    height: 6vh;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-}
-
-.share-btn i {
-    font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
-}
-
-.share-btn:hover {
-    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
-}
-
-/* Linha de separação */
-.text-proex hr {
-    border-top: 1px solid rgba(0, 0, 0, .1);
-    /* Cor e espessura da linha */
-    margin-bottom: 1.5rem;
-    /* Espaçamento vertical */
-}
+  }
+  
+  /* Linha de separação */
+  .text-proex hr {
+    border-top: 2px solid #d9d9d9; /* Cor e espessura da linha */
+    margin-bottom: 1.5rem; /* Espaçamento vertical */
+  }
 
 .img-nav {
     width: 5% !important;
