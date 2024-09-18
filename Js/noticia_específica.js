@@ -50,11 +50,11 @@ function addShareSection(news) {
 
   const newsLink = window.location.href;
   const shareHTML = `
-    <a href="https://www.instagram.com/proex_uesc/" target="_blank" class="share-btn"><i class="fab fa-instagram fa-lg" style="padding-top: 10px;"></i></a>
-    <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(newsLink)}&text=${encodeURIComponent(news.title)}" target="_blank" class="share-btn"><i class="fab fa-twitter fa-lg" style="padding-top: 10px;"></i></a>
-    <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(news.title)} ${encodeURIComponent(newsLink)}" target="_blank" class="share-btn"><i class="fab fa-whatsapp fa-lg" style="padding-top: 10px;"></i></a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(newsLink)}" target="_blank" class="share-btn"><i class="fab fa-facebook fa-lg" style="padding-top: 10px;"></i></a>
-    <a href="#" onclick="copyToClipboard('${newsLink}'); return false;" class="share-btn"><i class="fa fa-clone fa-lg" style="padding-top: 10px;"></i></a>
+    <a href="https://www.instagram.com/proex_uesc/" target="_blank" class="share-btn"><i class="fab fa-instagram fa-xs" style="padding-top: 10px;"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(newsLink)}&text=${encodeURIComponent(news.title)}" target="_blank" class="share-btn"><i class="fab fa-twitter fa-xs" style="padding-top: 10px;"></i></a>
+    <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(news.title)} ${encodeURIComponent(newsLink)}" target="_blank" class="share-btn"><i class="fab fa-whatsapp fa-xs" style="padding-top: 10px;"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(newsLink)}" target="_blank" class="share-btn"><i class="fab fa-facebook fa-xs" style="padding-top: 10px;"></i></a>
+    <a href="#" onclick="copyToClipboard('${newsLink}'); return false;" class="share-btn"><i class="fa fa-clone fa-xs" style="padding-top: 10px;"></i></a>
   `;
 
   shareSecs.forEach(shareSec => {

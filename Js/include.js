@@ -34,5 +34,29 @@ function includeHTML() {
   
   includeHTML();
   
-  //Adicionando indicadores no carrossel(Gabriel de Souza)
+  //Adicionando TABELAS EM BOLSAS(Gabriel de Souza)
+
+  document.addEventListener("DOMContentLoaded", function() {
+    function toggleTables() {
+        const largeTable = document.querySelector('.large-table');
+        const smallTable = document.querySelector('.small-table');
+        
+        if (window.innerWidth <= 1240) {
+            largeTable.style.display = 'none';
+            smallTable.style.display = 'table';
+        } else {
+            largeTable.style.display = 'table';
+            smallTable.style.display = 'none';
+        }
+    }
+
+    // Aplica a transformação na inicialização
+    toggleTables();
+
+    // Aplica a transformação novamente se a tela for redimensionada
+    window.addEventListener('resize', toggleTables);
+});
+
+  
+  
 

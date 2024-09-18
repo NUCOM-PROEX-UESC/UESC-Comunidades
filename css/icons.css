@@ -109,18 +109,21 @@
     width: 86px;
     height: 55px;
 	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Accessibility-Icons {
     width: 36px;
     height: auto;
     fill: #1e4261;
+    margin-top: 6px;
 }
 
 .Accessibility-Icons-semex {
     width: 18px;
     height: auto;
     fill: #1e4261;
+    margin-top: 7px;
 }
 
 .container_Icons_accessibility {
@@ -138,6 +141,7 @@
 .Icon_Text {
     color: #000000;
     font-size: 13px;
+    margin: 0;
 }
 
 .link_AcessoRapido {
@@ -161,6 +165,21 @@
     #Acess_Title {
         padding-left: 15px;
     }
+
+    .box_Icon:hover {
+        transform: scale(1.05); /* Aumenta o tamanho do ícone */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao redor */
+      }
+    
+      .box_Icon:hover .Icon_Text {
+        color: #007BFF; /* Muda a cor do texto para azul durante o hover */
+      }
+    
+      .box_Icon:hover .Accessibility-Icons,
+      .box_Icon:hover .Accessibility-Icons-semex {
+        filter: brightness(1.2); /* Aumenta o brilho do ícone durante o hover */
+      }
+    
 }
 
 @media (min-width: 993px) {
@@ -200,7 +219,6 @@
 
     .Accessibility-Icons-semex {
         width: 28px;
-		margin-top: 6px;
     }
 
     .Icon_Text {

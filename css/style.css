@@ -28,6 +28,10 @@ body {
     ;
 }
 
+b{
+    font-weight: 700;
+}
+
 .container_noticias_fundo {
     background-color: #f7f7f7 !important;
 }
@@ -342,22 +346,64 @@ section .section-title {
 
 /* Estilo do cabeçalho da notícia */
 .text-proex h3 {
-    font-size: 2.25rem; /* Ajustar para o tamanho desejado */
-    margin-bottom: 1rem; /* Espaçamento inferior */
-  }
-  
-  .text-proex h6 {
-    font-size: 1.125rem; /* Ajustar para o tamanho desejado */
-    margin-bottom: 0rem; /* Espaçamento inferior */
+    font-size: 2.25rem;
+    /* Ajustar para o tamanho desejado */
+    margin-bottom: 1rem;
+    /* Espaçamento inferior */
+}
+
+.text-proex h6 {
+    font-size: 1.125rem;
+    /* Ajustar para o tamanho desejado */
+    margin-bottom: 0rem;
+    /* Espaçamento inferior */
     color: #212529d5;
 
-  }
-  
-  /* Linha de separação */
-  .text-proex hr {
-    border-top: 2px solid #d9d9d9; /* Cor e espessura da linha */
-    margin-bottom: 1.5rem; /* Espaçamento vertical */
-  }
+}
+
+.Notica-dados{
+    display: flex!important;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.end-notice-sec {
+    display: flex !important;
+    flex-direction: row-reverse;
+    margin-top: 1.3rem;
+}
+
+.share-sec {
+    display: flex !important;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+}
+
+.share-btn {
+    display: flex!important;
+    justify-content: center;
+    align-items: end;
+    height: 70%;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: #212529bf;
+}
+
+.share-btn i {
+    font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+
+
+/* Linha de separação */
+.text-proex hr {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.div-recuation{
+    margin-top: -1rem;
+}
 
 .img-nav {
     width: 5% !important;
@@ -492,6 +538,15 @@ a.navbar-brand:hover {
     font-size: 14px;
 }
 
+.container .sec.my-5.ori .category {
+    margin-bottom: 1rem;
+}
+@media (max-width: 669px){
+    .container .sec.my-5.ori .category {
+        margin-bottom: 0rem;
+    }
+}
+
 .font-weight-bold {
     margin-top: 16px !important;
     font-size: 1.2rem;
@@ -549,6 +604,58 @@ a.navbar-brand:hover {
     text-decoration: underline;
 }
 
+/* Estilo comum para ambas as tabelas */
+.exportable-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-bottom: 1rem;
+  }
+  
+  .exportable-table th, .exportable-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    font-size: 12px;
+  }
+  
+  /* Estilo específico para a tabela grande */
+  .large-table .header-row th {
+    background-color: #f1f1f1;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  /* Estilo específico para a tabela pequena */
+  .small-table td {
+    background-color: #fff;
+    font-weight: normal;
+    text-align: left;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1240px) {
+    .large-table {
+      display: none;
+    }
+    .small-table {
+      display: table;
+    }
+  }
+  
+  @media (min-width: 1241px) {
+    .large-table {
+      display: table;
+    }
+    .small-table {
+      display: none;
+    }
+  }
+  
+
+
+
 /* Ajustes para diferentes tamanhos de tela desktop */
 
 @media (min-width: 768px) and (max-width: 2523px) {
@@ -590,6 +697,14 @@ a.navbar-brand:hover {
         flex-direction: column-reverse;
         align-items: flex-start;
         margin-top: 1.3rem;
+    }
+
+    .share-sec {
+        justify-content: flex-start;
+    }
+
+    .share-btn i {
+        font-size: 20px; /* Ajuste o tamanho do ícone conforme necessário */
     }
 
     .div-noticia-image {
