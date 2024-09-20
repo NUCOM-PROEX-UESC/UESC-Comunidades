@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     initializeCarousels();
+    addIndicatorsToCarousel('#carouselExampleControls');
 });
 
 function initializeCarousels() {
@@ -30,6 +31,31 @@ function initializeCarousels() {
 
         showSlide(index, 0);
     });
+}
+
+function addIndicatorsToCarousel(carouselSelector) {
+    const carousel = document.querySelector(carouselSelector);
+    const items = carousel.querySelectorAll('.carousel-item');
+    const indicatorsContainer = document.createElement('ol');
+    indicatorsContainer.classList.add('carousel-indicators');
+
+    items.forEach((item, index) => {
+        const indicator = document.createElement('li');
+        indicator.setAttribute('data-target', carouselSelector);
+        indicator.setAttribute('data-slide-to', index);
+
+        if (index === 0) {
+            indicator.classList.add('active');
+        }
+
+        indicator.addEventListener('click', () => {
+            $(`${carouselSelector}`).carousel(index);
+        });
+
+        indicatorsContainer.appendChild(indicator);
+    });
+
+    carousel.appendChild(indicatorsContainer);
 }
 
 let currentSlides = [];
@@ -82,4 +108,16 @@ function setSlide(carouselIndex, slideIndex) {
         isThrottled = true;
         setTimeout(() => { isThrottled = false; }, 500);
     }
+}
+
+function adjustCarouselImageSizes() {
+    const carousels = document.querySelectorAll('.carousel-interno');
+    carousels.forEach(carousel => {
+        const width = carousel.clientWidth;
+        const height = (4.5 / 8.5) * width;
+        const images = carousel.querySelectorAll('.carousel-interno-item img');
+        images.forEach(img => {
+            img.style.height = `${height}px`;
+        });
+    });
 }
