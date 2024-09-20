@@ -17,6 +17,7 @@ const news = [
     },
     {
       id: "curricularizacao-da-extensao-atende-a-escola-fe-e-alegria-no-municipio-de-ilheus",
+      category: "Extensão Universitária",
       title: "Curricularização da Extensão atende a Escola Fé e Alegria no município de Ilhéus",
       image: "./img/imagens-noticias/noticia_extensao_atende_a_escola_Fe_e_alegria_card.png",
       description: "A iniciativa foi planejada a partir da integração das disciplinas Plantas Medicinais e Plantas Alimentícias Não Convencionais (PANC), ambas ministradas pela Dr.ª Larissa Costa, professora vinculada ao Departamento de Ciências Biológicas.",
@@ -106,50 +107,53 @@ const news = [
     },
   ];
 
-  // Função para embaralhar um array
+// Função para embaralhar um array
 function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+// Função para selecionar e embaralhar as últimas 10 notícias
+function shuffleAndSelectNews(news) {
+  const lastTenNews = news.slice(-10); // Seleciona as últimas 10 notícias
+  return shuffleArray(lastTenNews).slice(0, 3); // Embaralha e seleciona 3 delas
+}
+
+// Função para preencher os cards com dados das notícias selecionadas
+function fillNewsCards(newsData) {
+  const cardContainers = document.querySelectorAll(".card");
+  const shuffledData = shuffleAndSelectNews(newsData);
+
+  shuffledData.forEach((data, index) => {
+      const cardContainer = cardContainers[index];
+      const titleLink = cardContainer.querySelector(".news-title");
+      const dateP = cardContainer.querySelector(".news-date");
+      const tagSpan = cardContainer.querySelector(".category"); // Seleciona o espaço da tag
+
+      // Define o ID da notícia como um atributo data
+      titleLink.setAttribute("data-news-id", data.id);
+      titleLink.textContent = data.title;
+
+      dateP.textContent = data.date;
+
+      // Adiciona a tag (categoria) se existir
+      if (data.category) {
+          tagSpan.textContent = data.category;
+          tagSpan.style.display = "block"; // Garante que a tag esteja visível
+      } else {
+          tagSpan.style.display = "none"; // Se não houver tag, esconde o espaço
       }
-      return array;
-  }
-  
-  // Função para selecionar e embaralhar as últimas 10 notícias
-  function shuffleAndSelectNews(news) {
-      const lastTenNews = news.slice(-10); // Seleciona as últimas 10 notícias
-      return shuffleArray(lastTenNews).slice(0, 3); // Embaralha e seleciona 3 delas
-  }
-  
-  // Função para preencher os cards com dados das notícias selecionadas
-  function fillNewsCards(newsData) {
-      const cardContainers = document.querySelectorAll(".card");
-      const shuffledData = shuffleAndSelectNews(newsData);
-    
-      shuffledData.forEach((data, index) => {
-          const cardContainer = cardContainers[index];
-          const img = cardContainer.querySelector(".news-image");
-          const titleLink = cardContainer.querySelector(".news-title");
-          const dateP = cardContainer.querySelector(".news-date");
-    
-          img.src = data.image;
-          img.alt = data.alt;
-    
-          // Define o ID da notícia como um atributo data
-          titleLink.setAttribute("data-news-id", data.id);
-          titleLink.textContent = data.title;
-    
-          dateP.textContent = data.date;
-    
-          // Adiciona um evento de clique para redirecionar para a página da notícia
-          titleLink.addEventListener("click", function() {
-              const newsId = this.getAttribute("data-news-id");
-              window.location.href = `noticia.html?id=${newsId}`;
-          });
+
+      // Adiciona um evento de clique para redirecionar para a página da notícia
+      titleLink.addEventListener("click", function () {
+          const newsId = this.getAttribute("data-news-id");
+          window.location.href = `noticia.html?id=${newsId}`;
       });
-  }
-  
-  // Exemplo de uso:
-  // Supondo que 'news' seja o array de todas as notícias disponíveis
-  // Chamada inicial da função para preencher os cards com dados aleatórios
-  fillNewsCards(news);
+  });
+}
+
+// Chamada inicial da função para preencher os cards com dados aleatórios
+fillNewsCards(news);

@@ -32,6 +32,24 @@ b{
     font-weight: 700;
 }
 
+/*carrosel interno de noticias das noticias Gabriel Matheus*/
+.news-tag {
+    display: inline-block;
+    background-color: #21243d; /* Cor de fundo da tag */
+    color: white; /* Cor do texto da tag */
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 5px; /* Espaço abaixo da tag */
+  }
+  
+  .news-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0; /* Linha separadora */
+    margin: 5px 0;
+  }
+
 .container_noticias_fundo {
     background-color: #f7f7f7 !important;
 }
@@ -529,7 +547,7 @@ a.navbar-brand:hover {
 }
 
 .category {
-    display: inline-block;
+    display: inline-block !important;
     background-color: #b5e5ff;
     color: #2259a6;
     padding: 2px 8px;
@@ -538,9 +556,14 @@ a.navbar-brand:hover {
     font-size: 14px;
 }
 
-.container .sec.my-5.ori .category {
+.divisor .container .sec.my-5.ori .category {
     margin-bottom: 1rem;
 }
+
+.container .sec.my-5.ori .category {
+    margin-bottom: 0.6rem;
+}
+
 @media (max-width: 669px){
     .container .sec.my-5.ori .category {
         margin-bottom: 0rem;
