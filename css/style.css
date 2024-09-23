@@ -32,6 +32,10 @@ b{
     font-weight: 700;
 }
 
+.ext_sec{
+    margin-top: 3rem;
+}
+
 /*carrosel interno de noticias das noticias Gabriel Matheus*/
 .news-tag {
     display: inline-block;
