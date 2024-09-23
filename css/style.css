@@ -512,6 +512,7 @@ a.navbar-brand:hover {
 }
 
 .noticia {
+    cursor: pointer;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
